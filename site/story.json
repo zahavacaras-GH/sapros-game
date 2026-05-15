@@ -7,6 +7,18 @@
       "id": "t1.1",
       "act": 1,
       "image": "t1.1_arrival.webp",
+      "paragraphImages": [
+        "t1.1_p01_silent_drive.webp",
+        "t1.1_p02_wall_checkpoint.webp",
+        "t1.1_p03_surveillance_poles.webp",
+        "t1.1_p04_silent_eques_driver.webp",
+        "t1.1_p05_thebes_facility.webp",
+        "t1.1_p06_badge_scan.webp",
+        "t1.1_p07_bunk_window.webp",
+        "t1.1_p08_distant_quadrant_lights.webp",
+        "t1.1_p09_uniform_in_lap.webp",
+        "t1.1_p10_no_plan.webp"
+      ],
       "text": "The Eques didn't talk on the drive.\n\nHe wasn't unkind about it. He just had a face that didn't seem to need talking. The transport was an electric SUV, almost silent on the road, and you could hear the camera at the wall checkpoint clicking through its routine — flash, beep, plate logged, two faces cross-referenced, gate up — without anyone in the car saying a word. We took the elevated highway into the Capitol, past the second checkpoint, past the wall I'd only ever seen from the outside. The city changed under the wheels.\n\nThe streets I knew were narrow and warm and smelled like frying oil. The streets we drove now were wide and clean and had no smell at all. Every intersection had a surveillance pole. Every pole had a camera, and a microphone, and the small white pyramid I'd read once on a forum — before the forum was taken down — was the AI module that listened for the wrong words.\n\nI kept thinking he would say something. *\"You'll get used to it.\"* Or *\"Don't worry.\"* Or *\"Your friend is fine.\"* He didn't. He didn't even glance at me. I suppose if you do this for a living you stop looking at the cargo.\n\nThe Thebes facility was on the eastern slope of the Capitol — three low concrete buildings that had been a public high school once, before the Council had needed the campus more than the kids had needed an education. You could still see the painted line for a basketball court in the courtyard, faded almost to nothing under the new security striping. Four other recruits were standing around with duffel bags. None of them looked like volunteers.\n\nThe Eques handed me to a clerk who scanned my thumb into a tablet, printed a temporary badge on a lanyard, and handed me a uniform that was a size too big. He said, \"Lights at twenty-two-hundred. Up at five. Don't try to leave the perimeter.\" Then he looked past me to the next one.\n\nI sat on my bunk. I held the uniform in my lap. I watched the small red light above the bunk-room door — a camera, the same model as in the cars I'd never been able to afford — and I tried not to think about Quinn.\n\nThere was a window. Outside the window, very far away, the lights of my old neighborhood were just visible past the wall.\n\nI told myself I was here to fix it. I told myself I had a plan.\n\nI was fifteen. I didn't have a plan.",
       "choices": [
         { "label": "Continue", "next": "t1.2", "isContinue": true }

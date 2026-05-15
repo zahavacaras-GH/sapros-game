@@ -583,9 +583,15 @@
       }
 
       showGameScreen();
-      setImage(node.image, node.memory);
+      // Start with the first paragraph image if present, else the node's main image.
+      const firstImage = (Array.isArray(node.paragraphImages) && node.paragraphImages[0])
+        ? node.paragraphImages[0]
+        : node.image;
+      setImage(firstImage, node.memory);
       setText(node, node.memory);
       setChoices(node);
+      // Wire up paragraph observer AFTER setText has rendered the <p> elements
+      setupParagraphObserver(node.paragraphImages, node.image, node.memory);
       updateCorruptionDisplay();
       applyNodeAudio(node);
       saveState();
@@ -623,34 +629,116 @@
     updateCorruptionDisplay();
   }
 
+  // Two-layer cross-fade: we keep two stacked image divs and alternate
+  // which one is "active" so we can smoothly fade between paragraph images.
+  let activeImageLayer = 'a';
+  let currentImageFilename = null;
+
   function setImage(filename, isMemory) {
-    const imgEl = document.getElementById('node-image');
-    if (!imgEl) return;
-    imgEl.classList.toggle('memory', !!isMemory);
-    if (filename) {
-      // Probe first; if it errors, show placeholder
-      const probe = new Image();
-      probe.onload = () => {
-        imgEl.style.backgroundImage = `url('images/${encodeURIComponent(filename)}')`;
-        imgEl.classList.remove('placeholder');
-        imgEl.textContent = '';
-      };
-      probe.onerror = () => {
-        imgEl.style.backgroundImage = 'none';
-        imgEl.classList.add('placeholder');
-        imgEl.textContent = filename;
-        Errors.notice(
-          'Image missing',
-          `${filename} hasn't been generated yet — placeholder shown.`,
-          'img_' + filename
-        );
-      };
-      probe.src = `images/${encodeURIComponent(filename)}`;
-    } else {
-      imgEl.style.backgroundImage = 'none';
-      imgEl.classList.add('placeholder');
-      imgEl.textContent = 'NO IMAGE';
+    const container = document.getElementById('node-image-container');
+    if (!container) return;
+    container.classList.toggle('memory', !!isMemory);
+
+    if (!filename) {
+      // No image specified — clear both layers and show placeholder
+      ['a', 'b'].forEach(k => {
+        const el = document.getElementById('node-image-' + k);
+        if (el) {
+          el.style.backgroundImage = 'none';
+          el.classList.remove('active');
+        }
+      });
+      container.classList.add('placeholder');
+      container.setAttribute('data-placeholder', 'NO IMAGE');
+      currentImageFilename = null;
+      return;
     }
+
+    // Same image already showing — nothing to do
+    if (filename === currentImageFilename) return;
+
+    const incomingKey = activeImageLayer === 'a' ? 'b' : 'a';
+    const outgoingKey = activeImageLayer;
+    const incoming = document.getElementById('node-image-' + incomingKey);
+    const outgoing = document.getElementById('node-image-' + outgoingKey);
+    if (!incoming || !outgoing) return;
+
+    const src = 'images/' + encodeURIComponent(filename);
+    const probe = new Image();
+    probe.onload = () => {
+      incoming.style.backgroundImage = `url('${src}')`;
+      container.classList.remove('placeholder');
+      // Force a reflow so the browser registers the bg before we toggle classes
+      void incoming.offsetWidth;
+      incoming.classList.add('active');
+      outgoing.classList.remove('active');
+      activeImageLayer = incomingKey;
+      currentImageFilename = filename;
+    };
+    probe.onerror = () => {
+      // Image missing — show placeholder. Don't switch layers (so the
+      // previously valid image, if any, stays visible).
+      if (!currentImageFilename) {
+        container.classList.add('placeholder');
+        container.setAttribute('data-placeholder', filename);
+      }
+      Errors.notice(
+        'Image missing',
+        `${filename} hasn't been generated yet — keeping the previous image visible.`,
+        'img_' + filename
+      );
+    };
+    probe.src = src;
+  }
+
+  // ----- Per-paragraph image observer -----
+  let paragraphObserver = null;
+
+  function teardownParagraphObserver() {
+    if (paragraphObserver) {
+      paragraphObserver.disconnect();
+      paragraphObserver = null;
+    }
+  }
+
+  function setupParagraphObserver(paragraphImages, fallbackImage, isMemory) {
+    teardownParagraphObserver();
+    if (!Array.isArray(paragraphImages) || paragraphImages.length === 0) return;
+
+    const textEl = document.getElementById('node-text');
+    if (!textEl) return;
+    const ps = textEl.querySelectorAll('p[data-image]');
+    if (ps.length === 0) return;
+
+    // Track which paragraph is currently "primary" by remembering the
+    // most-intersecting one. We pick a single active paragraph each tick.
+    const activeRatios = new Map();
+
+    paragraphObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          activeRatios.set(entry.target, entry.intersectionRatio);
+        } else {
+          activeRatios.delete(entry.target);
+        }
+      });
+      // Pick the paragraph with the highest intersection ratio
+      let best = null, bestRatio = -1;
+      activeRatios.forEach((ratio, el) => {
+        if (ratio > bestRatio) { best = el; bestRatio = ratio; }
+      });
+      if (best) {
+        const img = best.getAttribute('data-image');
+        if (img) setImage(img, isMemory);
+      }
+    }, {
+      // Trigger zone is the middle band of the viewport
+      root: null,
+      rootMargin: '-25% 0px -45% 0px',
+      threshold: [0, 0.1, 0.25, 0.5, 0.75, 1.0]
+    });
+
+    ps.forEach(p => paragraphObserver.observe(p));
   }
 
   function setText(node, isMemory) {
@@ -678,8 +766,16 @@
     }
 
     const paragraphs = bodyText.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
-    paragraphs.forEach(p => {
-      html += `<p>${formatProse(p)}</p>`;
+    const paraImages = Array.isArray(node.paragraphImages) ? node.paragraphImages : [];
+    const fallback = node.image || '';
+
+    paragraphs.forEach((p, i) => {
+      // If the node has paragraphImages and index i has one, attach it.
+      // Otherwise fall back to the node's main image so the observer
+      // still has something to point at.
+      const img = paraImages[i] || fallback;
+      const dataAttr = img ? ` data-image="${escapeHtml(img)}"` : '';
+      html += `<p${dataAttr}>${formatProse(p)}</p>`;
     });
 
     textEl.innerHTML = html;
@@ -1059,6 +1155,8 @@
   function transitionTo(fn) {
     const game = document.getElementById('game-screen');
     if (!game) { fn(); return; }
+    // Tear down the previous node's paragraph observer before transitioning
+    teardownParagraphObserver();
     game.classList.add('fading-out');
     setTimeout(() => {
       game.classList.remove('fading-out');

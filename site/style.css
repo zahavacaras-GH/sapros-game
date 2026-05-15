@@ -375,21 +375,36 @@ button {
   width: 100%;
   aspect-ratio: 4 / 3;
   background: #050505;
-  position: relative;
+  position: sticky;
+  top: 44px;            /* clear the HUD */
   overflow: hidden;
+  z-index: 5;
 }
 
-#node-image {
-  width: 100%;
-  height: 100%;
+.node-image-layer {
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
   background-color: #0a0a0a;
   background-repeat: no-repeat;
-  transition: filter 0.5s ease;
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.5s ease;
+  pointer-events: none;
 }
 
-#node-image.placeholder {
+.node-image-layer.active {
+  opacity: 1;
+}
+
+#node-image-container.memory .node-image-layer.active {
+  filter: sepia(0.7) saturate(0.85) brightness(0.95);
+}
+
+#node-image-container.placeholder::after {
+  content: attr(data-placeholder);
+  position: absolute;
+  inset: 0;
   background-image: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
   display: flex;
   align-items: center;
@@ -400,9 +415,9 @@ button {
   color: rgba(255, 255, 255, 0.25);
 }
 
-/* Memory flashback styling */
-#node-image.memory {
-  filter: sepia(0.7) saturate(0.85) brightness(0.95);
+.node-image-label {
+  /* Reserved for future debug overlay if needed */
+  display: none;
 }
 
 #node-text-container {
