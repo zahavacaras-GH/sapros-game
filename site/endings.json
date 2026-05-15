@@ -1,0 +1,235 @@
+{
+  "endings": {
+
+    "e1": {
+      "title": "Ending: Worse than Vespera",
+      "image": "ending_worse_than_vespera.webp",
+      "text": "I moved on her in the spring.\n\nThe coup was clean. I had been planning it for two months, with people she had not been watching, and the people had been chosen specifically because they had grievances with her that I had identified and offered to *resolve.* When the move came it took ninety minutes. She did not even reach the chamber.\n\nI sat in her chair the next morning.\n\nWithin three years I had reorganized the Hetairoi from five seats to seven, expanded the file system from civilians to Eques *and* to internal Council deliberations, created a new investigative body accountable directly to me, and made the head of the Council a permanent rather than rotating role.\n\nI had reformed the Council.\n\nThe reformed Council had, by year three, more files open than the old one had had in twenty years. The new investigative body, accountable to me, had begun handling cases that — by Vespera's old standards — would have been *escalations.* I had streamlined the escalations. I was more efficient than she had been.\n\n[KADEN_FATE]\n\n[QUINN_FATE]\n\n[BRAN_FATE]\n\n[NIKO_FATE]\n\n[SOPHIE_FATE]\n\n[AWARENESS]",
+      "variations": {
+        "KADEN_FATE": [
+          { "condition": { "all": [{ "not": { "survived": "kaden" }}, { "flag": "kaden_path", "equals": "mercy_killed" }]}, "text": "Kaden had been gone four years. I had killed him with his hand in mine. I have not, in any of the years since, found another room like that one." },
+          { "condition": { "not": { "survived": "kaden" }}, "text": "Kaden was buried in a small Eques plot. The official record said suicide. I had not visited the grave. I would not visit the grave." },
+          { "condition": { "flag": "kaden_path", "equals": "saved" }, "text": "Kaden was alive somewhere — assigned to a low-pressure administrative post in a Quadrant I had picked for him. I had not seen him in a long time." },
+          { "condition": { "survived": "kaden" }, "text": "Kaden was alive somewhere. I had stopped checking." }
+        ],
+        "QUINN_FATE": [
+          { "condition": { "flag": "closed_quinn_file" }, "text": "Quinn was alive in a small Quadrant town, under a different name, doing repair work. He did not know it had been me. I never told him." },
+          { "condition": { "flag": "signed_quinn_file" }, "text": "I had signed his file. I do not, even now, remember signing it. I had signed many things by then." },
+          { "condition": { "not": { "survived": "quinn" }}, "text": "Quinn had been dead for years. I had told myself, at the time, that I had been working on it." },
+          { "condition": { "survived": "quinn" }, "text": "Quinn was alive somewhere. I never tried to find him." }
+        ],
+        "BRAN_FATE": [
+          { "condition": { "flag": "bran_knows_truth" }, "text": "Bran had told me he loved me and would not see me again. He had kept his word." },
+          { "condition": { "flag": "bran_in_hiding" }, "text": "Bran was in hiding somewhere. He had taken my advice. He had not written." },
+          { "condition": { "flag": "bran_cut_off" }, "text": "Bran was alive. I had not spoken to him in years. The lie about *for his safety* was old by now." },
+          { "condition": { "flag": "bran_offered_protection" }, "text": "Bran wrote sometimes. The letters were polite. They did not ask anything of me. They did not give anything either." },
+          { "condition": { "not": { "survived": "bran" }}, "text": "Bran was on a list I had — at some point in the long blur of paperwork — approved." },
+          { "condition": {}, "text": "I had not spoken to Bran in years." }
+        ],
+        "NIKO_FATE": [
+          { "condition": { "not": { "survived": "niko" }}, "text": "Niko had died in a labor protest two years before. The report had been signed by an Agema I had myself promoted." },
+          { "condition": { "all": [{ "survived": "niko" }, { "flag": "niko_knows_truth" }]}, "text": "Niko was alive in the second Quadrant. He hated me. He was right to." },
+          { "condition": { "survived": "niko" }, "text": "Niko was alive. He was a stranger now. I assume he is a stranger still." }
+        ],
+        "SOPHIE_FATE": [
+          { "condition": { "all": [{ "not": { "survived": "sophie" }}, { "flag": "betrayed_sophie_back" }]}, "text": "Sophie was buried in an Eques plot in the Capitol. I had attended the funeral. I had told her father I was sorry. I had not been sorry. I had been efficient." },
+          { "condition": { "not": { "survived": "sophie" }}, "text": "Sophie was dead. There was a plot." },
+          { "condition": { "flag": "exposed_sophie_publicly" }, "text": "Sophie did not speak to me again. She lived a small life in a small office in a small Quadrant. We had not exchanged a word in years." },
+          { "condition": { "survived": "sophie" }, "text": "Sophie was alive. We had not spoken." }
+        ],
+        "AWARENESS": [
+          { "condition": { "mikaSelfAware": { "gte": 5 }}, "text": "I knew what I had become. I noticed, in the chair, that I did not mind. The boy in the hallway had been a different person. I had become the man who kept the door." },
+          { "condition": { "mikaSelfAware": { "gte": 3 }}, "text": "Sometimes, late, I noticed that the city was, by every measure I had once cared about, worse. The noticing did not change my hand on the pen." },
+          { "condition": {}, "text": "The numbers were good. The city was running. I had, by every metric I now used, succeeded." }
+        ]
+      }
+    },
+
+    "e2": {
+      "title": "Ending: Equal to Vespera",
+      "image": "ending_equal_to_vespera.webp",
+      "text": "I moved on her. The coup was successful.\n\nI expected the chair to feel different.\n\nIt did not.\n\nI had, in the years I had spent climbing toward this room, imagined the chair as a kind of summit — that to sit in it would be to *change* in some final way, to become whatever it was Vespera had been when I'd first walked into her chambers and she had poured me tea.\n\nI sat in it. I waited.\n\nI felt the same way I had felt the day before. I picked up the morning's docket and I read the first item.\n\nThe first item was a sentencing review. The sentence the Council recommended was the same sentence Vespera would have recommended. I voted for it.\n\nThe second item was a budget reallocation. I voted for it.\n\nThe third was a flag review. I read the file. I checked the box. I signed.\n\nThe day went on. The week went on. The month went on. The Council I had taken over by violence was, in every one of its operational details, the same Council that had been there the year before.\n\nThe architecture had not changed. The work was the work.\n\nI sit, now, in Vespera's old chair. I am exhausted in ways that do not yet show. I keep, in my desk drawer, a small handwritten note she sent me once. *Welcome home,* it says. I read it sometimes. I am not sure why.\n\n[KADEN_FATE]\n\n[QUINN_FATE]\n\n[BRAN_FATE]\n\n[NIKO_FATE]\n\n[SOPHIE_FATE]\n\n[AWARENESS]",
+      "variations": {
+        "KADEN_FATE": [
+          { "condition": { "not": { "survived": "kaden" }}, "text": "Kaden was dead. The grave was somewhere I did not visit." },
+          { "condition": { "survived": "kaden" }, "text": "Kaden was alive somewhere. I had stopped checking." }
+        ],
+        "QUINN_FATE": [
+          { "condition": { "flag": "closed_quinn_file" }, "text": "Quinn was alive in a small Quadrant town. He did not know it had been me." },
+          { "condition": { "not": { "survived": "quinn" }}, "text": "Quinn was dead. He had been dead for years." },
+          { "condition": { "survived": "quinn" }, "text": "Quinn was alive somewhere. I never looked for him." }
+        ],
+        "BRAN_FATE": [
+          { "condition": { "flag": "bran_knows_truth" }, "text": "Bran knew. He had stopped writing." },
+          { "condition": { "flag": "bran_in_hiding" }, "text": "Bran was in hiding. He had not written." },
+          { "condition": { "not": { "survived": "bran" }}, "text": "Bran was on a list I had approved without reading the name." },
+          { "condition": {}, "text": "I had not spoken to Bran in years." }
+        ],
+        "NIKO_FATE": [
+          { "condition": { "not": { "survived": "niko" }}, "text": "Niko had died in a labor protest. I had read the report." },
+          { "condition": { "survived": "niko" }, "text": "Niko was alive. He was a stranger." }
+        ],
+        "SOPHIE_FATE": [
+          { "condition": { "not": { "survived": "sophie" }}, "text": "Sophie was dead." },
+          { "condition": { "survived": "sophie" }, "text": "Sophie was alive. We had not spoken." }
+        ],
+        "AWARENESS": [
+          { "condition": { "mikaSelfAware": { "gte": 5 }}, "text": "I know I am her. I have known for some time. The knowing has not, in the end, changed what I do at this desk. It has only made the desk *clearer.*" },
+          { "condition": {}, "text": "The work continues. I have not, in some time, asked what the work is for." }
+        ]
+      }
+    },
+
+    "e3": {
+      "title": "Ending: Vespera's Heir",
+      "image": "ending_vesperas_heir.webp",
+      "text": "The transition took three years.\n\nShe kept her word. The handover was slow. The quiet meetings continued. The walks on the high balcony — the same balcony where Jason had once walked with me — became, in my last year as an Agema-track Hetairoi, a weekly fixture. Vespera and I, side by side, looking down at the city. She would point at things. She would tell me what they were *for.* I would listen.\n\nShe was, in many of those conversations, kind to me.\n\nI would think, later, that *kindness* and *grooming* were words for the same activity, applied at different distances. Up close they were indistinguishable. From far enough away they came apart. I did not, in those three years, take the far-away view.\n\nShe retired in the autumn. The ceremony was small. I sat in her chair the morning after. I did not feel different. I had, by then, not expected to.\n\nShe visits sometimes. She is, even retired, a presence in the chambers. The other Hetairoi know who I learned from.\n\nI have not, in the years since, made any decision she would have made differently.\n\n[BRAN_FATE]\n\n[QUINN_FATE]",
+      "variations": {
+        "BRAN_FATE": [
+          { "condition": { "flag": "bran_knows_truth" }, "text": "Bran knew what I was. He never wrote again. I do not blame him." },
+          { "condition": { "flag": "bran_in_hiding" }, "text": "Bran was in hiding. The letters had stopped." },
+          { "condition": {}, "text": "Bran did not write." }
+        ],
+        "QUINN_FATE": [
+          { "condition": { "flag": "closed_quinn_file" }, "text": "Quinn was alive in a small Quadrant town. He did not know it had been me. I never told him." },
+          { "condition": { "not": { "survived": "quinn" }}, "text": "Quinn was dead. He had been dead for years." },
+          { "condition": {}, "text": "Quinn was alive somewhere, but I had stopped thinking about him." }
+        ]
+      }
+    },
+
+    "e4": {
+      "title": "Ending: Pyrrhic Reformer",
+      "image": "ending_pyrrhic.webp",
+      "text": "I proposed the reform six weeks after the surveillance vote.\n\nThe reform was real. It dismantled, in stages, the worst of Vespera's architecture. It abolished the *associative dissent* category outright. It returned three Quadrants to a baseline of unmonitored privacy. It opened the file system, partially, to public review. It freed several thousand people who, like Quinn at fifteen, had been quietly held for years on technicalities.\n\nThe Council fought me. I won. The winning took eighteen months.\n\nThe reform passed.\n\nI gave a speech from a podium in the Capitol plaza. I had written it myself. It was, by speech standards, restrained. I did not mention Vespera. I did not mention the boy in the hallway. I did not *celebrate.* I said the work was beginning. I said it would take a long time. I said we would, all of us, have to carry it.\n\nI came down from the podium.\n\nThe reform also created — because all reforms create — a new category of *enemy.* The word the Council used for them was *destabilizers.* The destabilizers were, mostly, the people who had been *stabilizers* under the old regime. Some of them I knew personally. The new investigative body — staffed by my people, accountable to me — began processing the destabilizers with a quiet efficiency that, by my second year as Council head, looked very similar to what the old regime had looked like, with different names on the lists.\n\nI had reformed the system.\n\nThe system had reformed me back.\n\n[NEW_ENEMIES]\n\n[MIKAS_AWARENESS]",
+      "variations": {
+        "NEW_ENEMIES": [
+          { "condition": { "all": [{ "survived": "niko" }, { "relationship": "niko", "lte": 4 }]}, "text": "Niko's name was on the new lists. He had organized too publicly. He had not stopped. He was processed by my new body, by my new procedures, in my reformed system. The reform, for Niko, was indistinguishable from the system that had come before." },
+          { "condition": {}, "text": "The new enemies were people I had, at fifteen, been told the system existed to protect. The lists were shorter than they had been. The lists existed." }
+        ],
+        "MIKAS_AWARENESS": [
+          { "condition": { "mikaSelfAware": { "gte": 5 }}, "text": "I know what the reform was. I know what it was not. I sit, in the new chair, and I do the work anyway." },
+          { "condition": {}, "text": "The numbers are better. The numbers are not all the way to where I would have wanted. I tell myself this is the nature of reform. I am, possibly, right." }
+        ]
+      }
+    },
+
+    "e5": {
+      "title": "Ending: Self-Aware Tyrant",
+      "image": "ending_mirror.webp",
+      "text": "I ended up in the chair.\n\nThe route here was less important than the place it brought me to.\n\nThe place was an office. A high office. A polished black desk, an expensive chair, a long window onto the Capitol. There was a mirror on the back wall. I had had it installed. I had instructed the artisan, when he installed it, that the mirror should be tall and narrow and set into the wall in a way that, from most angles, would make it look like a door. He had not asked me why. I had paid him well.\n\nI look at the mirror, sometimes.\n\nThe face in the mirror is the face of a man who has finished. The face is twenty-three, now, or twenty-six, or thirty — the years compress, in this office, the way Vespera once told me they would. The face is always deciding. The face is always the face I had at the white room investiture, only older, and more itself.\n\nI know what I am.\n\nI knew on the way up. I knew at every turn. I knew when I killed Jason. I knew when I betrayed Sophie. I knew when I let Kaden break. I knew when I signed the things I have signed. I knew when I sat in the chair.\n\nI know, sitting in it now.\n\nIt has not changed anything. The knowing has been, all along, the small private religion that allowed me to keep going. *He knew.* I told myself this, on the worst days. *He saw it clearly.* As if the seeing made me different from Vespera.\n\nIt did not. Vespera saw too. She saw better than I did. She had told me so, four years before, in her parlor, with the dove-grey flowers.\n\nThe seeing is not the resistance.\n\nThe hand on the pen is the only resistance.\n\nI have, every day for years, picked up the pen.\n\n[FINAL_LINE]",
+      "variations": {
+        "FINAL_LINE": [
+          { "condition": {}, "text": "I look at the mirror once. I go back to the work." }
+        ]
+      }
+    },
+
+    "e6": {
+      "title": "Ending: Killed by Jason",
+      "image": "ending_jason.webp",
+      "text": "I lowered the gun.\n\nI tried to. The hand started the motion. The arm was almost halfway down, and I was already, in some part of myself, beginning to feel the relief of *not having done it,* when Jason's other hand came up from under the desk with the small black sidearm he had been carrying for nine years.\n\nHe was not surprised. He was sad.\n\nHe fired once. I went down on the rug in front of his desk.\n\nHe came around the desk. He knelt. The kettle was still on the hot plate. The window was the color of old paper.\n\nI tried to say something. I had several things I wanted to say. Bran's name was one of them. Quinn's was another. There was a third I do not remember.\n\nI didn't get to any of them.\n\nI was seventeen. The boy I had been at fifteen, in the hallway, would have understood — better than I would, in this last moment — what was about to happen. I tried to find him, in the small bright shrinking room of myself, in those last seconds.\n\nI do not know if I found him."
+    },
+
+    "e7": {
+      "title": "Ending: Executed by the Council",
+      "image": "ending_executed.webp",
+      "text": "I stood on the floor of the chamber. I refused the vote. They removed me.\n\nThe room was small. Grey. There was a single chair in the center. There were two Eques. There was a quiet man with a clipboard.\n\nI had time, in the chair, to think.\n\nI thought about the boy in the doorway. I thought about Bran. I thought about Quinn. I thought about Jason, briefly, who had been dead for some time. I thought about how strange it was, after all of it, to be sitting here in a chair in a basement, after planning so much, while a man with a clipboard read the procedural language of my removal in a tone that had been used for many other men in this same chair.\n\nThe man finished reading.\n\nHe nodded at one of the Eques. The Eques stepped forward.\n\n[FINAL_THOUGHT]\n\n[LEGACY]",
+      "variations": {
+        "FINAL_THOUGHT": [
+          { "condition": { "survived": "bran" }, "text": "I thought about the rice. The afternoon Bran and I had eaten the rice and corrected fractions. It was a Tuesday. The kind of small clean Tuesday a person should have more of." },
+          { "condition": { "survived": "quinn" }, "text": "I thought about Quinn, at the upper east stairs, waiting for me. He had waited the full twenty minutes. He had eventually given up. He had walked home alone." },
+          { "condition": {}, "text": "I thought about the boy in the doorway. I told him I was sorry. I think he understood." }
+        ],
+        "LEGACY": [
+          { "condition": {}, "text": "I did not become a legend. I did not become a story. The Council's records noted the removal in a single sentence. The sentence was accurate." }
+        ]
+      }
+    },
+
+    "e8": {
+      "title": "Ending: Killed by Sophie",
+      "image": "ending_sophie.webp",
+      "text": "I had given Ilse Sophie's coordinates.\n\nI had been clever. I had been, by my own measure, *very* clever. I had thought it through. I had not thought it through enough.\n\nSophie had been clever first.\n\nShe had not been blindsided by my retaliation. She had been *expecting* it. She had set up Ilse's entire approach as a feint — a trap she had wanted me to walk Ilse into. When I had sent Ilse the encrypted line, Sophie had been waiting, and Sophie had been waiting at the precise window where my own forward squad was exposed.\n\nSophie killed me at 04:23. The same minute the operations committed.\n\nShe did it personally. She broke from her squad. She came up the corridor where I had positioned my command post. She had an unsuppressed sidearm. She did not, in the corridor, say anything before firing.\n\nShe did not need to.\n\nI had, four years before, not understood what kind of girl Sophie really was. I had, at fifteen, looked at her loud unselfconscious laugh and concluded she was a particular kind of person. I had been wrong about the kind. The kind I had concluded was a kind that, for Sophie, had been a *performance.*\n\nUnderneath the performance was a different person. The different person was the one who came up the corridor that night.\n\nShe did not look back."
+    },
+
+    "e9": {
+      "title": "Ending: Killed by Kaden",
+      "image": "ending_kaden_kills.webp",
+      "text": "He was waiting in the corridor outside my office.\n\nHe had not, by all accounts, slept in five days. The complaints had been logged. The complaints had been routed to me. I had not done anything about them. I had been busy. *Busy* was the word I had been using.\n\nHe had a knife.\n\nHe did not have a gun. He could have had a gun. He had chosen the knife. The knife meant — by the small private grammar of Eques work — that this was personal. The knife was the tool you used when you wanted a man to look at you.\n\nHe looked at me.\n\nThe cracked eyes did, for one full second, something I had not seen in a year. They became *clear.* The clarity was the boy at the mess hall, three years before, telling a stranger to eat his rice. The boy had been, all along, somewhere underneath. He surfaced for the moment of his last act.\n\nHe said, \"I told you to eat lunch first, Just Mika.\"\n\nI had time, in the corridor, to be glad it was him. I had been ready, for a long time, for it to be someone else. Some stranger. Some Council operative. The clarity in his eyes, at the end, was a kind of mercy I had not earned, and would not have asked for, and could not refuse.\n\nHe held my hand. He did not let go."
+    },
+
+    "e10": {
+      "title": "Ending: Killed by Vespera",
+      "image": "ending_vespera.webp",
+      "text": "The coup did not work.\n\nShe had been watching me for years. She had been, specifically, watching the people I had been quietly building alliances with. Three of them were her people. I had been recruiting her people into my coup. She had let me. She had, in some way, *encouraged* me, by leaving small careful openings she had known I would walk into.\n\nWhen I moved, she moved first.\n\nIt was over in eleven minutes. I was taken at the chamber door. I was not taken to a basement. I was taken to her chambers. She had the dove-grey flowers. She had the tea. She poured.\n\nShe did not look angry. She looked, mostly, *disappointed* — the same disappointment from the day I had refused her offer, only deeper, and final.\n\nShe said, \"I thought you would be smarter, Mika.\"\n\nI drank the tea.\n\nThe tea was poisoned. I had drunk it before I had registered the possibility. It was a quiet poison. I had eight or ten minutes.\n\n*\"I was you, Mika. I told you, the first time we sat here, that I knew how it ended. You did not believe me.\"*"
+    },
+
+    "e11": {
+      "title": "Ending: Suicide",
+      "image": "ending_suicide.webp",
+      "text": "Dawn.\n\nI had been at the desk all night. The folders were still there. Vespera's note. The drafted reform proposal in the drawer. The intelligence on Vespera in another drawer.\n\nI looked at all of it, one more time.\n\nI did not, on the looking, find what I had been looking for. I had been hoping that one of the four routes would, in the morning light, reveal itself as the one I could *live with.* None of them did. They were all routes to versions of myself I had already, in essence, become.\n\nThere was a fifth option.\n\nI had known it was there for a long time. I had not let myself look at it.\n\nI looked at it now.\n\nThe fifth option had a kind of clarity that the other four did not. It was not, in any sense, *redemption.* It was simply *cessation.* The boy in the hallway, four years before, had not, in the end, survived to nineteen. The man at the desk was a different man. That man had, perhaps, no further reason to continue.\n\nI wrote a letter.\n\n[NOTE_LEFT]\n\nI went to the window. The Capitol was quiet. The light was coming up in the long slow way it does in the spring, the way that, when I had been twelve, I had loved.\n\n[FINAL_THOUGHT]",
+      "variations": {
+        "NOTE_LEFT": [
+          { "condition": { "survived": "bran" }, "text": "The letter was for Bran. It was three pages. It was the longest thing I had written in years. It said most of what I should have said in the cafe, and a few things I had not had the courage to say there." },
+          { "condition": { "all": [{ "survived": "kaden" }, { "flag": "kaden_path", "equals": "saved" }]}, "text": "The letter was for Kaden. It was short. It said: *You were right. I should have eaten my lunch first.*" },
+          { "condition": {}, "text": "The letter was a single line. *I'm sorry. — M.*" }
+        ],
+        "FINAL_THOUGHT": [
+          { "condition": {}, "text": "The body went very quiet. The quiet was kind. The quiet was the kindest thing the body had done for me in a long time." }
+        ]
+      }
+    },
+
+    "e12": {
+      "title": "Ending: Becomes Kaden",
+      "image": "ending_becomes_kaden.webp",
+      "text": "I did not commit to any of the four options.\n\nI sat at the desk. The morning came. Then the afternoon. The Council met without me. I did not go. I did not, in any procedural sense, *resign* — I simply stopped showing up.\n\nThe Council, after several days, sent a delegation. They were polite. They suggested *recovery leave.* I accepted.\n\nI was placed in a small Eques apartment in a quiet Quadrant, on a Council pension, with a quiet doctor visiting weekly. The apartment had a couch. The couch was empty. I sat on the floor.\n\nI am twenty-two now. Or twenty-three. I lose track.\n\nThe people from the files do not visit me, the way they visited Kaden. I had been afraid they would. They have not. The room is quiet. I am, by some measure, well. By another measure I am not.\n\n[KADEN_PRESENT]\n\n[CARE]\n\nI sit on the floor. The couch is across the room. I look at it sometimes. I am not sure what I am looking for.\n\nI think, often, about Kaden in the mess hall at fourteen, telling me to eat my rice. He had been right. He had been right about most things.\n\nHe had warned me in time, and I had not listened, and now I am doing the version of the breakdown he had done at twenty, and the symmetry is, in its way, almost peaceful.\n\nAlmost.",
+      "variations": {
+        "KADEN_PRESENT": [
+          { "condition": { "all": [{ "survived": "kaden" }, { "flag": "kaden_path", "equals": "saved" }]}, "text": "Kaden visits sometimes. He brings me food. He sits with me. We do not talk much. We do not need to. He is, in his quiet way, fine. Better than I am, probably." },
+          { "condition": { "survived": "kaden" }, "text": "Kaden is alive in a different Quadrant. We have not spoken in years." },
+          { "condition": {}, "text": "Kaden has been dead for years. I am alone in the apartment." }
+        ],
+        "CARE": [
+          { "condition": { "all": [{ "survived": "bran" }, { "flag": "bran_offered_protection" }]}, "text": "Bran writes. The letters are kind. He has not visited. I do not blame him." },
+          { "condition": { "all": [{ "survived": "niko" }, { "relationship": "niko", "gte": 6 }]}, "text": "Niko visits, once a year. He does not stay long. He brings groceries." },
+          { "condition": {}, "text": "No one visits." }
+        ]
+      }
+    },
+
+    "e13": {
+      "title": "Ending: The Paranoid King",
+      "image": "ending_paranoid.webp",
+      "text": "The coup worked.\n\nThe Council I built was *thorough.* I had made sure, in the first six months, that no one in the original Council remained. I had also made sure that no one in *my* coup remained — the people who had helped me had, by the second year, been quietly redistributed to less central positions, and by the third year, several of them had been redistributed further, and by the fifth year a majority of the people who had known how the coup had been organized were no longer alive.\n\nI sit, now, at the head of a Council of seven. I do not know all of them well. I do not want to.\n\nI sleep with a sidearm under the pillow. I do not eat food I have not seen prepared. I do not drink anything I have not poured myself. The chambers are cleaner than they have ever been. The flowers are gone. I had the dove-grey flowers removed. I did not like the way they made me think.\n\n[VICTIMS]\n\nThe trigger for the next purge is always something small. A look. A delay in answering a question. A document that should have been on my desk by ten and was on my desk by ten-fifteen. The triggers compound. The list is never finished. The list is, perhaps, the *point* of being in this chair.",
+      "variations": {
+        "VICTIMS": [
+          { "condition": { "not": { "survived": "sophie" }}, "text": "Sophie had been executed for \"smiling wrong\" at a session, two years in." },
+          { "condition": { "not": { "survived": "bran" }}, "text": "Bran's name had been on a list I had not read carefully enough. He had been processed during the third purge." },
+          { "condition": {}, "text": "I have, by my own quiet count, executed more colleagues than the previous Council combined." }
+        ]
+      }
+    },
+
+    "e14": {
+      "title": "Ending: The Ghost",
+      "image": "ending_ghost.webp",
+      "text": "I sit at the desk.\n\nI sign things. I read things. I attend meetings.\n\nI do all of these activities to a high standard. The Council has, in the four years since I became its head, run smoothly. The other Hetairoi consult me. They respect my judgments. My judgments are precise and consistent and reasonable.\n\nI do not feel anything.\n\nI do not, in the precise sense of the word, *feel.* I have not, since the day I sat in this chair, experienced the small physical events that I had previously categorized as emotion. I do not get hungry, until the body reminds me. I do not get tired, until the body collapses. I do not, in any detectable way, get angry. The thing inside me that had been doing those things is no longer doing them.\n\nI am, in the chair, a person-shaped administrative tool.\n\nThe administrative tool runs the city efficiently. The numbers, by every metric that the Council tracks, are good.\n\nLast month, [VISITOR] came to the Hetairoi tower.\n\nI did not recognize them. I looked at them politely the way you look at a stranger in your foyer. After several seconds, the recognition flickered — half a second, no more — and then went out.\n\nI had a guard escort them out.\n\nI went back to the desk. The next file was open.",
+      "variations": {
+        "VISITOR": [
+          { "condition": { "all": [{ "survived": "bran" }, { "not": { "flag": "bran_offered_protection" }}]}, "text": "Bran" },
+          { "condition": { "survived": "niko" }, "text": "Niko" },
+          { "condition": {}, "text": "a man I had once known" }
+        ]
+      }
+    },
+
+    "e15": {
+      "title": "Ending: The Believer",
+      "image": "ending_believer.webp",
+      "text": "The dinner is at seven.\n\nI have been preparing all afternoon. The cook has set the long table. The places are laid out. The wineglasses are filled. The candles are lit. The food is real. I had it brought up an hour ago. I oversaw the placement of the salt cellars myself.\n\nThe guests arrive at the appointed time.\n\nQuinn is here. Bran is here. Niko is here. Jason — yes, even Jason — is here. Sophie has brought her daughter, who is, charmingly, named Mika. Kaden is here, looking better than he has in years. Lady Vespera came. She has, against all expectations, come around in her old age. She sends me thoughtful letters about the work.\n\nI take my seat at the head of the table. I welcome them. I make the small joke I had prepared. They laugh. I pour the wine. I lift my glass.\n\n*To the city we built.*\n\nI drink. They drink. The dinner begins.\n\nWe talk for hours. We talk about old times. We talk about Bran's school. We talk about Niko's work. We talk about Quinn's hacker friends, who, I am pleased to report, have all done well for themselves. We talk about Sophie's daughter and we agree the name is sweet. We talk about Jason's retirement. We talk about Kaden's recovery.\n\nThe dinner is the best evening I have had in a long time.\n\nA servant glances in. The servant sees a man eating alone at a long table set for nine. The servant looks away. The servant has been instructed not to mention it. The servant has been instructed not to mention many things.\n\nThe candles burn down. The guests rise to go. They thank me. I thank them. I make the small joke about how they should not be strangers. They laugh. They promise. They leave.\n\nI clear the table myself.\n\nI go to bed.\n\nI will, in the morning, plan the next dinner. There is always another dinner. The dinners are the work, now, and the work is good, and the work is what fills the days."
+    }
+
+  }
+}

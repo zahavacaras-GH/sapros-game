@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Netlify CLI local state (auth tokens, build cache)
+.netlify/
+site/.netlify/
+
+# Node
+node_modules/
+
+# Build artifacts — local deploy zips, etc.
+sapros-site.zip
+*.zip.bak
+
+# Backup files from past edits
+*.bak

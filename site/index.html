@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Sapros</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Corruption gauge (always visible during gameplay) -->
+  <div id="hud" class="hidden">
+    <div id="corruption-bar">
+      <div id="corruption-fill"></div>
+      <div id="corruption-label">CORRUPTION 0</div>
+    </div>
+    <button id="mute-toggle" aria-label="Mute audio">♪</button>
+    <button id="menu-toggle" aria-label="Menu">☰</button>
+  </div>
+
+  <!-- Title screen -->
+  <div id="title-screen" class="screen">
+    <div class="title-image" style="background-image: url('images/title_screen.webp');"></div>
+    <div class="title-content">
+      <h1>SAPROS</h1>
+      <button id="btn-new-game" class="primary-btn">New Game</button>
+      <button id="btn-continue" class="secondary-btn hidden">Continue</button>
+      <button id="btn-chapter-select" class="secondary-btn">Start From Any Age</button>
+    </div>
+  </div>
+
+  <!-- Chapter select screen -->
+  <div id="chapter-select-screen" class="screen hidden">
+    <div class="chapter-content">
+      <h2>Start From Any Age</h2>
+      <p class="chapter-intro">Each entry point loads the canonical default state for that age. Anything you choose from there forward is yours.</p>
+      <div class="chapter-grid">
+        <button class="chapter-card" data-age="15">
+          <span class="chapter-age">Age 15</span>
+          <span class="chapter-rank">Thebes</span>
+        </button>
+        <button class="chapter-card" data-age="16">
+          <span class="chapter-age">Age 16</span>
+          <span class="chapter-rank">Skiritai</span>
+        </button>
+        <button class="chapter-card" data-age="17">
+          <span class="chapter-age">Age 17</span>
+          <span class="chapter-rank">Achaean</span>
+        </button>
+        <button class="chapter-card" data-age="18">
+          <span class="chapter-age">Age 18</span>
+          <span class="chapter-rank">Agema</span>
+        </button>
+        <button class="chapter-card" data-age="19">
+          <span class="chapter-age">Age 19</span>
+          <span class="chapter-rank">Hetairoi</span>
+        </button>
+      </div>
+      <button id="btn-back-from-chapter" class="secondary-btn">Back</button>
+    </div>
+  </div>
+
+  <!-- Game screen -->
+  <div id="game-screen" class="screen hidden">
+    <div id="node-image-container">
+      <div id="node-image"></div>
+    </div>
+    <div id="node-text-container">
+      <div id="node-text"></div>
+      <div id="node-choices"></div>
+    </div>
+  </div>
+
+  <!-- Menu overlay -->
+  <div id="menu-overlay" class="hidden">
+    <div class="menu-content">
+      <h3>Menu</h3>
+      <button id="menu-resume" class="secondary-btn">Resume</button>
+      <button id="menu-restart" class="secondary-btn">Restart from Title</button>
+      <button id="menu-chapter" class="secondary-btn">Start From Any Age</button>
+      <p class="menu-warn">Restart and chapter select will erase your current progress.</p>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="ambient-audio" loop preload="auto">
+    <source src="audio/ambient.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Engine -->
+  <script src="engine.js"></script>
+</body>
+</html>

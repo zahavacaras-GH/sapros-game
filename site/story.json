@@ -1,0 +1,2140 @@
+{
+  "title": "Sapros",
+  "startNode": "t1.1",
+  "nodes": {
+
+    "t1.1": {
+      "id": "t1.1",
+      "act": 1,
+      "image": "t1.1_arrival.webp",
+      "text": "The Eques didn't talk on the drive.\n\nHe wasn't unkind about it. He just had a face that didn't seem to need talking. The transport was an electric SUV, almost silent on the road, and you could hear the camera at the wall checkpoint clicking through its routine — flash, beep, plate logged, two faces cross-referenced, gate up — without anyone in the car saying a word. We took the elevated highway into the Capitol, past the second checkpoint, past the wall I'd only ever seen from the outside. The city changed under the wheels.\n\nThe streets I knew were narrow and warm and smelled like frying oil. The streets we drove now were wide and clean and had no smell at all. Every intersection had a surveillance pole. Every pole had a camera, and a microphone, and the small white pyramid I'd read once on a forum — before the forum was taken down — was the AI module that listened for the wrong words.\n\nI kept thinking he would say something. *\"You'll get used to it.\"* Or *\"Don't worry.\"* Or *\"Your friend is fine.\"* He didn't. He didn't even glance at me. I suppose if you do this for a living you stop looking at the cargo.\n\nThe Thebes facility was on the eastern slope of the Capitol — three low concrete buildings that had been a public high school once, before the Council had needed the campus more than the kids had needed an education. You could still see the painted line for a basketball court in the courtyard, faded almost to nothing under the new security striping. Four other recruits were standing around with duffel bags. None of them looked like volunteers.\n\nThe Eques handed me to a clerk who scanned my thumb into a tablet, printed a temporary badge on a lanyard, and handed me a uniform that was a size too big. He said, \"Lights at twenty-two-hundred. Up at five. Don't try to leave the perimeter.\" Then he looked past me to the next one.\n\nI sat on my bunk. I held the uniform in my lap. I watched the small red light above the bunk-room door — a camera, the same model as in the cars I'd never been able to afford — and I tried not to think about Quinn.\n\nThere was a window. Outside the window, very far away, the lights of my old neighborhood were just visible past the wall.\n\nI told myself I was here to fix it. I told myself I had a plan.\n\nI was fifteen. I didn't have a plan.",
+      "choices": [
+        { "label": "Continue", "next": "t1.2", "isContinue": true }
+      ]
+    },
+
+    "t1.2": {
+      "id": "t1.2",
+      "act": 1,
+      "image": "t1.2_thebes_barracks.webp",
+      "hub": true,
+      "text": "Morning. I had an hour before training. The facility was quiet — most of the recruits were already badged into assignments, doing the kind of work nobody admits Eques do. Hauling pallets at the central logistics yard. Mopping floors in administrative buildings. Standing very still in lobbies. The same labor any kid in any Quadrant did, but with a uniform on and a scannable badge, which apparently made it different.\n\nAn hour. I could feel the hour like a weight in my hand.\n\nI knew what I should do. The thing I'd promised myself in the car, watching the city change. The reason I'd told myself I was here. *Find Quinn. Help him. Get information.*\n\nI also knew Bran was about a forty-minute walk away, sitting at our kitchen table doing schoolwork, alone, because nobody had told him anything. The cameras between here and there would log my route, but my new badge said I had limited liberty.\n\nAnd the senior recruits had been very specific in the briefing about how the smartest thing a new Thebes could do was *put his head down and work*.\n\nThree things. One hour. I had to choose.",
+      "choices": [
+        { "label": "Sneak home to see Bran.", "next": "t1.3a" },
+        { "label": "Try to find out what happened to Quinn.", "next": "t1.3b" },
+        { "label": "Throw yourself into training.", "next": "t1.3c" },
+        { "label": "Continue.", "next": "t1.4", "isContinue": true }
+      ]
+    },
+
+    "t1.3a": {
+      "id": "t1.3a",
+      "act": 1,
+      "image": "t1.3a_visit_bran.webp",
+      "text": "I changed out of the uniform in a public toilet two blocks past the facility checkpoint. Civilian clothes. Old jacket. Hood up against the cameras at the corner of every block. I felt absurd. I'd been an Eques for fourteen hours.\n\nThe walk home was the strangest thing I'd done in my life. Same streets. Same cracked tile in front of the bakery. Same dog at the corner. Same surveillance dome on the lamppost outside the bus stop. None of it knew I'd left.\n\nBran was at the kitchen table doing his fractions on a screen. He looked up. His face did the small bright thing it does, and then it did a smaller, more careful thing, because he is twelve and he's already learned that bright is dangerous.\n\nHe said, \"I thought you were at your special program.\"\n\nI sat down across from him. He pushed half his rice over to my side of the plate without looking at it.\n\nI tried to figure out what I could say.",
+      "choices": [
+        { "label": "\"Tell him the truth — he can keep a secret.\"", "next": "t1.3a_truth" },
+        { "label": "\"Lie — say everything's fine.\"", "next": "t1.3a_lie" },
+        { "label": "\"Stay quiet, just sit with him.\"", "next": "t1.3a_silent" }
+      ]
+    },
+
+    "t1.3a_truth": {
+      "id": "t1.3a_truth",
+      "act": 1,
+      "image": "t1.3a_visit_bran.webp",
+      "text": "I told him.\n\nNot all of it. Not Quinn's file. Not the Eques's voice in the hallway. But the shape of it — that I was at the Thebes facility, that I hadn't chosen to be there, that he could not say a word to anyone — not at school, not to Mom, *especially* not to Mom, and not on his phone, not even by text, not even joking — until I told him otherwise.\n\nHe listened the way he listens when he's deciding whether something is real.\n\nThen he said, \"Okay.\"\n\nThat was all. *Okay.*\n\nI almost broke open right there. Twelve years old. *Okay.*\n\nI was back at the facility before training. Bran had eaten the rest of the rice himself.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t1.2", "activity": "t1.3a" },
+          "effects": {
+            "corruption": -1,
+            "relationships": { "bran": 2 },
+            "flags": { "mika_visited_bran_15": true, "bran_knows_secret": true }
+          }
+        }
+      ]
+    },
+
+    "t1.3a_lie": {
+      "id": "t1.3a_lie",
+      "act": 1,
+      "image": "t1.3a_visit_bran.webp",
+      "text": "I told him I was fine. I told him the program was hard but the food was good, which was a lie, and that I'd be home for visits, which I didn't know if was a lie. I told him to keep doing his fractions.\n\nI watched myself doing it. The way you watch a stranger order something at a restaurant.\n\nBran nodded along. He didn't believe me. He knew the rule about bright things.\n\nBut he wanted to. And so he let me.\n\nI left the apartment lighter than I came in. Which was the worst part — that lying to him made it easier to walk back past the cameras to the facility.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t1.2", "activity": "t1.3a" },
+          "effects": {
+            "corruption": 1,
+            "relationships": { "bran": 1 },
+            "flags": { "mika_visited_bran_15": true }
+          }
+        }
+      ]
+    },
+
+    "t1.3a_silent": {
+      "id": "t1.3a_silent",
+      "act": 1,
+      "image": "t1.3a_visit_bran.webp",
+      "text": "I didn't try to explain. I just sat with him.\n\nHe seemed to understand that explanations weren't on offer. He kept doing his fractions. I corrected one of them, the way I always had. He laughed at me a little for being a know-it-all, the way he always had.\n\nFor about ten minutes, in the middle of the worst week of my life, I was a regular older brother in a regular kitchen with a regular Tuesday afternoon.\n\nThen I left.\n\nHe didn't ask when I'd be back. I didn't tell him.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t1.2", "activity": "t1.3a" },
+          "effects": {
+            "relationships": { "bran": 1 },
+            "flags": { "mika_visited_bran_15": true }
+          }
+        }
+      ]
+    },
+
+    "t1.3b": {
+      "id": "t1.3b",
+      "act": 1,
+      "image": "t1.3b_records_room.webp",
+      "text": "The Skiritai records corridor was on the second floor. Thebes weren't allowed up there. The reasonable thing to do, on my first morning, was not to test that.\n\nI was not feeling reasonable.\n\nI walked up the stairs like I belonged. The biometric door at the top read someone else's badge — a Skiritai who'd left it active going in — and I slipped in behind her on the same scan. Nobody stopped me. Nobody was looking. I'd already noticed that most of the Eques *moved* like they were watching everything, but they weren't actually watching. They were performing a posture. There's a difference.\n\nThe records room had a glass door with a viewing window. Inside, two Skiritai stood at a workstation under three vertical monitors, talking about a case. I caught the word *file*. I caught the word *kid*. I caught the word *Quadrant*.\n\nI caught — I am almost sure — the word *Quinn*.\n\nI had to choose how close to get.",
+      "choices": [
+        { "label": "Risk being seen — get closer to hear more.", "next": "t1.3b_close" },
+        { "label": "Stay back, just listen.", "next": "t1.3b_safe" }
+      ]
+    },
+
+    "t1.3b_close": {
+      "id": "t1.3b_close",
+      "act": 1,
+      "image": "t1.3b_records_room.webp",
+      "text": "I pressed against the doorframe. I could hear better. I could hear *almost* enough.\n\n— *can't prove the intrusion was him —*\n— *option B then —*\n— *just clean it, scrub the metadata, close the file —*\n\nOne of them turned toward the door.\n\nI moved like I'd been walking past, head down, holding a clipboard I'd grabbed off a passing cart for exactly this reason. He looked at me through the glass. He had grey eyes and a small scar on his lip and he was filing my face away in whatever facial-recognition database lived behind his own eyes — and probably the one on the wall behind him, too.\n\nI kept walking. I made it to the stairs. My hands didn't shake until I was back in the bunkroom.\n\nI'd learned almost nothing. I'd been seen.\n\nI told myself it was worth it. *Almost* enough was something.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t1.2", "activity": "t1.3b" },
+          "effects": {
+            "corruption": 2,
+            "flags": { "mika_searched_quinn_15": true, "t1_almost_caught": true }
+          }
+        }
+      ]
+    },
+
+    "t1.3b_safe": {
+      "id": "t1.3b_safe",
+      "act": 1,
+      "image": "t1.3b_records_room.webp",
+      "text": "I stayed back. I caught fragments. *Can't prove. Option B. Scrub it.*\n\nI learned almost nothing.\n\nI told myself that almost nothing was better than something I would have paid for. It was the kind of sentence I would say to myself a lot, in the next four years.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t1.2", "activity": "t1.3b" },
+          "effects": {
+            "flags": { "mika_searched_quinn_15": true }
+          }
+        }
+      ]
+    },
+
+    "t1.3c": {
+      "id": "t1.3c",
+      "act": 1,
+      "image": "t1.3c_training.webp",
+      "text": "The gym was in the basement. Concrete walls, LED-strip lights, the smell of every gym that has ever been, and a wall-mounted screen looping body-mechanics videos with the sound off. Two senior recruits were on the bench when I came in. They watched.\n\nI did the warmups. I did them well. I had been a runner, before — the kind of skinny kid who could outpace bigger boys on a long enough course — and the body was still there, somewhere under the panic.\n\nThe senior at the door watched me through the whole thing. I didn't look at him. He had hard pale eyes and a burn scar that started under his jaw and went down into his collar. He was older than the recruits. The badge clipped to his collar had a small gold border I hadn't seen on anyone else's. I didn't know his name yet. I would, eventually.\n\nHe came over after I'd finished. He said, \"You're new.\"\n\nI said, \"Yes, sir.\"\n\nHe said, \"You're good. Don't be louder about it than you have to be.\"\n\nHe waited a beat. He wanted me to say something.",
+      "choices": [
+        { "label": "Thank him sincerely.", "next": "t1.3c_thank" },
+        { "label": "Brush it off.", "next": "t1.3c_brush" }
+      ]
+    },
+
+    "t1.3c_thank": {
+      "id": "t1.3c_thank",
+      "act": 1,
+      "image": "t1.3c_training.webp",
+      "text": "I said *thank you, sir*, the way I'd been raised to say it. I meant it.\n\nHe nodded once and turned away.\n\nI felt a thing I had not expected to feel. *Pride.* The hot, specific pride of being told you're good at the thing you didn't want to be good at.\n\nI went back to the warmup mat and did another set, and I could not tell, by the time I was done, whether I was working that hard for myself or for the man with the scar.\n\nI am not sure I knew the answer to that question, ever again.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t1.2", "activity": "t1.3c" },
+          "effects": {
+            "corruption": 3,
+            "relationships": { "jason": 1 },
+            "flags": { "mika_trained_hard_15": true }
+          }
+        }
+      ]
+    },
+
+    "t1.3c_brush": {
+      "id": "t1.3c_brush",
+      "act": 1,
+      "image": "t1.3c_training.webp",
+      "text": "I shrugged. I said, *yeah, I guess.*\n\nHe looked at me a second too long. Then he walked back to the bench.\n\nIt was the right move, I think. I had decided, on the drive in, that I was not going to be one of *those* recruits — the ones who wanted to be liked. The ones who got promoted because they smiled.\n\nI did one more set of warmups. The man with the scar didn't watch me anymore. The ceiling camera tracking me did.\n\nI felt nothing. That was good. *Nothing* was the goal.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t1.2", "activity": "t1.3c" },
+          "effects": {
+            "corruption": 1,
+            "flags": { "mika_trained_hard_15": true }
+          }
+        }
+      ]
+    },
+
+    "t1.4": {
+      "id": "t1.4",
+      "act": 1,
+      "image": "t1.4_meeting_kaden.webp",
+      "text": "Lunch was rice and a grey thing that was probably meat. The mess hall was loud. I was already learning that the loudness was a courtesy — the louder it was, the harder the audio-analytics on the ceiling mics had to work.\n\nA boy sat down across from me. He hadn't asked.\n\n\"Hi,\" he said. \"You're the kid from yesterday.\"\n\nI looked at him. Average height. Dark skin. Tight twists. Tired hazel eyes that weren't sleepy — they were *worn*, the way old furniture is worn. He was maybe my age. Maybe a year older. He was eating slowly and watching the room without seeming to.\n\n\"I'm Kaden,\" he said. \"Don't worry, I'm not friendly.\"\n\n\"Okay.\"\n\n\"I just wanted to see you up close. Word is you're smart. Word is they know you're smart.\"\n\nI said, \"Word is whatever, I guess.\"\n\nHe smiled, a little. The smile didn't reach the rest of his face. The rest of his face didn't move.\n\n\"Listen,\" he said. \"I'm not going to give you the speech. I'm going to give you one sentence. The mics don't just listen for words — they pattern-match cadence, vocabulary, how often you pause, who you sit next to twice in a row. If you ask the wrong questions, they'll flag you. If they flag you, you're done. Whatever you came here to fix — eat lunch first. You can fix it slower. It's allowed.\"\n\nHe went back to eating.\n\nI sat there with my fork in my hand.",
+      "choices": [
+        { "label": "Trust him a little — say more.", "next": "t1.4_trust" },
+        { "label": "Stay guarded.", "next": "t1.4_guarded" },
+        { "label": "Mock his cynicism.", "next": "t1.4_mock" }
+      ]
+    },
+
+    "t1.4_trust": {
+      "id": "t1.4_trust",
+      "act": 1,
+      "image": "t1.4_meeting_kaden.webp",
+      "text": "I said, \"Why are you telling me this?\"\n\nHe looked up. The tired eyes did a thing. Almost amused.\n\n\"Because you remind me of me. Six months ago. And I'd have done a lot for someone to sit down and tell me to eat lunch first.\"\n\nHe didn't say anything else. He finished his rice. He took his tray and left.\n\nI ate my lunch. Slowly. He had been right about that part.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t1.5",
+          "effects": { "relationships": { "kaden": 2 } }
+        }
+      ]
+    },
+
+    "t1.4_guarded": {
+      "id": "t1.4_guarded",
+      "act": 1,
+      "image": "t1.4_meeting_kaden.webp",
+      "text": "I said, \"Thanks for the advice.\"\n\nHe nodded like that was the answer he expected.\n\nHe finished his rice. He took his tray. He left.\n\nI ate my lunch. Slowly. Because he had been right, and because acknowledging it would have cost me something I wasn't sure I had to spend.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t1.5",
+          "effects": {
+            "corruption": 1,
+            "relationships": { "kaden": 1 }
+          }
+        }
+      ]
+    },
+
+    "t1.4_mock": {
+      "id": "t1.4_mock",
+      "act": 1,
+      "image": "t1.4_meeting_kaden.webp",
+      "text": "I said, \"Eat your rice, then. Some of us have plans.\"\n\nHe laughed. It was not a happy laugh. It was the laugh of somebody watching a slow car crash and being relieved that it wasn't his.\n\n\"Sure, hero,\" he said. \"Plans.\"\n\nHe took his tray. He left.\n\nI finished my lunch. Quickly. I told myself the speed was a discipline. It wasn't. It was that the room felt different now that he was gone, and not in a way I wanted to sit with.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t1.5",
+          "effects": {
+            "corruption": 2,
+            "relationships": { "kaden": -1 }
+          }
+        }
+      ]
+    },
+
+    "t1.5": {
+      "id": "t1.5",
+      "act": 1,
+      "image": "t1.5_morale_report.webp",
+      "text": "The supervising Skiritai's name was Officer Vell. He was the kind of man whose hands looked clean even when they weren't.\n\nHe put a tablet in front of me. The form on the screen was pre-loaded: a recruit's name, a Quadrant ID, a small dropdown with twelve risk categories. The category at the top, already highlighted, said LOW COHESION.\n\nThe name was *Talus Hadrik.*\n\nTalus had the bunk three down from mine. He'd told me that morning, while we were folding sheets, that his sister's wedding was next week and he was sad to miss it.\n\nVell put a stylus next to the tablet.\n\n\"Sign it,\" he said. \"Standard intake. Every new Thebes does one of these in the first week. You ID someone you think might struggle. The system helps them.\"\n\nI stared at the screen.\n\nI knew what *help* meant in this building. The system did not help. The system *processed*.\n\nVell said, \"It's a checkbox, Mika.\"\n\nI had not told him my first name.",
+      "conditionalText": [
+        {
+          "condition": { "flag": "t1_almost_caught" },
+          "append": "*He had grey eyes and a small scar on his lip. He'd seen me once already, that morning, walking past the records room with someone else's clipboard. He hadn't said anything about it. He didn't have to. His tablet probably already had me flagged.*"
+        }
+      ],
+      "choices": [
+        {
+          "label": "Sign it.",
+          "next": "t1.6",
+          "effects": {
+            "corruption": 8,
+            "flags": { "mika_signed_morale_report": true }
+          }
+        },
+        {
+          "label": "Sign it, but type a note in the comments field.",
+          "next": "t1.6",
+          "effects": {
+            "corruption": 5,
+            "flags": { "mika_signed_morale_report": true, "mika_thinks_hes_clever": true }
+          }
+        },
+        {
+          "label": "Refuse.",
+          "next": "t1.5_refuse",
+          "effects": {
+            "corruption": -3,
+            "flags": { "flagged_for_observation": true }
+          }
+        },
+        {
+          "label": "Report the order to a senior Eques.",
+          "next": "t1.5_report"
+        }
+      ]
+    },
+
+    "t1.5_refuse": {
+      "id": "t1.5_refuse",
+      "act": 1,
+      "image": "t1.5_refuse.webp",
+      "isEnding": true,
+      "endingTitle": "Ending #15-light: The Forgotten",
+      "text": "I said, \"No.\"\n\nI said it quietly. I said it like I'd been practicing.\n\nVell didn't react. He picked the tablet up. He locked the screen with his thumb. He looked at me for a long moment. Then he said, \"Okay.\"\n\nHe left the room.\n\nTwo days later I was reassigned to the laundry. Three weeks later I was reassigned to facility-cleaning duty in the East Quadrant satellite office. Within a month I was off the Eques roster entirely — discharged for \"failure to integrate,\" my biometric clearance downgraded to civilian.\n\nThey didn't kill me. That would have been a waste. They processed me into the uniformed labor pool in the East Quadrant, where I cleaned offices for the rest of my life. The cameras at every intersection knew me, but in the dull way the cameras knew everyone — not the specific way they had been about to know me.\n\nI was alive.\n\nQuinn was not.\n\nBran grew up. He never asked what happened. He understood there were things you didn't ask, things you certainly didn't search online.\n\nSometimes, late at night, I told myself that I had won. That the system hadn't gotten me. That refusing the form had kept me clean.\n\nI knew that wasn't true."
+    },
+
+    "t1.5_report": {
+      "id": "t1.5_report",
+      "act": 1,
+      "image": "t1.5_report.webp",
+      "isEnding": true,
+      "endingTitle": "Ending #7: Executed by the Council",
+      "text": "I said, \"I'd like to talk to your superior.\"\n\nVell smiled.\n\nIt was the only time I would ever see Vell smile, and the smile told me, before he said a word, that I had made a mistake of the kind you don't get to make twice. He was probably already messaging the senior on his tablet under the desk.\n\nThe senior Eques he took me to was already expecting me. The *report* I had wanted to file became, in his hands, a different kind of document — and the meeting room had no cameras, the kind of room you don't find on a floor plan.\n\nI didn't make it through the night.\n\nThe story they told Bran was that I had died honorably in a training accident. The notification came as a text with a press-release attachment.\n\nIt was the most flattering lie they ever told about me."
+    },
+
+    "t1.6": {
+      "id": "t1.6",
+      "act": 1,
+      "image": "t1.6_quinns_file.webp",
+      "memory": true,
+      "text": "I signed the form. Vell took the tablet. He didn't say anything else.\n\nI sat at the desk after he left, alone, and I was suddenly fifteen years old in a different hallway, two weeks before. I had been walking past a half-open door at the public library — a building the Council had quietly bought and turned into a regional records substation, although they had not changed the sign on the outside. I had been looking through the door without meaning to. I had been seeing Quinn's face on a monitor. I had been seeing the case file open beside it — *Q. Reilan, intrusion attempt, pending* — and the Eques at the workstation turning his head and seeing me.\n\nThe boy I'd been, in that hallway, had thought there was still a chance the world made sense.\n\nI was looking at him now from across two weeks and one signature.\n\nHe looked very small.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t1.7",
+          "effects": {
+            "corruption": 2,
+            "mikaSelfAware": 1
+          }
+        }
+      ]
+    },
+
+    "t1.7": {
+      "id": "t1.7",
+      "act": 1,
+      "image": "t1.7_promotion_skiritai.webp",
+      "text": "Six months passed. Then four more.\n\nThe work was not as bad as I'd feared. Some of it was real labor — moving crates at the central logistics yard, cleaning offices in administrative buildings, the kind of work my mother used to do. Some of it was forms. The forms were the hard part. Every few weeks, another tablet, another checkbox, another name. I got faster at it. I told myself this was strategy — that the faster I got, the less the system flagged me, and the higher I rose, the more I could fix.\n\nI told myself a lot of things, that year.\n\nThe promotion came in the spring. Twenty of us in the courtyard, the basketball line still faded under our boots. They called my name. They handed me a black Skiritai uniform with silver shoulder insignia. They reissued my badge — same chip, new clearance — and they handed me a service pistol I didn't yet know how to use.\n\nI was sixteen.\n\nMy mother had not been told. Bran did not know. Quinn was still in a holding facility I had not yet found.\n\nI stood up straight. I let them put the insignia on. I looked, for a moment, at the senior who had watched me train. The one with the scar. He was at the back of the courtyard. He nodded, once, like he'd been expecting this for months.\n\nI didn't know his name yet.\n\nHis name was Jason.",
+      "choices": [
+        { "label": "Continue", "next": "t2.1", "isContinue": true }
+      ]
+    },
+
+    "t2.1": {
+      "id": "t2.1",
+      "act": 2,
+      "image": "t2.1_promotion_meet_sophie.webp",
+      "text": "The Skiritai induction was held in a small plaza inside the Capitol wall, which I had now passed through so many times the biometric gate didn't even slow down for me anymore. Eighteen of us. Black uniforms. Silver insignia. A drone hovered overhead recording the ceremony for the Council's internal feed.\n\nThe girl beside me was laughing.\n\nShe was laughing at something a senior had said while he was pinning her insignia, and the laugh was loud and unselfconscious and it had the particular quality of a laugh that had never been made to be quiet. I had grown up in apartments where laughter was something you kept under a hand because the walls were thin and the building had been wired. This laughter belonged in rooms with high ceilings and no microphones.\n\nShe was tall. Pale. Long platinum hair in a high braid. The uniform fit her like it had been tailored — which, looking at the cut, it had been.\n\nShe caught me staring and didn't pretend not to notice. \"You look terrified,\" she said.\n\n\"I'm fine.\"\n\n\"You look terrified, but in a polite way. I'm Sophie.\"\n\n\"Mika.\"\n\n\"Mika what?\"\n\n\"Just Mika.\"\n\nShe looked at me a second too long, then smiled like she'd decided something. \"Okay, Just Mika. My father's a Hetairoi, so I'm going to be the worst person you've ever met, and I'm telling you that up front so you don't have to figure it out.\"\n\nI almost laughed.\n\nIt was the first time in a year that something had almost gotten a real laugh out of me.",
+      "choices": [
+        { "label": "Match her warmth — make a friend.", "next": "t2.1_warm" },
+        { "label": "Be polite but distant.", "next": "t2.1_distant" }
+      ]
+    },
+
+    "t2.1_warm": {
+      "id": "t2.1_warm",
+      "act": 2,
+      "image": "t2.1_promotion_meet_sophie.webp",
+      "text": "I let myself smile back. \"I'll keep that in mind.\"\n\n\"You should. I'll be insufferable about it.\"\n\nThe senior moved down the line and reached me, pinned the insignia on my collar, said the thing they said. *Service is privilege. Privilege is service.* I didn't hear it. Sophie was muttering something under her breath about how the man's hairline had a comb-over she couldn't unsee.\n\nI was going to have a friend in this place.\n\nI had not been planning on that.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t2.2",
+          "effects": {
+            "corruption": 1,
+            "relationships": { "sophie": 3 }
+          }
+        }
+      ]
+    },
+
+    "t2.1_distant": {
+      "id": "t2.1_distant",
+      "act": 2,
+      "image": "t2.1_promotion_meet_sophie.webp",
+      "text": "\"Good to know,\" I said. I gave her a small smile. The kind I'd been practicing on senior officers.\n\nShe blinked. The smile she'd been wearing didn't go anywhere — she kept it intact — but a different intelligence came in behind her eyes. The intelligence of a girl who had been raised to read rooms and was reading me right now and finding me interesting in a way she hadn't been before.\n\n\"Hm,\" she said.\n\nShe didn't try to talk to me again that day.\n\nShe would, later. But she'd taken a measurement, and the measurement would be there forever.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t2.2",
+          "effects": {
+            "relationships": { "sophie": 1 }
+          }
+        }
+      ]
+    },
+
+    "t2.2": {
+      "id": "t2.2",
+      "act": 2,
+      "image": "t2.2_skiritai_hub.webp",
+      "hub": true,
+      "text": "The Skiritai station was a different building than the Thebes facility — newer, glass-fronted, three stories of polished concrete and steel with the Council's geometric crest backlit above the entrance. The locker room had a window that looked out over a section of the Capitol I had never been able to see — high-end residential, retail under awnings, citizens who walked like the cameras weren't there because for them they weren't.\n\nA wall in the duty room cycled live feeds from a hundred surveillance points across the Capitol. We were given a lot more access now, which meant a lot more rope.\n\nI had three things I was thinking about.\n\nSophie was in the next row of lockers, telling somebody a story about a horse. I could spend more time with her. There was no harm in it. (*There was harm in it. I knew there was harm in it. I told myself there wasn't.*)\n\nI had Skiritai-level access to the case management system now. Not full access — that was Achaean — but enough to surface Quinn's file if I was careful with the audit logs. I could spend an evening with my head in the records and learn something real.\n\nAnd I hadn't seen Niko in a year. He was still in the old neighborhood. Last I'd heard, he was driving a delivery scooter for a bakery and posting opinions about the Council to small encrypted forums nobody had asked him to post on.\n\nThree things. A month off the duty rotation. I had to choose.",
+      "choices": [
+        { "label": "Build the friendship with Sophie.", "next": "t2.3a" },
+        { "label": "Use Skiritai access to investigate Quinn.", "next": "t2.3b" },
+        { "label": "Risk visiting Niko in the old neighborhood.", "next": "t2.3c" },
+        { "label": "Continue.", "next": "t2.4", "isContinue": true }
+      ]
+    },
+
+    "t2.3a": {
+      "id": "t2.3a",
+      "act": 2,
+      "image": "t2.3a_sophie_training.webp",
+      "text": "She was in the gym every morning at six. So was I. We had not planned this. It happened the way friendship happens between two people who are bad at admitting they want it.\n\nWe trained. We sparred. She was stronger than me and I was faster than her, and we landed in a rhythm where neither of us could win cleanly, and we both, for the first time in our lives, found it pleasant to lose to someone.\n\nShe told me about her family. Her father was on the Council — *the food and resources committee*, she said, like she was apologizing for it being that one and not a more glamorous one. Her mother had died when she was nine. She had three older brothers, all of them in uniformed services somewhere. Her father had wanted a fourth son. He'd gotten Sophie instead. *I think it's worked out for him*, she said.\n\nShe didn't ask about my family. Not for two weeks. When she finally did, she did it the right way — at the end of a sparring session, both of us flat on our backs on the mat, breathing hard, looking up at the camera in the corner of the ceiling.\n\n\"What's your family like, Just Mika?\"\n\nI had practiced an answer. I had several practiced answers. I had a whole rotation.\n\nI had to choose which version of myself to give her.",
+      "choices": [
+        { "label": "Tell her something real.", "next": "t2.3a_real" },
+        { "label": "Give her the version she wants.", "next": "t2.3a_perform" }
+      ]
+    },
+
+    "t2.3a_real": {
+      "id": "t2.3a_real",
+      "act": 2,
+      "image": "t2.3a_sophie_training.webp",
+      "text": "I told her about Bran.\n\nNot the rest of it — not Quinn, not the ultimatum, not the mother who didn't know I was an Eques and wouldn't be told until she was. But Bran I gave her. I told her about the fractions on the screen. I told her about the rice he pushed across the table. I told her about the way he'd learned that bright was dangerous.\n\nShe didn't say anything for a long time.\n\nThen she said, \"You should have him visit. The Eques have family weekends. They're horrible. Everyone pretends. But you should do it anyway.\"\n\nI told her I'd think about it.\n\nI knew I wouldn't. The system would learn his face, his gait, his thumbprint. Once he'd been logged into an Eques facility he was in the database forever.\n\nBut I'd given her something true, and she'd held it carefully, and she'd given me something back: the knowledge that she could hold things.\n\nIt was the kind of thing I would not have understood was valuable, a year before.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t2.2", "activity": "t2.3a" },
+          "effects": {
+            "relationships": { "sophie": 3 },
+            "flags": { "mika_close_to_sophie": true }
+          }
+        }
+      ]
+    },
+
+    "t2.3a_perform": {
+      "id": "t2.3a_perform",
+      "act": 2,
+      "image": "t2.3a_sophie_training.webp",
+      "text": "I told her my parents were dead.\n\nThey weren't. My mother was alive in a fourth-floor apartment in the East Quadrant, working two jobs, and she was, to my knowledge, still asking my brother every Sunday whether he had heard from me.\n\nBut the lie was easier than the explanation. It was also the lie a girl like Sophie expected. *Tragic backstory, scrappy origin, climbed his way up*, that whole register. She accepted it without question. She said she was sorry.\n\nI said it was a long time ago. I let my voice do the small thing that voices do when they want to be left alone about a topic.\n\nShe let me.\n\nI felt nothing. That was the goal.\n\nI noticed I had now used the phrase *that was the goal* twice in my own head about my own behavior, in the last year, and that the second time it had been easier than the first.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t2.2", "activity": "t2.3a" },
+          "effects": {
+            "corruption": 3,
+            "relationships": { "sophie": 2 },
+            "flags": { "mika_close_to_sophie": true }
+          }
+        }
+      ]
+    },
+
+    "t2.3b": {
+      "id": "t2.3b",
+      "act": 2,
+      "image": "t2.3b_records_skiritai.webp",
+      "text": "Skiritai access wasn't full access. I couldn't pull a sealed file or close one or move one. I could *read* most things, with restrictions, and I could read them after midnight, when the audit-log review was on a different shift's rotation and the duty officer was usually asleep at her workstation.\n\nIt took me four nights to find Quinn.\n\nHe was alive. He was in a low-security holding facility in the third Quadrant — a converted shipping warehouse the Council didn't list on any public-facing infrastructure map. His case had been *open and pending review* for fifteen months — meaning the Council had not decided what to do with him and was in no hurry. They were waiting to see if the underground he'd allegedly tried to help — a small group that had been routing data around the Council's mandatory ID gateways — showed any sign of being worth the leverage. If it didn't, they'd close his file. *Close* was a word I'd learned, in this place, had two meanings.\n\nI read his physical description. He was thinner. They had shaved his head. The intake photo showed him without his glasses, which somehow felt worse than the head.\n\nI had two options.",
+      "choices": [
+        { "label": "Try to pass him a message.", "next": "t2.3b_message" },
+        { "label": "Note the file's location, leave it alone, save it for later.", "next": "t2.3b_note" }
+      ]
+    },
+
+    "t2.3b_message": {
+      "id": "t2.3b_message",
+      "act": 2,
+      "image": "t2.3b_records_skiritai.webp",
+      "text": "I used an internal Eques courier line. I encrypted it badly on purpose — a low-grade encryption that would look like an ex-girlfriend's idiot kid brother had sent it, not a Skiritai. The message was three words.\n\n*Still here. Holding.*\n\nHe would know who it was. He'd been the only person I'd ever told about my private notation system, the one I used for calculus homework. Three words in that notation, on a low-grade encryption layer, was unmistakably me.\n\nIt was also unmistakably *traceable*, if anyone in the Council's analytics pipeline cared to look. The workstation was logged to my badge. The keystroke timing was logged. The send was logged.\n\nI told myself the risk was acceptable.\n\nI told myself the risk was acceptable a lot, that year. The phrase had a kind of warmth to it. *I told myself the risk was acceptable* meant: *I am the kind of person who weighs risks now.*",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t2.2", "activity": "t2.3b" },
+          "effects": {
+            "corruption": 5,
+            "flags": {
+              "mika_investigated_quinn_16": true,
+              "messaged_quinn": true,
+              "t2_quinn_message_traceable": true
+            }
+          }
+        }
+      ]
+    },
+
+    "t2.3b_note": {
+      "id": "t2.3b_note",
+      "act": 2,
+      "image": "t2.3b_records_skiritai.webp",
+      "text": "I memorized the file location. I closed the case viewer. I didn't even copy the case number — I trusted myself to remember it. I cleared my session log and walked out.\n\nThere was nothing I could do with Skiritai clearance. To pull him out of holding, or to close the file in a way that helped him, I'd need Achaean clearance. And Achaeans signed kill orders, which meant by the time I could help him, I would have done other things to get there.\n\nI noted, lying in my bunk that night, that this trade was beginning to make sense to me.\n\nI noted, also, that *making sense to me* was the kind of phrase a person uses when they are translating something terrible into a language they can use without flinching.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t2.2", "activity": "t2.3b" },
+          "effects": {
+            "corruption": 1,
+            "flags": { "mika_investigated_quinn_16": true }
+          }
+        }
+      ]
+    },
+
+    "t2.3c": {
+      "id": "t2.3c",
+      "act": 2,
+      "image": "t2.3c_niko.webp",
+      "text": "Niko picked the alley. He did not invite me to the bakery and he did not come to the Capitol. He picked an alley three blocks from his apartment, at eleven at night — a blind spot between two camera arcs that I had checked on the Skiritai mapping tool before I'd agreed — and when he saw me coming he didn't smile.\n\nHe was taller than I remembered. Or I'd gotten shorter. Both, probably.\n\n\"You came.\"\n\n\"You said to come.\"\n\n\"I said it like a test. Some Eques wouldn't bother.\"\n\nI didn't have an answer to that. He hadn't said it like a test. We both knew he hadn't said it like a test. He was performing the new shape of our friendship in real time and I was supposed to figure it out.\n\nHe said, \"Where's Quinn?\"\n\nThat was the whole conversation. He had not asked how I was. He had not asked about training. He had not asked, the way I had thought he might, whether I was okay. He'd asked one thing.\n\nI had to choose what to say.",
+      "choices": [
+        { "label": "Lie. Smoothly.", "next": "t2.3c_lie" },
+        { "label": "Partial truth — Quinn's alive, that's all you know.", "next": "t2.3c_partial" },
+        { "label": "The whole truth — beg him to keep quiet.", "next": "t2.3c_truth" }
+      ]
+    },
+
+    "t2.3c_lie": {
+      "id": "t2.3c_lie",
+      "act": 2,
+      "image": "t2.3c_niko.webp",
+      "text": "\"I don't know,\" I said. \"I haven't heard. I can't ask. They watch us.\"\n\nHe looked at me for a long time.\n\n\"Mika,\" he said. \"When did you get good at lying?\"\n\nI didn't answer.\n\nHe nodded slowly, like the answer to that question was the answer to a different question, and the different question was the only one he'd really come to ask.\n\nHe said, \"Get out of my city.\"\n\nHe left first. I waited five minutes, then walked back, varying my route to avoid the camera I'd entered through.\n\nI was already composing, in my head, the next three lies I would have to tell him if he ever spoke to me again.\n\nI noticed, walking, that I was good at it. I noticed I felt nothing about being good at it. I noticed that *noticing nothing* had become something I noticed.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t2.2", "activity": "t2.3c" },
+          "effects": {
+            "corruption": 5,
+            "relationships": { "niko": -2 }
+          }
+        }
+      ]
+    },
+
+    "t2.3c_partial": {
+      "id": "t2.3c_partial",
+      "act": 2,
+      "image": "t2.3c_niko.webp",
+      "text": "\"He's alive,\" I said. \"Last I knew. That's all I have.\"\n\n\"Where?\"\n\n\"I can't say.\"\n\n\"Can't, or won't?\"\n\n\"Both.\"\n\nHe waited. He wanted more. I didn't have more to give him without giving him too much. I held his eye and let the silence do what silence does between people who have known each other a long time, which is, sometimes, more honest than words.\n\nHe nodded, finally. \"Okay.\"\n\nHe said it the way Bran had said it, a year before, at the kitchen table. *Okay.* The same word. The same disappointment, dressed in patience.\n\nHe left.\n\nI noticed, as he walked away, that my hands were not shaking. I would have expected my hands to be shaking.\n\nThat was new.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t2.2", "activity": "t2.3c" },
+          "effects": {
+            "corruption": 2,
+            "relationships": { "niko": 1 }
+          }
+        }
+      ]
+    },
+
+    "t2.3c_truth": {
+      "id": "t2.3c_truth",
+      "act": 2,
+      "image": "t2.3c_niko.webp",
+      "text": "I told him.\n\nAll of it. The library hallway. The file. The Eques who caught me. The ultimatum. The facility. The morale report on a tablet. Quinn alive in a third-Quadrant warehouse, head shaved, file open and pending. The whole thing in twelve minutes, in a camera blind spot, while a stray cat watched us from the lid of a dumpster.\n\nWhen I was done he didn't say anything for a long time.\n\nThen he said, \"You should have told me a year ago.\"\n\n\"I couldn't.\"\n\n\"You could. You decided not to. There's a difference.\"\n\nI didn't have an answer.\n\nHe said, \"Don't come back here. Don't write. Don't visit. If they ever assign you to me, do it cleanly.\"\n\nHe left.\n\nI stood in the alley for a long time. The cat eventually got tired of watching me and went into the dumpster.\n\nI noticed, walking back, that the truth had not made me feel cleaner. The truth had made me feel like a person who had told the truth for the wrong reasons — because keeping the secret was finally heavier than I wanted to carry.\n\nThat was a different kind of weakness. I made a note of it.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t2.2", "activity": "t2.3c" },
+          "effects": {
+            "relationships": { "niko": 3 },
+            "flags": { "niko_knows_truth": true }
+          }
+        }
+      ]
+    },
+
+    "t2.4": {
+      "id": "t2.4",
+      "act": 2,
+      "image": "t2.4_detention.webp",
+      "text": "The man's name was Andrei Kos. He was forty-three. He was a high school chemistry teacher.\n\nHe had been flagged by the Council's predictive system for *associative dissent* — meaning he had eaten dinner three times in the last six months with a man who had been flagged for *direct dissent*. The direct dissenter, as far as I could tell from the case file on my tablet, had once written an opinion piece about Council water policy. The opinion piece had never even cleared the moderation queue.\n\nWe took Kos at his apartment, at nine in the evening, in front of his children. He had two of them. A daughter, ten. A son, six. They were in their pajamas. The son had Eques stickers on his pajamas. He pointed at our uniforms and said, *\"They're like in my book,\"* and the daughter looked at her father's face and started to cry before anything had happened, because she was ten and she had figured out, faster than her brother, what kind of book it was actually like.\n\nKos was quiet at first. Then, when the senior Skiritai started reading the warrant off his tablet, he was less quiet. He begged. He did the begging cleanly — no dignity stuff, no *I demand a lawyer*, no *you're making a mistake*. Just *please. Please. The kids.*\n\nI had to put a hand on his shoulder. Then both hands. Then my arms around him, when he tried to drop to the floor. The body camera clipped to my collar recorded all of it. The audio analysis would parse it for the threat-assessment review in the morning.\n\nHe weighed a lot less than I'd expected.\n\nI kept my face arranged in the shape we'd been told to keep our faces in. Calm. Professional. The shape was easy. I had been practicing.\n\nIn the transport van, on the way back, the senior Skiritai looked at me and said, \"First one?\"\n\nI said, \"Yes, sir.\"\n\nHe said, \"You'll get used to it.\"\n\nI noticed he had used the exact phrase the Eques in the car had not used, two years before, when I was the one in the back seat.\n\nI noticed I was now on the other side of that sentence.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t2.5",
+          "isContinue": true,
+          "effects": { "corruption": 5 }
+        }
+      ]
+    },
+
+    "t2.5": {
+      "id": "t2.5",
+      "act": 2,
+      "image": "t2.5_climax.webp",
+      "text": "A week later. A biometric checkpoint at the south end of the Capitol wall. A young man, my age, ran.\n\nHe shouldn't have run. The checkpoint was a routine secondary screening — facial-rec had returned an inconclusive match for someone the system was looking for, which was an everyday occurrence, and the worst that happens to a probable is a forty-minute interview and then they reissue your day-pass. He'd run anyway. People do, sometimes. The body does what the body does.\n\nThe senior Skiritai — the same one who'd told me I'd get used to it — yelled my name through the earpiece comms.\n\n\"Mika! Drop him!\"\n\nThe runner was forty meters out and accelerating. The drone overhead was already adjusting its trajectory to follow.\n\nI had a service rifle. It was not a difficult shot.",
+      "conditionalText": [
+        {
+          "condition": {
+            "all": [
+              { "survived": "quinn" },
+              { "relationship": "quinn", "gte": 5 }
+            ]
+          },
+          "append": "*For one second, looking at the back of him as he ran — same height, same lankiness, same way the elbows pumped — I thought he was Quinn. He wasn't. Quinn was three Quadrants away in a warehouse with a shaved head. But the second was there, and it was a long second, and it stained everything that came after it.*"
+        }
+      ],
+      "choices": [
+        { "label": "Fire to kill.", "next": "t2.5_kill" },
+        { "label": "Fire to wound.", "next": "t2.5_wound" },
+        { "label": "Refuse.", "next": "t2.5_refuse" },
+        { "label": "Shoot the CO.", "next": "t2.5_shoot_co" }
+      ]
+    },
+
+    "t2.5_kill": {
+      "id": "t2.5_kill",
+      "act": 2,
+      "image": "t2.5_climax.webp",
+      "text": "I fired once.\n\nHe went down at thirty-eight meters. He was dead before he hit the ground, which I knew because I'd taken the shot at the base of the skull and that is the kind of shot that does not leave room for interpretation.\n\nThe CO put a hand on my shoulder.\n\n\"Clean,\" he said. \"Good.\"\n\nWe walked over. The drone was already photographing the body for the incident report. The runner had been carrying nothing. Nothing in his pockets, nothing in his hands, nothing in the small pack on his back except a sandwich and a paperback book whose title I didn't recognize. The Council's predictive system had returned an inconclusive match because he had searched the term *unauthorized assembly* on a public library terminal three weeks before. He had run because he had panicked. He was nineteen years old.\n\nCleanup arrived in an unmarked van. We filed the report from the field — the CO did the typing, I did the body-cam upload. The CO walked me back to the station and bought me dinner from the staff cafeteria, which was the protocol — first kills got dinner, the way first periods got chocolate, in some other version of childhood that wasn't mine.\n\nI ate the dinner. I slept that night. I was surprised at how well I slept.\n\nThat was the worst part.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t2.6",
+          "effects": {
+            "corruption": 15,
+            "madness": 5,
+            "flags": { "mika_fired_on_dissenter": true }
+          }
+        }
+      ]
+    },
+
+    "t2.5_wound": {
+      "id": "t2.5_wound",
+      "act": 2,
+      "image": "t2.5_climax.webp",
+      "text": "I aimed low. I hit him in the left thigh.\n\nHe went down screaming. He kept trying to crawl. He didn't get far.\n\nThe CO was furious. He shouted at me — *clean shot, Mika, clean shot, that was a clean shot* — and then he walked over and finished the job himself, two rounds, very fast, and the runner stopped crawling. The drone overhead got both kills on video.\n\nThe CO came back. He didn't look at me.\n\nHe said, \"If you're going to be squeamish, be squeamish at home. Not on shift. Not on the body cam.\"\n\nHe didn't write me up. He didn't escalate. He told me, at the end of the shift, that he understood — *first one's hard* — and he hoped I'd be more decisive next time.\n\nI walked back to the station alone. I told myself, on the walk, that I had not killed the boy. The CO had killed the boy. I had only wounded him. There was a moral difference. There had to be.\n\nThe moral difference would last me about four months.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t2.6",
+          "effects": {
+            "corruption": 10,
+            "madness": 3,
+            "flags": {
+              "mika_fired_on_dissenter": true,
+              "mika_thinks_hes_better": true
+            }
+          }
+        }
+      ]
+    },
+
+    "t2.5_refuse": {
+      "id": "t2.5_refuse",
+      "act": 2,
+      "image": "t2.5_refuse.webp",
+      "isEnding": true,
+      "endingTitle": "Ending #7: Executed by the Council (field variant)",
+      "text": "I lowered the rifle.\n\nThe CO was twelve feet to my right. He saw it. Everyone saw it. The drone overhead saw it. The body cam clipped to my collar saw it.\n\nHe didn't yell again. He drew his sidearm, unhurried, the way you draw a sidearm when you have absolutely decided what comes next. He shot me.\n\nOnce, in the stomach. I went down.\n\nHe stood over me. He shot me twice more, both in the chest, and he said the thing he had to say for the incident report — *insubordination under fire, terminated in field* — and the runner got away in the meantime, which was the part that, lying on the asphalt, I was most pleased about.\n\nI had time, before everything went, to be pleased about it.\n\nIt was not a long time.\n\n*The runner — never identified, the drone footage of his face inconclusive — escaped into the third Quadrant. He kept running. He did not stop running for a long time. Bran would be told you died honorably. Quinn was still alive in the warehouse. He would be alive for nine more months. After that, the file closed itself.*"
+    },
+
+    "t2.5_shoot_co": {
+      "id": "t2.5_shoot_co",
+      "act": 2,
+      "image": "t2.5_shoot_co.webp",
+      "isEnding": true,
+      "endingTitle": "Ending #7: Executed by the Council (defiance variant)",
+      "text": "I turned and shot the CO.\n\nI don't fully remember the decision. I remember the body deciding before the mind did. I remember the rifle coming up to a different target than the one it had been aimed at. I remember the CO's expression, which was not surprise — it was something more like recognition. Like he had always thought it would be one of his recruits eventually.\n\nHe went down. The runner kept running, and made it past the drone's last clean capture.\n\nI had four minutes before the response unit arrived. I used them to disable my body camera and pull the GPS chip out of my badge, because I knew the system better now than I had a year ago.\n\nI made it three blocks before they cornered me.\n\nI don't remember most of what happened after that. I remember a doorway. I remember someone's hand on the back of my neck. I remember thinking, very clearly, *Quinn would have laughed at this.*\n\nI was wrong about most of my last thoughts. I was right about that one.\n\n*The story of a Skiritai who shot his own CO and let a probable escape was scrubbed from the official record but kept circulating on the encrypted forums in the third Quadrant for a year before it was forgotten. You became, briefly, a story. You never knew.*"
+    },
+
+    "t2.6": {
+      "id": "t2.6",
+      "act": 2,
+      "image": "t2.6_memory_walking.webp",
+      "memory": true,
+      "text": "I was twelve. Bran was nine.\n\nWe were walking home from school, and Bran was eating one of those pickled things from the corner stand, the ones Mom hated because they made his uniform smell. I was making fun of him about it. He was laughing in the way nine-year-olds laugh when they're trying to chew and laugh at the same time, badly.\n\nThe afternoon light was gold. The street was warm. There was a woman at the second-floor window of the green building hanging laundry, and the laundry caught the light, and a dog crossed in front of us and Bran tried to pet it and it went past, and we got to the corner of our street and Bran said something about a cartoon he'd seen, and I said something dismissive about the cartoon, and he laughed at me for being dismissive about a cartoon I had not even watched, and we went inside, and that was the day.\n\nThat was the whole day.\n\nIt came back to me in the transport van after the shooting. The whole afternoon. In one piece. Like a photograph someone slid under a door.\n\nI sat in the van and I thought about the woman with the laundry, and I thought about the dog, and I thought about Bran trying to laugh and chew at the same time, and I did not cry, because I had stopped crying eight months ago, but I had a feeling in my chest like crying, which was perhaps a thing I would have to learn to live with.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t2.7",
+          "effects": { "madness": 2 }
+        }
+      ]
+    },
+
+    "t2.7": {
+      "id": "t2.7",
+      "act": 2,
+      "image": "t2.7_promotion_achaean.webp",
+      "text": "A year. Then most of another year.\n\nI will not bore us both with the year. There were more checkpoints. There were more reports. There were people I detained whose names I have not chosen to remember, although the system remembers them, in a database I now had partial access to. There were three more people I shot, two of whom died, and one of whom didn't, and the one who didn't was a woman in her fifties who I think about more often than the two who did.\n\nSophie and I trained. Sophie and I ate. Sophie and I became close in the slow particular way of people who have agreed not to talk about the work. We did not talk about the work. We did not have to. The work was something we both did and both were good at and neither of us, by the end of that year, was the same kind of person we'd been at the start.\n\nShe told me once, slightly drunk on Capitol-issue wine, that her father had said I was *promising*. She'd said it like she was warning me.\n\nI'd thanked her for the warning.\n\nThe promotion came in the fall. Achaean black-and-gold. The tailor had measured me a week before and the uniform fit. The service pistol I now knew how to use. The biometric clearance bumped two levels — Achaeans could move through doors that Skiritai couldn't see. There was a small ceremony. There was applause that didn't touch the walls.\n\nThe Achaean who would be my squad leader stepped out of the row at the back to shake my hand.\n\nHe had pale eyes and a burn scar that started under his jaw and went down into his collar.\n\nI had seen him before. Twice. Once in the gym, when I was fifteen. Once at the back of my Skiritai induction, watching me, nodding once.\n\nHe shook my hand. He held it a beat longer than necessary.\n\nHe said, \"Welcome. I'm Jason.\"\n\nI had been waiting two years to hear him say his name.\n\nI had not known I was waiting until I heard it.",
+      "choices": [
+        { "label": "Continue", "next": "t3.1", "isContinue": true }
+      ]
+    },
+
+    "t3.1": {
+      "id": "t3.1",
+      "act": 3,
+      "image": "t3.1_jasons_office.webp",
+      "text": "Jason's office was on the fourth floor of the Achaean wing, in a corner with two windows. The Capitol lights came in at a low angle in the evenings and made the whole room the color of old paper — which was strange, given how little paper was in the room. He had two armchairs. He had a kettle on a hot plate. He had a workstation with three monitors that he kept turned off when he was meeting with people. He had a bookshelf — actual physical books, which was rare anywhere in the Capitol and especially rare in an Eques's office — that I would later realize was curated, not for show, but with the precision of a man who had been thinking for a long time about what was on it. On the lowest shelf, in a worn leather binding, was a paperback copy of *Meditations*. He took it down on my first night.\n\n\"Read this,\" he said. \"The job is hard. This helps.\"\n\nHe poured me tea. Black tea, the kind that tasted like wood. He didn't ask if I wanted it.\n\n\"How's your family?\" he said.\n\nI had been expecting a debrief. I had been expecting strategy. I had been expecting the kind of opening conversation a senior officer has with his new subordinate. I had not been expecting *how's your family,* delivered like he'd known me twenty years.\n\nI was at the desk now. The man behind the desk was the man who had nodded at me from the back of two ceremonies. He had been watching me, in person and on the system, for two years.\n\nI had to choose how to answer.",
+      "choices": [
+        { "label": "Tell him about Bran. Be honest.", "next": "t3.1_open" },
+        { "label": "Deflect — politely.", "next": "t3.1_deflect" },
+        { "label": "Lie. Invent a tragic backstory.", "next": "t3.1_lie" }
+      ]
+    },
+
+    "t3.1_open": {
+      "id": "t3.1_open",
+      "act": 3,
+      "image": "t3.1_jasons_office.webp",
+      "text": "I told him about Bran.\n\nI told him the way I'd told Sophie — the fractions on the screen, the rice, the bright thing he was learning not to do. I didn't know why I was telling him. I had decided, on the way up the stairs, to be careful. Then I'd sat down and my mouth had done something else.\n\nHe listened the way he poured tea. Steady. Unhurried. As if listening were a discipline like marksmanship and he had been practicing it longer than I had been alive.\n\nWhen I was done he said, \"He sounds like a good kid.\"\n\n\"He is.\"\n\n\"Don't bring him here. Not for visits. Not for anything. Once he's badged into an Eques facility he's in the database forever. The kindest thing you can do for a sibling, in this work, is to keep them in a different version of your life.\"\n\nHe said it without any weight. The way you'd tell someone to wear a coat in the rain.\n\nI drank the tea. I knew, drinking it, that I had just given a man I did not know enough about my brother for him to find Bran in the public records system inside of forty seconds.\n\nI knew that. I drank the tea anyway.\n\nThat was a new kind of knowing.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t3.2",
+          "effects": { "relationships": { "jason": 3 } }
+        }
+      ]
+    },
+
+    "t3.1_deflect": {
+      "id": "t3.1_deflect",
+      "act": 3,
+      "image": "t3.1_jasons_office.webp",
+      "text": "\"They're well, sir.\"\n\nHe looked at me over the rim of his cup. The look had the particular kindness of a man who had asked a real question and been answered with a wall, and who had decided not to mind.\n\n\"Glad to hear it,\" he said.\n\nHe didn't ask again. He moved on. He talked, instead, about the work — the schedule, the squad, the kind of operations Achaeans ran. He was warm and clear and I was, against my better judgment, charmed.\n\nI noticed, walking back to my quarters, that I would have liked him to ask again.\n\nI noticed that I had wanted to be asked again.\n\nIt was a small thing. It worried me anyway.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t3.2",
+          "effects": {
+            "corruption": 1,
+            "relationships": { "jason": 1 }
+          }
+        }
+      ]
+    },
+
+    "t3.1_lie": {
+      "id": "t3.1_lie",
+      "act": 3,
+      "image": "t3.1_jasons_office.webp",
+      "text": "I gave him a tragic backstory.\n\nI had several. I rotated them with senior officers the way you rotate stories at parties. This one was the *parents-died-young* version, which I'd given to Sophie a year before — clean, simple, ends conversations.\n\nJason listened. He set his cup down. He waited a full beat after I was done.\n\nThen he said, \"Mika. I knew your father. He was a baker. He's still alive. He lives on the third floor of the green building on Levant Street. His unit number is 308. He buys bread flour from the wholesaler on Wednesdays. I was the one who pulled your file when the recruiting Eques flagged you.\"\n\nHe took a sip of tea.\n\n\"You don't have to tell me about your family,\" he said. \"But please don't lie to me about it. The records are right there. The lying is what I find difficult.\"\n\nI sat there.\n\nI had never, in my life, been more clearly outclassed by a man being kind to me.\n\nI would think, later, that this was the moment Jason had decided to make me into something. Not by punishing the lie. By correcting it gently and then drinking his tea. He was teaching me, in real time, how *he* did this work. The work being: knowing more than the other person, and being kind about it, and watching the other person change shape under the weight of being known.\n\nI would learn it. Of course I would learn it. He was a good teacher.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t3.2",
+          "effects": {
+            "corruption": 5,
+            "relationships": { "jason": 2 }
+          }
+        }
+      ]
+    },
+
+    "t3.2": {
+      "id": "t3.2",
+      "act": 3,
+      "image": "t3.2_achaean_hub.webp",
+      "hub": true,
+      "text": "I had my own office now. It was small. By the end of the first week, three things were waiting for my attention. Three things to do, on top of the actual work.\n\nThe first was a calendar invite. No subject line. Jason had said, on my way out of his office, that I was welcome any evening. *Evenings* was his word, said the way other people say *whenever*. He was offering. He was inviting. He was teaching.\n\nThe second was a sealed assignment file on my secure terminal, marked with a code I had been briefed to recognize. My first independent operation. My first kill.\n\nThe third was a hand-written note slipped under my door overnight. Physical paper, no digital trail. The handwriting was Kaden's. I had not seen Kaden in eight months.\n\nThree things. A month before the next promotion review. I had to choose how many I'd open.",
+      "choices": [
+        { "label": "Spend evenings with Jason.", "next": "t3.3a" },
+        { "label": "Open the assignment file.", "next": "t3.3b" },
+        { "label": "Read Kaden's note.", "next": "t3.3c" },
+        { "label": "Continue.", "next": "t3.4", "isContinue": true }
+      ]
+    },
+
+    "t3.3a": {
+      "id": "t3.3a",
+      "act": 3,
+      "image": "t3.3a_jason_walk.webp",
+      "text": "We walked, mostly. He wasn't a desk talker. He liked the high balcony on the east wing where you could see the city spread out below — the Quadrants in the distance, the wall, the surveillance towers, the lights of the third Quadrant where Quinn was still in a warehouse with a shaved head.\n\nHe talked about everything except the work, until he was ready to talk about the work.\n\nWhen he was ready, it was on the third walk. We were standing at the rail. He said, \"What do you think the Council is for, Mika?\"\n\nI had practiced answers. I had been practicing answers for two years.\n\nHe held up a hand before I started. \"I'm not asking what you think the right answer is. I'm asking what you actually think.\"\n\nI told him I thought it was for control.\n\n\"Control of what?\"\n\n\"Of people.\"\n\n\"That's a lazy answer. Control of *what about* people?\"\n\nI didn't have a fast answer.\n\nHe waited. Then: \"The Council exists to keep eight million people from killing each other. The thing it controls is the *appetite for chaos.* If you ever come to think the Council is the bad guy, ask yourself who keeps the bakery open. Ask yourself who makes sure the trains run. Ask yourself why your brother is alive.\"\n\n\"I used to think the way you think. I'm not insulting you. I'm telling you it's a phase. Most people grow out of it by twenty. The smart ones grow out of it earlier.\"\n\nThe drone above us made its slow circuit and continued past.",
+      "choices": [
+        { "label": "Argue with him.", "next": "t3.3a_argue" },
+        { "label": "Listen and let yourself agree.", "next": "t3.3a_agree" },
+        { "label": "Perform agreement, stay quietly opposed.", "next": "t3.3a_perform" }
+      ]
+    },
+
+    "t3.3a_argue": {
+      "id": "t3.3a_argue",
+      "act": 3,
+      "image": "t3.3a_jason_walk.webp",
+      "text": "I said, \"My brother is alive because my mother kept him alive. Not the Council. The Council just hasn't killed him yet.\"\n\nJason looked at me. He didn't get angry. He got *quieter*.\n\n\"That's a real answer,\" he said. \"You're going to be a problem.\"\n\n\"Sir?\"\n\n\"I mean that as a compliment. Mostly.\"\n\nHe left me at the rail. He went back inside.\n\nI noticed I was glad I had argued. I noticed that he had let me argue, and that he had walked away looking pleased. I noticed, in other words, that I had won the argument and that I had also, somehow, lost.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t3.2", "activity": "t3.3a" },
+          "effects": {
+            "corruption": -2,
+            "relationships": { "jason": 1 },
+            "flags": { "mika_understands_jason": true }
+          }
+        }
+      ]
+    },
+
+    "t3.3a_agree": {
+      "id": "t3.3a_agree",
+      "act": 3,
+      "image": "t3.3a_jason_walk.webp",
+      "text": "I said, \"I think you're right.\"\n\nI said it because, standing at the rail with him, I thought — for a few full seconds — that he *was* right. The bakery. The trains. The brother. He had laid it out and the lay-out was clean.\n\nI would not realize, until much later, that this had been the goal.\n\nJason smiled. A small, real smile. \"Good. The job is much easier when you let yourself be right.\"\n\nThe next morning I signed three forms before breakfast. I signed them without slowing down. I did not feel anything when I signed them.\n\nI told myself this was efficiency.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t3.2", "activity": "t3.3a" },
+          "effects": {
+            "corruption": 10,
+            "relationships": { "jason": 4 }
+          }
+        }
+      ]
+    },
+
+    "t3.3a_perform": {
+      "id": "t3.3a_perform",
+      "act": 3,
+      "image": "t3.3a_jason_walk.webp",
+      "text": "I said, \"I think you're right.\"\n\nI didn't think he was right. But the conversation was a test, and I had decided I would be the kind of subordinate who passed gentle tests.\n\nI said it well. I said it with the right hesitation. I said it like a smart kid trying to admit, against his pride, that an older man had a point.\n\nHe clapped me on the shoulder.\n\nHe was not stupid. There was a possibility — small but real — that he had heard exactly what I'd done and had clapped me on the shoulder anyway. Because performing the thing well was, in his world, sometimes good enough. The performance was the thing he was teaching.\n\nI would think about that, later. More than I wanted to.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t3.2", "activity": "t3.3a" },
+          "effects": {
+            "corruption": 5,
+            "relationships": { "jason": 3 },
+            "mikaSelfAware": 2,
+            "flags": { "mika_understands_jason": true }
+          }
+        }
+      ]
+    },
+
+    "t3.3b": {
+      "id": "t3.3b",
+      "act": 3,
+      "image": "t3.3b_assassination.webp",
+      "text": "The target was a forty-year-old man named Ennis Ardin. He taught literature at a high school in the second Quadrant. He had hosted three private discussion groups in the last year about Council policy. The Council's predictive system had flagged the gatherings as *pre-emergent dissident formation.* The flag had been upgraded to *active.* The active flag had landed on my desk.\n\nHe had a wife and a five-year-old daughter. They were sleeping in the next room.\n\nI stood outside his apartment door at three in the morning with a lockpick kit, a service pistol with a suppressor, and a Council key card. The corridor camera had been disabled remotely from my terminal. The corridor was empty.\n\nI had four options.",
+      "choices": [
+        { "label": "Clean kill — do it right, get out.", "next": "t3.3b_clean" },
+        { "label": "Messy kill — make it look like a robbery.", "next": "t3.3b_messy" },
+        { "label": "Fake the death — let him escape, file the report.", "next": "t3.3b_fake" },
+        { "label": "Refuse — abort the operation.", "next": "t3.3b_abort" }
+      ]
+    },
+
+    "t3.3b_clean": {
+      "id": "t3.3b_clean",
+      "act": 3,
+      "image": "t3.3b_assassination.webp",
+      "text": "I went in.\n\nHe was sleeping on his side. I checked the room. Nothing on the nightstand worth taking. I took two steps to the bed. I waited until he turned, and the turn put him face-up.\n\nThe shot was clean. The suppressor did its work.\n\nI was out of the building in eleven minutes. I re-enabled the corridor camera as I left.\n\nThe wife found him at six.\n\nI filed the report. *Target neutralized, no collateral.* Jason signed it without looking up. \"Good work.\"\n\nI slept four hours. In the morning I noticed I was not different. I had killed a man — the deliberate one, the planned one — and I had thought it would change me visibly.\n\nThe face in the mirror was the same.\n\nThat was the thing that worried me. Not the kill. The sameness.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t3.2", "activity": "t3.3b" },
+          "effects": {
+            "corruption": 15,
+            "madness": 3,
+            "flags": { "mika_first_assassination_clean": true }
+          }
+        }
+      ]
+    },
+
+    "t3.3b_messy": {
+      "id": "t3.3b_messy",
+      "act": 3,
+      "image": "t3.3b_assassination.webp",
+      "text": "I made it look like a break-in.\n\nA clean kill was a *Council* kill, and everyone in the second Quadrant would know. A robbery gone wrong was a story people could tell themselves. The Council preferred the clean version. Sometimes I preferred the other.\n\nI tossed the apartment. Broke a window. Took a watch and some cash. Left a knife in the doorframe. Shot him from across the room, twice.\n\nThe wife screamed long enough that the neighbors heard her before I was out.\n\nI filed the report. *Target encountered intruder during assigned window. Operation completed under cover of incident.*\n\nJason looked at me a long time after reading it. \"Why this way?\"\n\nI gave him the logic.\n\nHe said, \"Be careful with stories, Mika. Stories are how you start lying to yourself.\"\n\nHe signed the report. I didn't sleep that night.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t3.2", "activity": "t3.3b" },
+          "effects": {
+            "corruption": 12,
+            "madness": 8,
+            "flags": { "mika_first_assassination_messy": true }
+          }
+        }
+      ]
+    },
+
+    "t3.3b_fake": {
+      "id": "t3.3b_fake",
+      "act": 3,
+      "image": "t3.3b_assassination.webp",
+      "text": "I went in. I woke him up.\n\nI covered his mouth before he could shout. I held the suppressor at his temple. I leaned down, very close, and told him exactly what was going to happen.\n\nI would fire into the pillow next to his head. He would go limp. He would wait two full minutes. Then he would get up, take his daughter and his wife, leave through the back fire escape — the one with no camera coverage, I had checked — and never come back. He would not return. He would not write. He would not contact anyone he had hosted in his living room.\n\nHe nodded, as well as he could with my hand on his mouth.\n\nI fired into the pillow. Left through the front, slowly.\n\nI filed the report. *Target neutralized. No collateral.*\n\nThe wife and the daughter and Ennis Ardin were on a transport out of the Capitol by morning, riding under names I had generated using a Council ID terminal I shouldn't have had access to.\n\nJason signed the report. He didn't look at it twice.\n\nI had bought myself a thing. A man's life, and his daughter's, and his wife's. I had also bought myself a *secret* — the kind of secret that, in this work, would eventually get me killed if I was not careful.\n\nI decided I would be careful.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t3.2", "activity": "t3.3b" },
+          "effects": {
+            "corruption": 5,
+            "flags": { "mika_first_assassination_faked": true, "mika_thinks_hes_clever": true }
+          }
+        }
+      ]
+    },
+
+    "t3.3b_abort": {
+      "id": "t3.3b_abort",
+      "act": 3,
+      "image": "t3.3b_assassination.webp",
+      "text": "I didn't go in.\n\nI stood in the corridor. The lockpick was in my hand. The pistol was at my hip. I stood there for ninety seconds, until a movement light at the end of the hallway clicked on and clicked off, and then I left.\n\nI filed the report as *target's premises compromised — operational integrity insufficient — recommend reassignment.* Standard language. Plausible.\n\nJason read it across the desk. He didn't say anything for a long time.\n\nThen: \"Mika. The next assignment you receive, you will complete. If you don't, I will not protect you. I am protecting you now. That's why we're having this conversation. There won't be another.\"\n\nHe signed the report. He looked at me one more time before I left.\n\n\"I'm not angry. I'm disappointed. And disappointed is more dangerous, in this building, than angry. Find a way.\"\n\nI walked back to my office. I sat at the desk a long time.\n\nI noticed I was not relieved. I had refused — and I felt, on a physical level, *worse* than I had felt on the runner-with-the-sandwich morning.\n\nThat was new information. I filed it away.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t3.2", "activity": "t3.3b" },
+          "effects": {
+            "corruption": -3,
+            "relationships": { "jason": -3 },
+            "flags": { "flagged_disobedient": true }
+          }
+        }
+      ]
+    },
+
+    "t3.3c": {
+      "id": "t3.3c",
+      "act": 3,
+      "image": "t3.3c_kaden_plan.webp",
+      "text": "The note said an address and a time. The address was a Capitol bar I had never been to — quietly mapped on the internal Eques mapping tool as a known camera-blind-spot establishment. The time was eleven at night.\n\nKaden looked worse than I had expected.\n\nHe had been promoted to Achaean too. Same year. We had not crossed paths, because he had been assigned to a different branch — internal ops, the kind that handled Eques who had become problems for other Eques.\n\nHe was thinner. Hollow under the eyes. The boy from the mess hall had been *worn.* This man was *cracked.*\n\nBut the mind was sharp. The mind was, if anything, sharper.\n\nHe bought me a drink. He didn't drink one himself.\n\n\"I have a plan, Just Mika. I want to tell it to you. It's going to take five years. It's going to require both of us to stay alive, which is the unpleasant part. And it's going to put us, by the time we're twenty-two, in a position to kill a Hetairoi and replace them.\"\n\nThe smile didn't reach the rest of his face.\n\n\"Tell me you're listening.\"",
+      "choices": [
+        { "label": "Agree. Plan it together.", "next": "t3.3c_agree" },
+        { "label": "Push back. Talk him down.", "next": "t3.3c_resist" },
+        { "label": "Pretend to agree. Plan to use him.", "next": "t3.3c_use" }
+      ]
+    },
+
+    "t3.3c_agree": {
+      "id": "t3.3c_agree",
+      "act": 3,
+      "image": "t3.3c_kaden_plan.webp",
+      "text": "I said, \"I'm listening.\"\n\nHe told me the plan.\n\nIt was good. Startlingly good. It involved patience and patience and patience and then a single afternoon. Positioning ourselves in two specific Achaean tracks. Then two Agema seats. Then eligibility for a Hetairoi vacancy that would open between our twenty-second and twenty-third birthdays.\n\nThe Hetairoi who would die was a man named Tellis. Kaden had reasons. The reasons were not just pragmatic. They were also *personal* in a way I did not press him on, and would, later, regret not pressing him on.\n\nI said yes.\n\nI said yes for several reasons. One was that I wanted the seat. One was that I wanted Kaden to have something to live for. One was that I had not, until I sat across from him, realized how much I had missed having a friend who *understood* the work.\n\nWe shook on it. Walking back, I noticed I had just agreed to murder a Hetairoi.\n\nI noticed I was looking forward to it.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t3.2", "activity": "t3.3c" },
+          "effects": {
+            "corruption": 8,
+            "relationships": { "kaden": 3 },
+            "flags": { "kaden_conspiracy": true }
+          }
+        }
+      ]
+    },
+
+    "t3.3c_resist": {
+      "id": "t3.3c_resist",
+      "act": 3,
+      "image": "t3.3c_kaden_plan.webp",
+      "text": "I let him tell the plan. I listened to all of it.\n\nWhen he was done I said, \"Kaden. You haven't slept in a month.\"\n\n\"I sleep.\"\n\n\"You haven't slept *well* in a month.\"\n\nThe cracked eyes did a tired thing.\n\n\"Don't do this,\" he said. \"Don't be the friend who tries to save me.\"\n\n\"I'm not trying to save you. I'm trying to tell you the plan is a plan a person makes when they're not sleeping.\"\n\nWe sat in the bar another twenty minutes. I bought him food. He ate some of it. We talked about other things — old training jokes, a mutual instructor we had both disliked, the weather. The weather was a bad sign in itself.\n\nI walked him home. I made him take a glass of water. I sat with him until he fell asleep on the couch.\n\nI noticed *clean* was a feeling I had not had in some time and that I was suspicious of it.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t3.2", "activity": "t3.3c" },
+          "effects": { "relationships": { "kaden": 2 } }
+        }
+      ]
+    },
+
+    "t3.3c_use": {
+      "id": "t3.3c_use",
+      "act": 3,
+      "image": "t3.3c_kaden_plan.webp",
+      "text": "I said, \"Tell me everything.\"\n\nHe told me. The plan. The timeline. The Hetairoi. The names of the men he had been quietly building rapport with for two years. He told me with the particular clarity of a man who had been holding the plan in his head alone for too long.\n\nI listened. I asked good questions. The questions a partner would ask.\n\nI was not a partner.\n\nI was already, while he was talking, working out how to turn the plan to my own ends. He had named four officers in our cohort whose loyalties he believed he had secured. In the next month, I would quietly check on each of them. If any of them turned out to be more useful to me alone than to us together, I would adjust.\n\nI let him buy me dinner. I told him I was glad he'd brought it to me first.\n\nThat part wasn't a lie.\n\nI had a friend who had brought me a gift, and I was already, in my head, putting away the parts of the gift I would keep for myself.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t3.2", "activity": "t3.3c" },
+          "effects": {
+            "corruption": 12,
+            "madness": 5,
+            "relationships": { "kaden": 1 },
+            "flags": { "kaden_conspiracy": true, "mika_used_kaden": true }
+          }
+        }
+      ]
+    },
+
+    "t3.4": {
+      "id": "t3.4",
+      "act": 3,
+      "redirectIf": [
+        { "condition": { "flag": "messaged_quinn" }, "next": "t3.4_leverage" },
+        { "condition": { "flag": "mika_investigated_quinn_16" }, "next": "t3.4_alive" },
+        { "condition": { "flag": "mika_searched_quinn_15" }, "next": "t3.4_dead" }
+      ],
+      "redirectDefault": "t3.4_dead_shock"
+    },
+
+    "t3.4_leverage": {
+      "id": "t3.4_leverage",
+      "act": 3,
+      "image": "t3.4_quinn_news.webp",
+      "text": "A sealed file appeared in my secure terminal. The seal was Hetairoi-grade — they came down through Agema first, normally. This one came directly.\n\nInside was a digital photograph and a single page.\n\nThe photograph was Quinn. Older. Gaunt. They had shaved his head a long time ago and the hair had been growing back in patches.\n\nThe page read:\n\n*Achaean Mika.*\n\n*Subject Q. Reilan, file open and pending. Clearance to close has been delegated to your office, contingent on two conditions: 1) the file is closed in the Council's preferred direction, and 2) the file is closed by your hand.*\n\n*We are aware of the message you sent in your sixteenth year. We have made no record of it. We expect, in return, your continued cooperation.*\n\nIt was signed *L. Vespera.*\n\nI read it three times. The third time, I noticed my hands were not shaking.\n\nA year ago, my hands would have been shaking.\n\nI had been *seen* — fully seen, by Vespera, who had not yet met me — and the seeing had been, in its way, a kind of recruitment.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t3.5",
+          "effects": {
+            "corruption": 10,
+            "madness": 5,
+            "vesperaInterest": 3,
+            "survived": { "quinn": false },
+            "flags": { "quinn_used_as_leverage": true }
+          }
+        }
+      ]
+    },
+
+    "t3.4_alive": {
+      "id": "t3.4_alive",
+      "act": 3,
+      "image": "t3.4_quinn_news.webp",
+      "text": "A sealed file appeared in my secure terminal.\n\nInside was a digital photograph and a single page.\n\nQuinn. Older. Gaunt. Shaved head growing back in patches. His eyes were the same.\n\nThe page read:\n\n*File: Q. Reilan. Status: open, holding, third-Quadrant facility 14-B. No action required at this time. Distributed to your office for situational awareness.*\n\nHe was alive. He was still in the same facility. The file had moved to my level — not because I had asked, but because the system, having processed me up the ranks, was now sharing things with me that had previously been kept from me.\n\nI closed the file. I sat at my desk for a long time.\n\nI had, until this moment, told myself that I would help Quinn when I had the rank to help him. I now had something close to the rank. I did not, in fact, have anything resembling a *plan* to help him. I had a plan to *eventually* have a plan.\n\n*Eventually* had been a comfortable word for two years.",
+      "choices": [
+        { "label": "Continue", "next": "t3.5", "effects": { "madness": 3 } }
+      ]
+    },
+
+    "t3.4_dead": {
+      "id": "t3.4_dead",
+      "act": 3,
+      "image": "t3.4_quinn_news.webp",
+      "text": "A sealed file appeared in my secure terminal.\n\n*File: Q. Reilan. Status: CLOSED.*\n\n*Resolution date: 06-04 of the prior year.*\n\nHe had been dead for nine months.\n\nClosed. *Closed* was the word, and *closed* was the word I had learned, three years before, had two meanings. He had not been released. He had been killed quietly during one of the periodic file reviews, and no one had told me, because I was not — at that level of clearance — a person who needed to be told.\n\nI sat at the desk.\n\nI had told myself, for two years, that I would find him when I had the rank. The rank had now arrived. The boy was nine months gone.\n\nI noticed I was not crying. I noticed I had been ready to cry — the throat had done the small tightening — and that the tightening had not finished. The body had stopped halfway and waited to see what I would do.\n\nI did not do anything.\n\nThe body relaxed. It had learned what to expect from me.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t3.5",
+          "effects": {
+            "corruption": 2,
+            "madness": 5,
+            "survived": { "quinn": false }
+          }
+        }
+      ]
+    },
+
+    "t3.4_dead_shock": {
+      "id": "t3.4_dead_shock",
+      "act": 3,
+      "image": "t3.4_quinn_news.webp",
+      "text": "A sealed file appeared in my secure terminal. It was not unusual. Achaeans got these all day.\n\n*File: Q. Reilan. Status: CLOSED.*\n\n*Resolution date: 06-04 of the prior year.*\n\nI read the name three times before I understood whose file it was.\n\nI had not, in the year and a half since the morale report, allowed myself to think Quinn's full name. The full name — *Quinn Reilan* — felt, on the screen, like a stranger's.\n\nHe had been dead for nine months and I had not known. I had not searched. I had not investigated. I had told myself, for two years, that I would find him when I had the rank. The rank had now arrived. The boy was nine months gone, and I had not even bothered to look in time to know.\n\nI sat at the desk.\n\nThis time the body did cry. Briefly. Two minutes. I let it. Then I cleaned my face. Then I went to dinner.\n\nAt dinner I ate normally. I made conversation with two other Achaeans. I laughed at a joke.\n\nThe cry had been a release valve and the release valve had worked, and I would not cry again.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t3.5",
+          "effects": {
+            "corruption": 5,
+            "madness": 7,
+            "survived": { "quinn": false }
+          }
+        }
+      ]
+    },
+
+    "t3.5": {
+      "id": "t3.5",
+      "act": 3,
+      "image": "t3.5_memory_quinn_file.webp",
+      "memory": true,
+      "text": "I was fifteen.\n\nI was in the hallway, walking home from school, taking the wrong corridor on purpose, because I had told Quinn I'd meet him at the upper east stairs and the upper east stairs were a slightly longer route and I had the time.\n\nThe door was half-open. I looked through it because I am the kind of person who looks through doors. That has, perhaps, been the whole problem.\n\nI saw the screen. I saw Quinn's face. I saw the file.\n\nThe Eques was at the desk. He turned. His eyes met mine.\n\nI had remembered this moment many times. I had remembered it from inside my own body.\n\nThis time, sitting at my desk in my Achaean office, I was not in my own body. I was floating above the hallway. Looking down on the boy in the doorway.\n\nHe looked very small.\n\nThe Eques at the desk turned his head. I saw the Eques's face, this time, and the face was not the face I remembered. The face I remembered had been older, taller, harder. The face I was looking at now was younger. Approximately seventeen.\n\nI knew the face.\n\nIt was mine.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t3.6",
+          "effects": { "mikaSelfAware": 3 }
+        }
+      ]
+    },
+
+    "t3.6": {
+      "id": "t3.6",
+      "act": 3,
+      "image": "t3.6_kill_jason_setup.webp",
+      "text": "The intelligence came from Kaden, eventually.\n\nThe shape of it was this:\n\nThe Council had a triage process for flagged citizen files. The most serious went to Vespera and her inner circle. The trivial ones — literature teachers, pamphleteers, boys who had once searched the wrong term — went to a single Achaean who had been doing the work, by personal preference, for nine years.\n\nThe Achaean processed the trivial cases quietly. He kept them small, and quiet, and *clean.* Without him, the whole architecture of *minor* enforcement — the architecture that kept the Council looking less brutal than it was — would collapse upward, until the Council's daily work became so visibly cruel that even the people who tolerated it now would have to stop.\n\nThe Achaean was Jason.\n\nIf Jason died, the system did not have a replacement of his caliber. In three to five years, the architecture would crack. The cracks would force change.\n\nTo fix the city, I had to kill the kindest man I had ever met.\n\nI went to his office that night. He was reading. The kettle was on the hot plate.\n\nHe looked up when I came in. He saw the suppressor on my pistol. He did not look surprised.\n\nHe set the book down. \"Sit, Mika. Let's at least have the tea.\"",
+      "conditionalText": [
+        {
+          "condition": { "flag": "mika_understands_jason" },
+          "append": "*I had spent months arguing with him on the high balcony. I knew, in a way I had not known when I'd walked up the stairs, that there was nothing left to say.*"
+        }
+      ],
+      "choices": [
+        { "label": "Kill him cleanly. Make it quick.", "next": "t3.7a" },
+        { "label": "Strike before he speaks. Messy.", "next": "t3.7b" },
+        { "label": "Try one more time to convert him.", "next": "t3.7c" },
+        { "label": "Lower the gun.", "next": "t3.7d" },
+        {
+          "label": "Let Sophie do it. You tipped her off.",
+          "next": "t3.7e",
+          "condition": { "relationship": "sophie", "gte": 6 }
+        }
+      ]
+    },
+
+    "t3.7a": {
+      "id": "t3.7a",
+      "act": 3,
+      "image": "t3.7a_clean.webp",
+      "text": "I sat. We had the tea.\n\nHe did not try to talk me out of it. He drank his tea. He asked me, twice, about Bran. He asked me about Sophie. He asked, in the small careful voice he used for hard questions, whether I had been sleeping.\n\nI had been sleeping. I told him so.\n\n\"Good. The job doesn't go well otherwise.\"",
+      "conditionalText": [
+        {
+          "condition": { "relationship": "jason", "gte": 7 },
+          "append": "He said, \"I knew it would be you, eventually. I'm glad it was you. The other candidates would have made it ugly.\"\n\nI shot him once. Behind the ear. He went forward onto the desk, hand still loosely on his cup, and the cup did not even tip.\n\nThe quiet was the new shape of me."
+        },
+        {
+          "condition": { "not": { "relationship": "jason", "gte": 7 } },
+          "append": "He said, \"I'd like to ask one favor. Tell my sister it was quick. Don't tell her anything else.\"\n\nI told him I would.\n\nI shot him once. Behind the ear. He went forward onto the desk, hand still loosely on his cup, and the cup did not even tip.\n\nThe quiet was the new shape of me."
+        }
+      ],
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t3.8",
+          "effects": {
+            "corruption": 20,
+            "madness": 3,
+            "survived": { "jason": false },
+            "flags": { "killed_jason_clean": true }
+          }
+        }
+      ]
+    },
+
+    "t3.7b": {
+      "id": "t3.7b",
+      "act": 3,
+      "image": "t3.7b_messy.webp",
+      "text": "I didn't sit.\n\nI shot him before he was done with the sentence about the tea. The first shot was high and to the left. It hit the bookshelf. He moved — fast, faster than I had expected — and went for the alarm under the desk. The second shot caught him in the shoulder. He still reached. The third shot took him in the side of the neck.\n\nHe bled out in about ninety seconds. I watched.\n\nThe room was a mess. The report I would have to file would not be clean.\n\nI left the *Meditations* on the floor. I made it back to my quarters. I sat at my desk with my hands on the surface, and I noticed that they were shaking — not from horror, but from something more like *adrenaline.*\n\nThe shaking did not come with shame.\n\nI noticed the absence of the shame and I was not sure whether it was because I had been right about the necessity, or because something in me had been quietly closing for two years and had now finished closing.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t3.8",
+          "effects": {
+            "corruption": 25,
+            "madness": 10,
+            "survived": { "jason": false },
+            "flags": { "killed_jason_messy": true, "messy_evidence": true }
+          }
+        }
+      ]
+    },
+
+    "t3.7c": {
+      "id": "t3.7c",
+      "act": 3,
+      "image": "t3.6_kill_jason_setup.webp",
+      "text": "I sat. We had the tea.\n\nI told him what I had figured out. The triage. The architecture. The way his quiet work held up the whole charade. I asked him if he had ever considered that he was, in fact, the most *dangerous* man in the building.\n\nHe listened the way he always listened. He did not interrupt.\n\nWhen I was done he said, \"Yes. I've considered it.\"\n\nI waited.\n\n\"If I leave this office tonight, the city is worse by morning. The Council will not collapse. The Council will *escalate.* They will replace me clumsily. The clumsy replacement will land on people Vespera doesn't currently bother with. Your brother. Your friend Niko. I have been keeping the Council *small* for nine years. I am the only thing keeping the brutality from being twenty times what it is now.\"\n\nHe set down his cup. He looked at me with sorrow.\n\n\"You're going to kill me anyway. Aren't you.\"",
+      "choices": [
+        {
+          "label": "Kill him.",
+          "next": "t3.7a",
+          "effects": { "mikaSelfAware": 2 }
+        },
+        { "label": "Don't.", "next": "t3.7d" }
+      ]
+    },
+
+    "t3.7d": {
+      "id": "t3.7d",
+      "act": 3,
+      "image": "t3.7d_death.webp",
+      "isEnding": true,
+      "endingTitle": "Ending #6: Killed by Jason",
+      "text": "I lowered the gun.\n\nI tried to. The hand started the motion. The arm was almost halfway down, and I was already beginning to feel the relief of *not having done it,* when Jason's other hand came up from under the desk with the small black sidearm he had been carrying for nine years.\n\nHe was not surprised. He was sad.",
+      "conditionalText": [
+        {
+          "condition": { "flag": "mika_understands_jason" },
+          "append": "He said, \"We both knew this was where it was going. I'm proud of you, for the part where you tried.\"\n\nHe held my hand at the end."
+        },
+        {
+          "condition": { "not": { "flag": "mika_understands_jason" } },
+          "append": "He said, \"I'm going to tell them you came at me. I owe you that much.\"\n\nHe did not look at me as he said it. He was already drafting the report in his head."
+        }
+      ]
+    },
+
+    "t3.7e": {
+      "id": "t3.7e",
+      "act": 3,
+      "image": "t3.7e_sophie_kills.webp",
+      "text": "I did not go to Jason's office that night.\n\nI had told Sophie, three weeks before, the shape of what I had figured out. I had told her over a long dinner. I had told her in the way you tell a friend who you know will, when they hear the conclusion, want to be the one to do the thing.\n\nSophie was, in many ways, a simpler person than I was. The simplicity was not a flaw. It was an advantage I did not yet fully understand.\n\nShe went that night. I knew because I saw the small movement of a single light at four in the morning, in the corner where Jason's office was, and I saw the light go out twenty minutes later.\n\nI slept.\n\nIn the morning the report on Jason's death was filed by Sophie. *Insurgent activity, lone target, neutralized.* The Council praised her work. She was promoted to Agema in front of me, three weeks later. I was kept Achaean.\n\nI had given Jason to Sophie because giving him to Sophie was easier than killing him myself.\n\nI kept this in a small private file in the back of my head, marked *SOFTNESS,* and I did not look at it again for almost two years.\n\nWhen I did look at it again, the cost would be considerably higher than the seat.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t3.8",
+          "effects": {
+            "corruption": 15,
+            "relationships": { "sophie": 5 },
+            "survived": { "jason": false },
+            "flags": { "let_sophie_kill_jason": true, "mika_demoted_temporarily": true }
+          }
+        }
+      ]
+    },
+
+    "t3.8": {
+      "id": "t3.8",
+      "act": 3,
+      "redirectIf": [
+        { "condition": { "flag": "let_sophie_kill_jason" }, "next": "t3.8_demoted" }
+      ],
+      "redirectDefault": "t3.8_promotion"
+    },
+
+    "t3.8_promotion": {
+      "id": "t3.8_promotion",
+      "act": 3,
+      "image": "t3.8_promotion_agema.webp",
+      "text": "I was promoted to Agema in the autumn.\n\nThe grey coat was heavy. Real wool. The medals on the chest came in two rows, three on each row, and the third row would come in a year if I was promoted again, and the row after that if I made Hetairoi.\n\nThe ceremony was small. Four of us promoted. The Hetairoi who pinned my insignia spoke to me by name, called me by *first name*, which she should not have been able to do without consulting a document. She did not consult a document.\n\nVespera did not pin the insignia. She was not running the ceremony. But she was in the room.\n\nShe was in dove-grey, the way she always was. She watched me. She had not yet spoken to me. She had been, by my count, watching me for three years.\n\nShe caught my eye, once. She gave me a small smile. The smile was not warm. It was the smile of a woman who had decided I was the next one.\n\nI understood the smile.\n\nI would think later that the smile was the moment I had known what I was going to do, even if I had not yet known I knew.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t4.1",
+          "isContinue": true,
+          "effects": { "vesperaInterest": 2 }
+        }
+      ]
+    },
+
+    "t3.8_demoted": {
+      "id": "t3.8_demoted",
+      "act": 3,
+      "image": "t3.8_promotion_agema.webp",
+      "text": "The promotion ceremony was small. Four of us. Sophie was one of them.\n\nI was not.\n\nI stood in the audience. I clapped at the right moments. I had been told, very privately, that I was *deferred* — not denied, deferred.\n\nSophie smiled at me from the dais. She did not know — she could not know — that I had given this to her. She thought she had earned it.\n\nShe had earned it. The version of *earning* that this place rewarded, she had earned.\n\nI noticed I was not jealous. I noticed I was something else. The something else had the quiet of *patience*, but it also had the temperature of *anger*, and the two of them braided together to make a thing I had not had before.",
+      "choices": [
+        { "label": "Continue", "next": "t4.1", "isContinue": true }
+      ]
+    },
+
+    "t4.1": {
+      "id": "t4.1",
+      "act": 4,
+      "redirectIf": [
+        { "condition": { "flag": "mika_demoted_temporarily" }, "next": "t4.1_demoted_intro" }
+      ],
+      "redirectDefault": "t4.1_signing"
+    },
+
+    "t4.1_signing": {
+      "id": "t4.1_signing",
+      "act": 4,
+      "image": "t4.1_signing_orders.webp",
+      "text": "The Agema desk was polished black wood. A green leather inlay. A small silver pen-holder. Three leather-bound dossiers, fresh from intake, on a tray to my right.\n\nI opened the first.\n\nThe man was named Edrik Vant. I had never heard of him. A logistics coordinator for a Quadrant transit company. Flagged for *facilitation of association* — meaning his transit corridor had been used by a group the Council was watching. There was no evidence he had known.\n\nThere was a checkbox at the bottom of the form. The checkbox said *EXECUTE.*\n\nI checked the box. I signed. I moved to the next.\n\nThe second was a woman in her thirties. She had hosted a discussion group like the one Ennis Ardin had hosted. I checked the box. I signed.\n\nThe third was Marya Fennik.\n\nMarya Fennik had been my math tutor when I was thirteen. She had sat at my mother's kitchen table for forty minutes once a week for two years and had taught me trigonometry with a patience that I had, at the time, taken for granted. She had laughed at my jokes when they were not funny. She had brought my mother bread.\n\nShe had been flagged for *known association* — she had attended a single meeting of a Quadrant labor group.\n\nI read the file twice.",
+      "choices": [
+        { "label": "Pause. Pull her full file. Read it.", "next": "t4.1_pause" },
+        { "label": "Don't pause. Move to the next.", "next": "t4.1_move" }
+      ]
+    },
+
+    "t4.1_demoted_intro": {
+      "id": "t4.1_demoted_intro",
+      "act": 4,
+      "image": "t4.1_signing_orders.webp",
+      "text": "I was Achaean another year. The year was a long quiet thing.\n\nI did my work. I outmaneuvered three other Achaean candidates the slow way — the way Vespera had outmaneuvered her own contemporaries, four decades before. The slow way is not glamorous. It is not satisfying. It is a series of small choices that add up to a position.\n\nA year and a half later, the seat opened. I took it.\n\nI was promoted to Agema at nineteen and a half, instead of nineteen.\n\nThe half was, in the Council's records, immaterial. It was not immaterial to me. It was the cost of the moral argument I had made in Jason's office. I would be paying it, in small ways, for years.\n\nThe Agema desk was polished black wood. The third file on it was Marya Fennik — my math tutor when I was thirteen. She had been flagged for *known association.*",
+      "choices": [
+        { "label": "Pause. Pull her full file. Read it.", "next": "t4.1_pause" },
+        { "label": "Don't pause. Move to the next.", "next": "t4.1_move" }
+      ]
+    },
+
+    "t4.1_pause": {
+      "id": "t4.1_pause",
+      "act": 4,
+      "image": "t4.1_signing_orders.webp",
+      "text": "I pulled the file.\n\nHer full file was forty pages. I read all of it. She had attended the meeting because the woman she was seeing — a janitor in a third-Quadrant administrative building — had asked her to come. She had not spoken at the meeting. She had not returned.\n\nI sat at the desk for a long time.\n\nI had two options now, neither of which was new. I could sign. I could not sign.\n\nI signed.\n\nThe pause did not change the outcome. The pause was the difference between *signing* and *signing while having read the file,* and the difference between those two things was a very small comfort I gave to myself, in a private chamber of my head where I kept the small comforts.\n\nI noticed the chamber was getting full.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t4.2",
+          "effects": {
+            "corruption": 5,
+            "madness": 3,
+            "mikaSelfAware": 1
+          }
+        }
+      ]
+    },
+
+    "t4.1_move": {
+      "id": "t4.1_move",
+      "act": 4,
+      "image": "t4.1_signing_orders.webp",
+      "text": "I checked the box.\n\nI did it without rereading the name. The pen had been moving down the page. The pen continued to move down the page. The signature was the same signature I had put on every other order that morning, a clean *M Halren* with a small underscore, and the underscore did its work, and Marya Fennik was now, on this day at this desk, a signed order.\n\nI went on to the next file.\n\nI noticed, three or four files later, that I had not paused. I noticed it the way you notice a thing about a stranger.\n\nHer name had not stopped me.\n\nThat was useful information about myself.\n\nI did not let myself think anything else about it for the rest of the day.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t4.2",
+          "effects": { "corruption": 12, "madness": 1 }
+        }
+      ]
+    },
+
+    "t4.2": {
+      "id": "t4.2",
+      "act": 4,
+      "image": "t4.2_agema_hub.webp",
+      "hub": true,
+      "text": "The Agema office was on the seventh floor. The window looked east, across the wall, at the Quadrants where I had grown up. On a clear day you could see, just barely, the tower of the green building on Levant Street where my mother still lived.\n\nShe had moved a year ago. She had not told me where.\n\nThere were three things on my list this month.\n\nA hand-written invitation had arrived from Vespera's office. Tea. Her chambers. *Whenever convenient.* Tea with Vespera was not a thing one declined.\n\nKaden was unraveling. He had been unraveling for a year, and I had been pretending the unraveling was not accelerating. The acceleration was no longer deniable.\n\nAnd it had been three years since I had been to my mother's apartment. Bran was now fifteen. Niko was organizing labor protests in the second Quadrant in a way that suggested he had decided to live a much shorter life than was strictly necessary.\n\nThree things. A few weeks. I had to choose.",
+      "choices": [
+        { "label": "Cultivate Lady Vespera. Accept her invitation.", "next": "t4.3a" },
+        { "label": "Try to talk Kaden down.", "next": "t4.3b" },
+        { "label": "Final visit to the old neighborhood.", "next": "t4.3c" },
+        { "label": "Continue.", "next": "t4.4", "isContinue": true }
+      ]
+    },
+
+    "t4.3a": {
+      "id": "t4.3a",
+      "act": 4,
+      "image": "t4.3a_vespera_audience.webp",
+      "text": "Her chambers were on the top floor of the Hetairoi tower. Two rooms. The first was a small white parlor with two armchairs. There was no decoration except a single arrangement of dove-grey winter flowers on a low table. The flowers were real.\n\nShe rose when I came in. She poured the tea herself.\n\nShe was tall. Slender. White-and-cream silk. Her silver-white hair was up in a soft architectural style I had not seen before, and would not see again — she did not, I would learn, ever wear her hair the same way twice. The half-smile was on her face the way it was always on her face.\n\n\"Sit, Mika.\"\n\nI sat. We had the tea.\n\nShe said, \"Tell me what you actually want.\"\n\nShe said it the way Jason had said *how's your family.* Without weight. As if it had not, in fact, been the entire purpose of the meeting.\n\nI had been preparing for this conversation for three years.",
+      "choices": [
+        { "label": "Tell her you want her seat.", "next": "t4.3a_ambition" },
+        { "label": "Tell her you want to fix the city.", "next": "t4.3a_idealism" },
+        { "label": "Tell her you want her approval.", "next": "t4.3a_approval" },
+        { "label": "Lie. Say you want nothing.", "next": "t4.3a_lie" }
+      ]
+    },
+
+    "t4.3a_ambition": {
+      "id": "t4.3a_ambition",
+      "act": 4,
+      "image": "t4.3a_vespera_audience.webp",
+      "text": "\"I want your seat,\" I said.\n\nShe laughed. A small, real laugh. The first time I had ever heard her produce a sound that was not, in some way, calibrated.\n\n\"Of course you do,\" she said. \"I would have lost interest already if you didn't. The interesting question is how *cleanly* you want it.\"\n\n\"Cleanly?\"\n\n\"Some men want my seat by killing me. Some by replacing me. Some by being so useful that I retire and hand it to them out of fondness. All three are possible. I would like to know which you are.\"\n\nI had not, going in, decided which I was.\n\nI gave her the best answer I had: I told her I had not decided yet.\n\nShe seemed pleased. \"Smart. The ones who decide too early always pick the wrong one. You and I are going to be friends, Mika. I think we have several years of being friends ahead of us.\"\n\nShe refilled my cup.\n\nI noticed, leaving her chambers, that I had been more honest with her than I had been with anyone in two years. I noticed she had liked it.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t4.2", "activity": "t4.3a" },
+          "effects": {
+            "corruption": 5,
+            "vesperaInterest": 5,
+            "flags": { "mika_courted_vespera": true, "vespera_grooming": true }
+          }
+        }
+      ]
+    },
+
+    "t4.3a_idealism": {
+      "id": "t4.3a_idealism",
+      "act": 4,
+      "image": "t4.3a_vespera_audience.webp",
+      "text": "\"I want to fix the city,\" I said.\n\nShe did not laugh.\n\nShe set down her cup very gently. She looked at me, for a long moment, with what I would have called sympathy if I had not known her better.\n\n\"I see,\" she said. \"How sweet.\"\n\nShe did not say it cruelly. She said it the way an aunt might say *how sweet* to a child's drawing of a horse. With a kind of sincere fondness for the *attempt.*\n\n\"I felt that way, when I was your age. I did. I was very serious about it. I came to the conclusion, eventually, that the city is not a thing one *fixes.* The city is a thing one *manages.* Once you understand that, the work becomes easier, and you become better at it.\"\n\nShe drank.\n\n\"You will come to that conclusion too, in time.\"\n\nShe did not seem worried about my idealism. She seemed, in fact, charmed by it. The way a person is charmed by a flower they know will be dead in a week.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t4.2", "activity": "t4.3a" },
+          "effects": {
+            "vesperaInterest": 3,
+            "flags": { "mika_courted_vespera": true, "vespera_curious": true }
+          }
+        }
+      ]
+    },
+
+    "t4.3a_approval": {
+      "id": "t4.3a_approval",
+      "act": 4,
+      "image": "t4.3a_vespera_audience.webp",
+      "text": "\"I want you to like me,\" I said.\n\nThe words came out before I had decided to say them. They surprised me. They surprised her, too — the half-smile shifted, briefly, into something more interested.\n\nShe put down her cup.\n\n\"That,\" she said, \"is the most useful answer you could have given me. Most men your age would not have been able to say it.\"\n\nShe stood. She walked to the window. The Capitol lay below us in its evening colors.\n\n\"I will like you, Mika. I already do. I will continue to. I will, in fact, like you in a way that will be very, very difficult for you to walk back from, when the time comes that you should walk it back.\"\n\nShe turned. Her smile was not unkind.\n\n\"Many men have liked me. Almost none of them survived liking me. I am telling you this in the spirit of full disclosure.\"\n\nI did not know what to say. I drank the tea.\n\nShe let me leave without pressing further.\n\nShe had judged correctly. That was the worst kind of manipulation. The kind that worked on you because you respected the manipulator.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t4.2", "activity": "t4.3a" },
+          "effects": {
+            "corruption": 8,
+            "vesperaInterest": 6,
+            "flags": { "mika_courted_vespera": true }
+          }
+        }
+      ]
+    },
+
+    "t4.3a_lie": {
+      "id": "t4.3a_lie",
+      "act": 4,
+      "image": "t4.3a_vespera_audience.webp",
+      "text": "\"I want nothing,\" I said.\n\nShe held the cup at her lips. She did not drink. She lowered it again.\n\n\"Hm,\" she said. \"That's disappointing.\"\n\nShe did not press me.\n\nWe finished the tea. We talked about other things — Capitol weather, a recent renovation, a piece of music she had been listening to. The conversation was *pleasant.*\n\nShe walked me to the door. At the door she paused.\n\n\"When you're ready to tell me the truth, Mika, I'll be here. I'm not in a hurry. The people who say *nothing* always come back. They always want something specific. The longer they wait to tell me what it is, the less interesting they become.\"\n\nShe closed the door.\n\nI noticed that the lie had cost me something. Specifically, the version of her interest I had wanted to inherit from this conversation. I had walked in with the *grooming* version. I had walked out with the *amused-and-disappointed* version. The amused-and-disappointed version was a much harder room to climb out of.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t4.2", "activity": "t4.3a" },
+          "effects": {
+            "corruption": 5,
+            "vesperaInterest": 2,
+            "flags": { "mika_courted_vespera": true }
+          }
+        }
+      ]
+    },
+
+    "t4.3b": {
+      "id": "t4.3b",
+      "act": 4,
+      "image": "t4.3b_kaden_breaking.webp",
+      "text": "He had not answered my last three messages.\n\nI let myself in with the key he had given me a year ago and had probably forgotten he had given me. The apartment was a narrow Eques two-room. He was on the floor of the living room, sitting against the couch, looking at his hands. He looked up when I came in.\n\nHe said, \"Hey, Just Mika.\"\n\nHe said it like it had been ten minutes since we'd last talked.\n\nHe had not slept. He had not eaten. The plant on the windowsill had been dead for a long time. There were small piles of papers on the table — papers that, in our work, you did not leave on a table. File fragments. Names. Photographs.\n\nHe saw me looking.\n\n\"They visit,\" he said. \"Sometimes. The people from the files. They sit on the couch.\"\n\nHe gestured at the couch.\n\n\"It's why I'm on the floor.\"\n\nI sat down across from him.\n\nI had four ways out of this conversation. None of them were good.",
+      "choices": [
+        { "label": "Stay with him. Get him help. Risk your reputation.", "next": "t4.3b_save" },
+        { "label": "Use his state. Extract what you need.", "next": "t4.3b_use" },
+        { "label": "Cut him off. He's a liability now.", "next": "t4.3b_abandon" },
+        { "label": "Offer mercy. Help him end it on his terms.", "next": "t4.3b_mercy" }
+      ]
+    },
+
+    "t4.3b_save": {
+      "id": "t4.3b_save",
+      "act": 4,
+      "image": "t4.3b_kaden_breaking.webp",
+      "text": "I stayed.\n\nI sat with him for two hours. He talked sometimes. He didn't talk other times. I made him eat. I made him drink water. I made him take a shower while I sat in the kitchen and pretended I was not waiting to make sure he came out again.\n\nI called an Eques physician I had reason to trust. I did not give her his name. I gave her enough to know I was bringing in a man who was *cracked* and needed quiet handling.\n\nI took him to her in the morning. He spent six weeks in a quiet facility. I visited every week. He came out — not whole, but functional enough to walk and eat and look at couches without flinching. He thanked me, the day he came out, in the small dry voice he had when he was sincere.\n\nI had used a great deal of political capital to do this. The capital would cost me, later.\n\nI noticed I had done a thing for a friend that did not in any way help me. I noticed the noticing. I noticed the noticing was, in itself, a small clean thing.\n\nI held it carefully, walking. I would need it.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t4.2", "activity": "t4.3b" },
+          "effects": {
+            "corruption": -3,
+            "madness": 2,
+            "relationships": { "kaden": 5 },
+            "flags": { "mika_saved_kaden": true, "kaden_path": "saved" }
+          }
+        }
+      ]
+    },
+
+    "t4.3b_use": {
+      "id": "t4.3b_use",
+      "act": 4,
+      "image": "t4.3b_kaden_breaking.webp",
+      "text": "I sat with him.\n\nI made him eat. I made him drink. While he was doing those things — slowly, mechanically, with the obedience of a man who had given up the energy required to refuse — I asked him, gently, about a few of the names on the table.\n\nHe answered.\n\nHe answered *well.* He had, even in this state, the precision he had always had. He gave me details I had been working a month to find. He gave me, on one of the names, a piece of intelligence that would, six weeks later, allow me to outmaneuver an Agema rival without lifting a finger.\n\nHe did not, I think, fully realize what he was doing. He was talking the way a tired man talks when a friend asks. He was talking because he trusted me.\n\nI left after three hours. I did not call a physician. I did not bring help.\n\nI noticed, walking out, that he had not noticed I had not brought help.\n\nI had just used the breakdown of my closest friend in this place to advance my career.\n\nI noticed it and I did not, particularly, mind. There was a part of me that should have minded. The part had been quiet for a while.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t4.2", "activity": "t4.3b" },
+          "effects": {
+            "corruption": 10,
+            "madness": 5,
+            "relationships": { "kaden": -2 },
+            "flags": { "mika_used_kaden": true, "kaden_path": "used" }
+          }
+        }
+      ]
+    },
+
+    "t4.3b_abandon": {
+      "id": "t4.3b_abandon",
+      "act": 4,
+      "image": "t4.3b_kaden_breaking.webp",
+      "text": "I stood.\n\nI told him I had to go. I told him I would check on him in a few days. I gave him the small lie of *I'll be back soon* in the small voice you give that lie in.\n\nHe nodded. He didn't believe me. He did not seem hurt. He had, by that point, stopped being hurt by things.\n\nHe said, \"Take care of yourself, Just Mika.\"\n\nI closed the door behind me.\n\nI did not go back. Not the next day. Not the week after. Not the month after that.\n\nI would tell myself, later, that I had been busy.\n\nI would also know, when I told myself this, that *busy* was a word a person used when they did not want to look at what they had done.\n\nI would hear the front door of his apartment in my head, sometimes. The sound of it closing.\n\nThe sound was small. It carried.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t4.2", "activity": "t4.3b" },
+          "effects": {
+            "corruption": 5,
+            "madness": 3,
+            "relationships": { "kaden": -5 },
+            "flags": { "kaden_path": "abandoned" }
+          }
+        }
+      ]
+    },
+
+    "t4.3b_mercy": {
+      "id": "t4.3b_mercy",
+      "act": 4,
+      "image": "t4.3b_kaden_breaking.webp",
+      "text": "I sat with him.\n\nI asked him, eventually, what he wanted.\n\nHe thought for a long time. The thinking did not look painful. It looked, almost, like relief.\n\n\"I want to stop being awake.\"\n\nI asked him if he meant sleep.\n\nHe laughed. The laugh broke the smile, finally. The smile reached the rest of his face. The rest of his face was not, after all, dead. It was just exhausted. He looked, for one full second, like the boy in the mess hall who had told me to eat my rice.\n\nHe shook his head.\n\nI did it that night.\n\nIt was not violent. I had been trained, by now, in many ways to end a life. I used the gentlest of them. He was holding my hand at the end. I did not let go.\n\nI called it in as a suicide. The Council did not investigate.\n\nI sat in my apartment. I drank water. I did not sleep.\n\nThe floor of his apartment had been the last room I had been in where I had been with someone who knew me. The full me. The full version. The hallway, the file, the boy I had been at fifteen.\n\nThere were no other rooms like that.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t4.2", "activity": "t4.3b" },
+          "effects": {
+            "corruption": 8,
+            "madness": 10,
+            "relationships": { "kaden": 3 },
+            "survived": { "kaden": false },
+            "flags": { "kaden_path": "mercy_killed" }
+          }
+        }
+      ]
+    },
+
+    "t4.3c": {
+      "id": "t4.3c",
+      "act": 4,
+      "image": "t4.3c_final_visit.webp",
+      "text": "I had not been to the Levant Street apartment in three years.\n\nThe bakery on the corner was still there. The dog at the second corner was a different dog. The cracked tile in front of the bakery was in the same place — the crack had grown.\n\nMy mother was at work.\n\nBran was in the kitchen. He was fifteen now. He had grown almost a full head taller. He was working out a calculus problem on a tablet with a chewed-end stylus. He looked up when I came in.\n\nHe didn't smile.\n\nHe looked at me like he was deciding, in real time, whether to be surprised.\n\n\"You're tall,\" I said.\n\nHe said, \"You're in a uniform.\"\n\nI had forgotten. I had thought I'd worn civilian clothes. I was wearing the uniform under a civilian jacket. The boots were Eques boots.\n\nNiko was in the living room. He had not stood up. He had gotten older in a different way than Bran had — a way that was made of *attention,* which is what working in opposition to an empire does to a person's face.\n\n\"Hi, Mika,\" he said.\n\n\"Hi, Niko.\"\n\nIt was the first thing we had said to each other in eighteen months.\n\nI had to choose what to say to Bran first.",
+      "choices": [
+        { "label": "Apologize for being absent. Be present.", "next": "t4.3c_bran_apologize" },
+        { "label": "Warn him — they're watching everyone.", "next": "t4.3c_bran_warn" },
+        { "label": "Don't say much. He's a kid.", "next": "t4.3c_bran_quiet" }
+      ]
+    },
+
+    "t4.3c_bran_apologize": {
+      "id": "t4.3c_bran_apologize",
+      "act": 4,
+      "image": "t4.3c_final_visit.webp",
+      "text": "I apologized.\n\nNot for joining. For being absent. For not knowing his calculus class was algebra now. For not knowing he had grown.\n\nHe listened the way Bran listens — head slightly tilted, eyes steady. He waited until I was done.\n\nThen he said, \"Okay.\"\n\nIt was the same *okay* he had given me three years before at the kitchen table. The same word. The same disappointment, dressed in a more adult version of the same patience.\n\nI noticed something in him had gotten very good at not being surprised.\n\nThat was the worst news of the visit.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t4.3c_niko_check",
+          "effects": {
+            "corruption": -2,
+            "relationships": { "bran": 3 }
+          }
+        }
+      ]
+    },
+
+    "t4.3c_bran_warn": {
+      "id": "t4.3c_bran_warn",
+      "act": 4,
+      "image": "t4.3c_final_visit.webp",
+      "text": "I told him to be careful.\n\nNot in those words. I told him not to search anything he could not explain. I told him not to attend any gathering he had not been invited to twice. I told him that the AI listened for *patterns* now, not just words — that the way you typed, the speed, the time of day, the people you stood near in the school cafeteria, all of it.\n\nHe listened.\n\nHe said, \"I know.\"\n\nI looked at him. He was fifteen.\n\nHe said it again. \"I know. We talk about it at school.\"\n\nThe kids talked about it at school. They had, apparently, been talking about it at school for some time. I had not known. I had not been to a school in four years.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t4.3c_niko_check",
+          "effects": {
+            "relationships": { "bran": 1 },
+            "flags": { "warned_bran_early": true }
+          }
+        }
+      ]
+    },
+
+    "t4.3c_bran_quiet": {
+      "id": "t4.3c_bran_quiet",
+      "act": 4,
+      "image": "t4.3c_final_visit.webp",
+      "text": "I didn't say much. He's a kid.\n\nI sat. I watched him do his calculus. I corrected one problem, the way I always had. He laughed at me a little for being a know-it-all. The laugh was not the laugh he had laughed at twelve. The laugh had been calibrated. The kid had been working on it.\n\nI noticed I had not known he had been working on his laugh.\n\nI noticed there was now a version of my brother I had not been around long enough to recognize, and that the version had developed in the years I had been away, and that I had no right to be sad about this.\n\nI was sad about it anyway.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t4.3c_niko_check",
+          "effects": { "relationships": { "bran": -1 } }
+        }
+      ]
+    },
+
+    "t4.3c_niko_check": {
+      "id": "t4.3c_niko_check",
+      "act": 4,
+      "image": "t4.3c_final_visit.webp",
+      "text": "Niko was watching me from the living room.\n\nI walked over. I sat down across from him.\n\nHe said, \"Heard you got promoted.\"\n\n\"Yes.\"\n\n\"Big coat.\"\n\n\"It is.\"\n\nHe waited.\n\nI had to choose what to say to him.",
+      "choices": [
+        { "label": "Engage. Argue politics.", "next": "t4.3c_niko_engage" },
+        { "label": "Warn him — he's going to get killed if he keeps organizing.", "next": "t4.3c_niko_warn" },
+        { "label": "Threaten him. Drop the mask.", "next": "t4.3c_niko_threaten" }
+      ]
+    },
+
+    "t4.3c_niko_engage": {
+      "id": "t4.3c_niko_engage",
+      "act": 4,
+      "image": "t4.3c_final_visit.webp",
+      "text": "I argued with him.\n\nI told him the Council was not what he thought. I told him the alternative was not what he thought. I told him the city as it was, was *managed,* and that managed was, at scale, the best you could hope for.\n\nI was using Jason's words. I had not realized I knew them this well.\n\nNiko listened. He did not interrupt. When I was done he said, \"You know what's funny, Mika? You used to argue for the other side. Same heat. Same precision. Same look in the eyes.\"\n\nHe did not say it cruelly. He said it the way a person says, *I'm sorry for your loss.*\n\nHe stood up. He went to the kitchen. He poured himself water from the same faucet I had drunk from as a child.\n\nWe did not talk for the rest of the visit.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t4.2", "activity": "t4.3c" },
+          "effects": {
+            "corruption": 2,
+            "relationships": { "niko": -1 },
+            "flags": { "mika_final_visit_neighborhood": true }
+          }
+        }
+      ]
+    },
+
+    "t4.3c_niko_warn": {
+      "id": "t4.3c_niko_warn",
+      "act": 4,
+      "image": "t4.3c_final_visit.webp",
+      "text": "I told him.\n\nNot the details. Not who specifically. Just: *Niko. They have your name. The pattern of your messages. The location data from the meetings. You have, by my count, three months before they decide whether you are worth processing.*\n\nHe listened.\n\nHe said, \"How do you know.\"\n\n\"Because I see the lists.\"\n\n\"Have you seen mine.\"\n\nI didn't answer right away.\n\nHe waited. He had time. He had nothing but time, until they came.\n\nI said, \"Not yet.\"\n\nHe nodded.\n\nHe said, \"If you see it before they act on it, will you tell me?\"\n\nI told him I would.\n\nI did not know whether I would.\n\nHe knew I did not know. He thanked me anyway. He stood up. He clapped me on the shoulder. He said, \"Goodbye, Mika.\"\n\nHe said it the way you say it to a person you have, in some private accounting, decided not to expect to see again.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t4.2", "activity": "t4.3c" },
+          "effects": {
+            "corruption": -1,
+            "relationships": { "niko": 1 },
+            "flags": { "warned_niko": true, "mika_final_visit_neighborhood": true }
+          }
+        }
+      ]
+    },
+
+    "t4.3c_niko_threaten": {
+      "id": "t4.3c_niko_threaten",
+      "act": 4,
+      "image": "t4.3c_final_visit.webp",
+      "text": "I dropped the mask.\n\nI told him the labor protests would end. I told him I would, personally, see to it that he stopped organizing, or I would personally, see to it that he was *processed.* I told him I did not have time to do this gently and that the next time I saw his name on a list I would not be in a position to remove it.\n\nHe listened. His face did not change.\n\nHe said, \"You sound like one of them.\"\n\nI said, \"I am one of them.\"\n\nHe nodded. He stood up. He didn't shake my hand.\n\nHe said, \"Mom won't know it was you. I'll see to that.\"\n\nThen he left the apartment. The door closed gently. He was, in his way, a careful man.\n\nI noticed I had wanted him to be angry. I had wanted the argument. I had wanted the *fight.*\n\nWhat I had gotten was a man who had decided I was something he no longer had to engage with, the way you decide that about an institution.\n\nThat was a worse kind of loss than the fight would have been.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t4.2", "activity": "t4.3c" },
+          "effects": {
+            "corruption": 10,
+            "relationships": { "niko": -5 },
+            "flags": { "mika_final_visit_neighborhood": true }
+          }
+        }
+      ]
+    },
+
+    "t4.4": {
+      "id": "t4.4",
+      "act": 4,
+      "image": "t4.4_trial_briefing.webp",
+      "text": "The trial was announced in early winter.\n\nSix of us in the briefing room. All eligible Agema. Sophie was there. So was a man named Aren Volk who had hated me since basic training. So was a woman named Ilse who I did not know well. Two others I did not bother to remember.\n\nThe Hetairoi who briefed us was not Vespera. The briefing was delivered by a thin grey man named Cassius who had the air of a person who thought trials were beneath him and resented being asked.\n\nThe mission was a coordinated strike on a mid-level dissident cell. Twenty-eight known members, working in three Quadrants. Names. Photographs. Schedules. Locations. The Council had been watching them for nine months.\n\nThe trial was this: each Agema candidate would lead a portion of the strike. Each portion was independent. Each portion was, by design, *interlocking* — meaning that any candidate who wished to could, in theory, sabotage the others without sabotaging the operation.\n\nThe candidate who ran the most efficient portion of the strike — *while ensuring no other candidate gained an advantage at their expense* — would be promoted.\n\nCassius did not look up while he said this.\n\nThe trial was, in other words, a betrayal puzzle wrapped around a mass execution.\n\nSophie was sitting next to me. She squeezed my hand, very briefly, under the table.\n\nIt was a friendly squeeze. The kind a friend gives a friend.\n\nIt said, *we'll do this together, won't we?*\n\nI squeezed back.\n\nI had not yet decided whether I meant it.",
+      "choices": [
+        { "label": "Continue", "next": "t4.5", "isContinue": true }
+      ]
+    },
+
+    "t4.5": {
+      "id": "t4.5",
+      "act": 4,
+      "image": "t4.5_memory_sophie.webp",
+      "memory": true,
+      "text": "The night before the trial, I lay awake.\n\nThe thing the body did when it could not sleep was give me the memory I had been trying not to have.\n\nIt was a winter afternoon, two years before. We had been Skiritai for three months. We were on a joint patrol that had ended two hours early because nothing had happened. We were walking back along the south wall of the Capitol. The snow had started.\n\nShe had stopped to scoop a handful off the railing.\n\nShe had thrown it at me without aiming. The snowball had hit me in the side of the neck and gone down inside my collar and I had said something I should not have said in front of a superior officer, and she had laughed — the loud unselfconscious laugh — and I had laughed.\n\nI had laughed for the first time, in this work, in months.\n\nShe had been sixteen. The snow had been on her shoulders. The platinum braid had been wet.\n\nShe had been, in that one minute, the person who had reminded me — without trying, without knowing she was doing it — that I was still the same age as her, and that being the same age as her had once been a thing that came with laughter.\n\nThe memory ended.\n\nI was in my bed in the Capitol. The trial was in the morning.\n\nThe body had given me the memory for a reason.\n\nI would have to ignore the reason.",
+      "choices": [
+        { "label": "Continue", "next": "t4.6", "effects": { "madness": 2 } }
+      ]
+    },
+
+    "t4.6": {
+      "id": "t4.6",
+      "act": 4,
+      "image": "t4.6_betrayal.webp",
+      "text": "The trial began at four in the morning. Three Quadrants. Six candidates. Twenty-eight targets. A Council overseer in a Capitol bunker watching the whole thing on a wall of monitors.\n\nI was running the strike on the second-Quadrant cluster. My subordinate squad had four Skiritai. I had positioned them in a particular cross-fire pattern that I had spent two weeks designing. The pattern depended on a single piece of information staying private until 04:23.\n\nAt 04:18, the information was no longer private.\n\nAren Volk's squad — three Quadrants away — moved in a way that should not have been possible unless they knew the cross-fire pattern. They knew the pattern. They had, in fact, structured their own strike to *use* my pattern as cover, which would, at the moment of commit, make it look — to the Council overseer — like Volk had executed the pattern and I had merely participated.\n\nI had been sabotaged.\n\nI checked the records of who had been near my planning materials in the last week. Three people. Two had not opened the file. The third had opened it twice and been alone in my office for sixteen minutes, two days before, while I was at a Council briefing.\n\nThe third was Sophie.\n\nI had four minutes before the operation committed.",
+      "choices": [
+        { "label": "Betray her back. Feed her coordinates to a third candidate.", "next": "t4.7a" },
+        { "label": "Expose her publicly during the debrief.", "next": "t4.7b" },
+        {
+          "label": "Win without retaliating. Outperform her cleanly.",
+          "next": "t4.7c",
+          "condition": {
+            "all": [
+              { "relationship": "sophie", "gte": 8 },
+              { "corruption": { "lte": 60 } }
+            ]
+          }
+        },
+        { "label": "Accept defeat with dignity.", "next": "t4.7d" },
+        { "label": "Sabotage the entire operation.", "next": "t4.7e" }
+      ]
+    },
+
+    "t4.7a": {
+      "id": "t4.7a",
+      "act": 4,
+      "image": "t4.7a_revenge.webp",
+      "text": "I had three minutes.\n\nI sent a single encrypted line to Ilse — the Agema who had the cleanest reputation and the weakest political position. I gave her Sophie's strike coordinates and the timing of Sophie's commit window.\n\nI did not give her any explanation. Ilse was smart enough that no explanation was necessary.\n\nIlse moved.\n\nAt 04:23, when the operations committed, three things happened almost simultaneously. Sophie's strike walked into Ilse's positioning, and Sophie's two best Skiritai went down in friendly crossfire. My pattern executed cleanly because Volk had been watching the wrong window. Volk's portion was, in the bunker monitors, visibly amateurish. Sophie's portion was in chaos.\n\nSophie was in the chaos.\n\nShe did not survive the chaos.\n\nThe Council ruled that the operation had been a mixed success, that two candidates had distinguished themselves, and that the seat would go to the candidate whose portion had been *cleanest under contested conditions.*\n\nThat was me.\n\nIlse was reprimanded for *uncoordinated maneuver.* Sophie was buried with full Agema honors. I went to her funeral. I held her father's hand. I told him I was sorry. I had been ready to feel grief. I felt instead the cold satisfaction of a problem solved, and underneath it, smaller, the cold satisfaction of having been *better at this than she had been.*\n\nThe second cold satisfaction was the one that kept me up that night.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t4.8",
+          "effects": {
+            "corruption": 20,
+            "relationships": { "sophie": -10 },
+            "survived": { "sophie": false },
+            "flags": { "betrayed_sophie_back": true }
+          }
+        }
+      ]
+    },
+
+    "t4.7b": {
+      "id": "t4.7b",
+      "act": 4,
+      "image": "t4.7b_expose.webp",
+      "text": "I let the operation play out. My portion held. Volk's portion, being now badly designed because it had been built around a stolen plan, fell apart in the field. Sophie's portion completed. So did Ilse's.\n\nIn the debrief, I spoke last.\n\nI had brought the records. The terminal logs. The file access records. The sixteen-minute window in my office. I projected them onto the wall behind the panel.\n\nSophie was in the front row. She did not move when she saw the slides. She had known, watching me set up, what I was about to do.\n\nI made the case.\n\nI made it well. I did not raise my voice. I did not make accusations beyond what the evidence supported. I let the panel reach its own conclusion, in the way you let a Council reach its own conclusion when you have already arranged the conclusion to be reachable.\n\nThe panel reached the conclusion.\n\nSophie was reprimanded. Aren Volk was reprimanded by association. Both of them lost the seat.\n\nThe seat went to Ilse, who had, by far, run the cleanest portion. The Council noted that I had behaved with admirable restraint and would be *considered favorably* for the next vacancy.\n\nI had, in other words, sacrificed the seat to deny it to Sophie.\n\nSophie kept her rank. She did not speak to me again. The friendship was over, in a quieter way than it would have been over if she had died. The over-ness was *long.* It would last the rest of our lives, however long they each turned out to be.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t4.7b_aftermath",
+          "effects": {
+            "corruption": 10,
+            "relationships": { "sophie": -10 },
+            "flags": { "exposed_sophie_publicly": true }
+          }
+        }
+      ]
+    },
+
+    "t4.7b_aftermath": {
+      "id": "t4.7b_aftermath",
+      "act": 4,
+      "image": "t4.7b_expose.webp",
+      "text": "I stayed Agema for another year.\n\nI worked. I waited. I outmaneuvered three other Agema candidates the slow way — the way Vespera had outmaneuvered her own contemporaries, four decades before.\n\nA year and a half later, the seat opened. I took it.\n\nI was promoted to Hetairoi at nineteen and a half, instead of nineteen.\n\nThe half was, in the Council's records, immaterial. It was not immaterial to me.",
+      "choices": [
+        { "label": "Continue", "next": "t4.8", "isContinue": true }
+      ]
+    },
+
+    "t4.7c": {
+      "id": "t4.7c",
+      "act": 4,
+      "image": "t4.6_betrayal.webp",
+      "text": "I had three minutes.\n\nI did nothing.\n\nI did not send a counter-signal. I did not warn Ilse. I did not alter my plan. The plan had been good. The plan had been good before Sophie had stolen part of it. The plan was, even with Volk's misuse of it, good enough that — if I executed my portion *flawlessly* — the operation would still credit me as the lead architect, by the simple fact that I had built the pattern Volk was failing to use.\n\nI committed at 04:23. My portion executed at the speed of light. My Skiritai moved like one body. Three of the six targets were down within two minutes. The other three were down within four. There were no Council casualties on my side.\n\nVolk's side was a mess. Sophie's side completed her objectives but with two casualties and a public-facing disaster — civilians visible in the operational footage. The bunker overseers noted the difference in real time.\n\nThe post-trial review was short.\n\nThe seat went to me.\n\nSophie was reprimanded for the sabotage, which she had not denied. The Council required her to acknowledge it formally and to apologize. She did. She apologized in the words she had been given. I accepted in the words I had been given.\n\nWe did not speak again.\n\nIt was the cleanest path to the seat. It was also a path I could have taken because I had — somehow — kept myself, all the way through, slightly *better* than this place wanted me to be.\n\nI knew, the moment I held it, that *I had not retaliated* could become, very easily, the new lie I told myself.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t4.8",
+          "effects": {
+            "corruption": -3,
+            "mikaSelfAware": 3,
+            "flags": { "won_without_retaliating": true, "mika_thinks_hes_better": true }
+          }
+        }
+      ]
+    },
+
+    "t4.7d": {
+      "id": "t4.7d",
+      "act": 4,
+      "image": "t4.6_betrayal.webp",
+      "isEnding": true,
+      "endingTitle": "Ending #15-light: The Forgotten",
+      "text": "I let the operation play.\n\nMy portion completed adequately. I did not, in fact, even try to maximize. I did the work the way you do work when you have decided, on the way in, that you are not going to fight for the prize.\n\nSophie's portion completed beautifully. Mine had been the better plan. Hers had been the better *execution,* given that she had stolen mine.\n\nThe seat went to her.\n\nI clapped at her promotion. I attended the ceremony. She found me at the bar after. She didn't speak. She took the drink from my hand, drank it, and put it down again.\n\nThen she said, \"I'm sorry.\"\n\nI told her not to be.\n\nI was reassigned, six months later, to a Quadrant administrative post. I oversaw paperwork. I oversaw transit corridor approvals. I oversaw, eventually, my own slow drift out of relevance.\n\nI was alive. I was clean. I was the kind of clean a person becomes when they stop swimming.\n\nIt was a kind of life.\n\nI would not, by the time I was twenty-five, recognize the boy in the hallway anymore. He had been swimming."
+    },
+
+    "t4.7e": {
+      "id": "t4.7e",
+      "act": 4,
+      "image": "t4.7e_sabotage.webp",
+      "isEnding": true,
+      "endingTitle": "Ending #7: Executed by the Council (sabotage variant)",
+      "text": "I had three minutes.\n\nI used them to break the operation.\n\nI gave my Skiritai a counter-order. *Hold position. Do not fire.* I sent a duplicate of the order, on a channel I knew would be intercepted by Volk's command line and Sophie's command line, *in their names.* All three squads received conflicting orders within the same forty-five seconds. The targets — twenty-eight people in three Quadrants — fled in twenty-eight directions. Sixteen of them got away clean.\n\nThe bunker overseers traced the false orders to my terminal in eighty minutes.\n\nI did not run. I sat at my desk and waited.\n\nThe Eques who came for me did not say much. They were polite about it. One of them was a woman I had been to a wedding with, two months before. She did not look at me.\n\nThe Council did not give me a trial. They gave me a small grey room in the basement of the Capitol. They gave me three days. They asked me, in those three days, several questions, and I gave them several answers, some of them honest.\n\nThe end of it was a hallway. I was walked down the hallway. There was a small antechamber. There was a chair.\n\nI had time, in the chair, to think about the boy in the doorway.\n\nHe had been small. He had thought there was still a chance the world made sense.\n\nHe had, in his way, been right. The chance was small. He had taken it, four years later, and bet on it, and lost.\n\nThe losing had been my own. The bet had been honest.\n\nThat was the part I would have wanted Bran to know.\n\nIt was the part nobody would tell him."
+    },
+
+    "t4.8": {
+      "id": "t4.8",
+      "act": 4,
+      "image": "t4.8_investiture.webp",
+      "text": "The investiture was held in the white room.\n\nThe white room is on the top floor of the Hetairoi tower. It is round. The ceiling is high. The walls are bare. It has the acoustics of a chapel, though it is not a chapel. There are no chairs except a single low one in the center. The candidate sits in the chair. The Hetairoi stand in a ring around the candidate. They place a small silver pin on the candidate's collar, one at a time, until all five pins are in place.\n\nI sat in the chair.\n\nThe pins went on. Each Hetairoi, in turn, said the small ritual phrase. *Service is privilege. Privilege is service.* The phrase had been said over me five times, now, at five investitures. I had stopped hearing the words years ago.\n\nVespera was last. Her pin was the smallest. Her hands were warm. She placed it on my collar with a precision I had not expected — she had done this many times, and she had not gotten bored of it.\n\nShe leaned in. She said, in a voice only I could hear, \"Welcome home.\"\n\nI rose.\n\nThere was a mirror at the back of the room. I had not noticed it, going in. It was not a *prominent* mirror. It was tall and narrow and set into the wall in a way that, from most angles, made it look like a door. I caught my reflection in it as I turned.\n\nI was nineteen.\n\nThe face in the mirror was not the face of a nineteen-year-old. It had the right number of years. The wear was wrong. The eyes had four extra years on them, at least, and the mouth had something I had not seen before — a small set to the corners that made the mouth look like it was *deciding* something at all times, even when it was at rest.\n\nI had become the kind of man whose face was always deciding.\n\nThe white room had been built precisely so that the candidate would catch this reflection. The mirror was the *point* of the room.\n\nIt was the kind of design Vespera would have made.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t5.1",
+          "isContinue": true,
+          "effects": { "vesperaInterest": 2 }
+        }
+      ]
+    },
+
+    "t5.1": {
+      "id": "t5.1",
+      "act": 5,
+      "image": "t5.1_first_council.webp",
+      "text": "The Council met in a chamber that had no windows.\n\nThis was deliberate. Vespera had explained it to me once, in passing — *daylight makes people sentimental, Mika.* The chamber was lit by a soft white light from the ceiling that did not flicker and did not cast shadows. The table was a long polished black. There were six chairs. Five had been occupied for a long time. The sixth had, for two months, been mine.\n\nThe first session opened with a small docket.\n\nThe fourth item was a sentencing review. A man named Petros Heller. He had posted a printed sheet of paper on a public wall that said *they watch us so we will not see them.* He had been arrested within sixteen hours.\n\nThe Hetairoi to my left, Othman, suggested *relocation* as the appropriate sentence. Most relocations were survivable.\n\nHe looked around the table for objection.\n\nIt was, by ritual, my chance to speak.\n\nThe vote would carry whether I spoke or not. The other four had already, with their faces, agreed.",
+      "choices": [
+        { "label": "Vote with the room.", "next": "t5.1_with" },
+        { "label": "Vote against, just to see what happens.", "next": "t5.1_against" }
+      ]
+    },
+
+    "t5.1_with": {
+      "id": "t5.1_with",
+      "act": 5,
+      "image": "t5.1_first_council.webp",
+      "text": "I said, \"I support the recommendation.\"\n\nIt was the first sentence I had ever spoken in the chamber.\n\nOthman nodded. The vote carried, five to nothing. The session moved on.\n\nVespera — across the table, four chairs down — caught my eye for half a second. The half-smile shifted, briefly, into something that was almost approval.\n\nI noticed the approval. I noticed I had, on the level of the body, *wanted* the approval before I had spoken.\n\nI had wanted it the way Mika at fifteen had wanted Jason's nod in the back of the courtyard. The same hot specific pride.\n\nThe pride was not different.\n\nI was. But the pride was not.",
+      "choices": [
+        { "label": "Continue", "next": "t5.2", "effects": { "corruption": 8 } }
+      ]
+    },
+
+    "t5.1_against": {
+      "id": "t5.1_against",
+      "act": 5,
+      "image": "t5.1_first_council.webp",
+      "text": "I said, \"I oppose the recommendation.\"\n\nOthman blinked.\n\nHe had not been expecting opposition. The other Hetairoi turned to look at me, slowly.\n\nI said, \"The relocation is appropriate. I do not object to the outcome. I object to the *unanimity.* I think it is bad practice for this body to rule unanimously on matters of speech. It teaches the public to believe we are a single mind. We are not.\"\n\nIt was the kind of speech a man gives when he has decided to be a slightly visible kind of problem.\n\nOthman thought about it. \"You may be right. But you've made the boy's record more complicated for no benefit to him.\"\n\nThe vote carried four to one. I had voted *yes,* with the dissent noted. Petros Heller was relocated.\n\nVespera caught my eye for half a second.\n\nThe half-smile did a different thing. It became more *interested.*\n\nShe had, in that one small piece of theater, decided to spend more time on me.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t5.2",
+          "effects": {
+            "corruption": -2,
+            "vesperaInterest": 1,
+            "flags": { "flagged_curious_to_council": true }
+          }
+        }
+      ]
+    },
+
+    "t5.2": {
+      "id": "t5.2",
+      "act": 5,
+      "image": "t5.2_hetairoi_hub.webp",
+      "hub": true,
+      "text": "My office was in the Hetairoi tower. The window faced east. From it I could see, on a clear day, the wall of the Capitol and beyond it the Quadrants and beyond them the green building on Levant Street where my mother no longer lived.\n\nShe had moved a year ago. She had not told me where.\n\nThere were three folders on my desk.\n\nThe first was a request from Vespera. A handwritten note, three lines. *Tea. My chambers. We have a conversation that is overdue.*",
+      "conditionalText": [
+        {
+          "condition": { "survived": "quinn" },
+          "append": "\nThe second was Quinn's file. It was still open. Hetairoi clearance now allowed me to do almost anything with it."
+        },
+        {
+          "condition": { "survived": "bran" },
+          "append": "\nThe third was a letter from Bran. It had arrived through an old courier route I had not known he knew about. The handwriting was careful. He wanted to see me."
+        }
+      ],
+      "choices": [
+        {
+          "label": "Decide what to do with the Quinn file.",
+          "next": "t5.3a",
+          "condition": { "survived": "quinn" }
+        },
+        { "label": "Confront Vespera privately.", "next": "t5.3b" },
+        {
+          "label": "Reach out to Bran.",
+          "next": "t5.3c",
+          "condition": { "survived": "bran" }
+        },
+        { "label": "Continue.", "next": "t5.4", "isContinue": true }
+      ]
+    },
+
+    "t5.3a": {
+      "id": "t5.3a",
+      "act": 5,
+      "image": "t5.3a_quinn_file.webp",
+      "text": "I opened the file.\n\nQuinn was thirty pounds lighter than he had been at fifteen. The most recent photograph had been taken six weeks before. They had let his hair grow back. He had grown a small thin beard. He looked, in the photograph, almost peaceful — the peace of a man who had been alone with himself in a small room for a long time and had found, eventually, that the small room was not the worst possible companion.\n\nHe was still alive.\n\nHe was twenty. He had been in the third-Quadrant facility for five years. He had not been moved. He had not been interrogated since the second year.\n\nI had three options. I had, finally, the rank to use any of them.",
+      "choices": [
+        { "label": "Close the file. Order his quiet release to a low-priority Quadrant.", "next": "t5.3a_close" },
+        { "label": "Sign the file. End it cleanly.", "next": "t5.3a_sign" },
+        { "label": "Leave it open. Let the system decide.", "next": "t5.3a_leave" }
+      ]
+    },
+
+    "t5.3a_close": {
+      "id": "t5.3a_close",
+      "act": 5,
+      "image": "t5.3a_quinn_file.webp",
+      "text": "I closed it.\n\nI authored the closure myself. I did not delegate. The closure routed Quinn out of the third-Quadrant facility on a low-priority Quadrant transfer, which meant he would be processed quietly, given a new identity card, and reassigned to a labor district somewhere far enough from the Capitol that no one in the Capitol would notice.\n\nI did not give him my own name. I did not write him a letter. I did not, in any way, attach myself to the closure beyond the signature.\n\nHe would never know it had been me.\n\nHe would simply, one morning, be told he was being released.\n\nI had used Hetairoi privilege, once, for one good thing.\n\nI had paid four years to be able to do it.\n\nI sat at the desk. I noticed the math of the cost.\n\nThe math was not flattering. But the math, for the first time in a long time, came out positive on a single line item, and I held the line item carefully, the way I had once held the *clean* feeling of declining Kaden's plan.\n\nI would need it.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t5.2", "activity": "t5.3a" },
+          "effects": {
+            "corruption": -8,
+            "mikaSelfAware": 2,
+            "flags": { "closed_quinn_file": true }
+          }
+        }
+      ]
+    },
+
+    "t5.3a_sign": {
+      "id": "t5.3a_sign",
+      "act": 5,
+      "image": "t5.3a_quinn_file.webp",
+      "text": "I signed.\n\nI did it quickly. I did it without rereading the file. I did it the way I had signed the Marya Fennik order at the Agema desk — without slowing the pen.\n\nThe signature went out. The file moved through the system. The execution was scheduled for a week later. It would be, by procedure, quiet.\n\nI went back to the next folder on the desk.\n\nI did not think about it again until that evening, when I was at the bathroom mirror, brushing my teeth. The face in the mirror was the face I had seen at the investiture — the face that was always deciding. I noticed it had not, for the act of signing Quinn's file, done any deciding at all.\n\nThe face had simply continued.\n\nThe body had, over four years, finished its training.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t5.2", "activity": "t5.3a" },
+          "effects": {
+            "corruption": 20,
+            "madness": 5,
+            "survived": { "quinn": false },
+            "flags": { "signed_quinn_file": true }
+          }
+        }
+      ]
+    },
+
+    "t5.3a_leave": {
+      "id": "t5.3a_leave",
+      "act": 5,
+      "image": "t5.3a_quinn_file.webp",
+      "text": "I closed the file without acting on it.\n\nI did not sign. I did not order release. I did not, in any way, intervene.\n\nI told myself this was a kind of mercy — the system, left alone, would *probably* not act, and Quinn, left alone, would *probably* survive in the facility for several more years.\n\nThis was not true. The Council had recently begun *sweeping* old open cases. I knew this because I had sat in on the meeting, two weeks before, where the policy had been announced. Open files older than four years were being closed. Most closures were going one way.\n\nI knew, when I left the file open, what the system would do.\n\nI told myself I had not made a decision. The system would make the decision. The system would carry the weight.\n\nI would notice, six months later, that the system had carried the weight, and that Quinn had been processed in the third batch of the sweep, and that I had not, at any point, picked up a pen.\n\nNot picking up the pen was, in the end, just another way of picking up the pen.\n\nThe face in the mirror, that night, did not care about the distinction.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t5.2", "activity": "t5.3a" },
+          "effects": {
+            "corruption": 5,
+            "survived": { "quinn": false }
+          }
+        }
+      ]
+    },
+
+    "t5.3b": {
+      "id": "t5.3b",
+      "act": 5,
+      "image": "t5.3b_confront_vespera.webp",
+      "text": "Her chambers had not changed.\n\nShe rose. She poured the tea. She had been waiting.\n\n\"Sit, Mika.\"\n\nI sat. We had the tea. The half-smile was on her face.\n\nShe said, \"Let's not be coy, today. You've come to talk about my retirement.\"\n\nI had not, in fact, said this on the way over.\n\nShe said, \"I am sixty-three. I have been on the Council for twenty-two years. I am tired in ways that do not show, yet. I do not intend to be a Council member who is *visibly* tired.\"\n\nShe paused.\n\n\"I think it should be you.\"\n\nShe drank.\n\n\"It will be a slow handover. Three years. You will continue to learn. I will continue to consult. By the end of three years, you will be the dominant voice in this room, and I will be, formally, retired.\"\n\nShe set down the cup.\n\n\"I am offering you what I was offered, and what I took. I do not believe you will refuse. You are, in this respect, very like me.\"",
+      "choices": [
+        { "label": "Accept her offer with gratitude.", "next": "t5.3b_accept_grateful" },
+        { "label": "Accept her offer, knowing exactly what it makes you.", "next": "t5.3b_accept_aware" },
+        { "label": "Refuse. Tell her you will dismantle the Council.", "next": "t5.3b_refuse" },
+        { "label": "Don't decide. Let her think you're undecided.", "next": "t5.3b_delay" }
+      ]
+    },
+
+    "t5.3b_accept_grateful": {
+      "id": "t5.3b_accept_grateful",
+      "act": 5,
+      "image": "t5.3b_confront_vespera.webp",
+      "text": "\"I would be honored,\" I said.\n\nI said it well. I said it the way you say it when you mean it.\n\nI did, in fact, mean it. The mean-ing was perhaps the saddest part of the conversation. I had walked in undecided. The half-smile and the dove-grey flowers and the small careful sentences had collapsed me, in twelve minutes, into the version of myself I had been — privately — trending toward for some time.\n\nShe rose. She came around the table. She placed a hand on my shoulder. The hand was very warm.\n\n\"Welcome, Mika.\"\n\nI drank the rest of the tea.\n\nI went back to my office. I sat at my desk. I noticed that the part of me that had four years before stood in a hallway and looked through a door was not, in this office, anywhere I could find. I had looked. The boy was simply not in the room.\n\nI did not, in any precise way, mourn him.\n\nI had, a long time ago, decided not to.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t5.2", "activity": "t5.3b" },
+          "effects": {
+            "corruption": 15,
+            "vesperaInterest": 5,
+            "flags": { "confronted_vespera": true, "vespera_offered_succession": true }
+          }
+        }
+      ]
+    },
+
+    "t5.3b_accept_aware": {
+      "id": "t5.3b_accept_aware",
+      "act": 5,
+      "image": "t5.3b_confront_vespera.webp",
+      "text": "\"I accept.\"\n\nI said it without flourish. I said it without warmth.\n\nI said, \"I want to be very clear with you, before I do, that I know exactly what I am accepting. I am accepting the seat. I am accepting it from you. I am accepting that, in three years, I will be sitting where you are now, and I will have, by then, become more like you than I am now. I am accepting that I have, in fact, *become* more like you in each of the last four years, and that this conversation is the last of those years' worth of decisions, made formal.\"\n\nShe looked at me.\n\nThe half-smile did not move.\n\n\"Yes. That is exactly what you are accepting.\"\n\n\"I want you to know I know.\"\n\n\"I know you know. That is part of why I am offering.\"\n\nShe poured me more tea.\n\n\"Most men who climb to this seat arrive without knowing. They are surprised, after, by what they have become. The surprise is, in itself, an excuse. The surprise lets them believe they are *not* the seat. They are. They simply did not look directly at it on the way up.\"\n\nShe drank.\n\n\"You looked. It is a small distinction. But I find it interesting. You will be a slightly different kind of Council head than I have been. I am curious to see how you fail.\"",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t5.2", "activity": "t5.3b" },
+          "effects": {
+            "corruption": 15,
+            "vesperaInterest": 5,
+            "mikaSelfAware": 5,
+            "flags": { "confronted_vespera": true, "vespera_offered_succession": true }
+          }
+        }
+      ]
+    },
+
+    "t5.3b_refuse": {
+      "id": "t5.3b_refuse",
+      "act": 5,
+      "image": "t5.3b_confront_vespera.webp",
+      "text": "\"No,\" I said.\n\nShe blinked.\n\n\"I am going to dismantle the Council,\" I said. \"I came here to tell you. I owed you that much.\"\n\nShe set down her cup.\n\nShe did not laugh. She did not get angry. She did not try to talk me out of it. She did, however, look — for one half-second — *disappointed.* The disappointment was for *me.* As if I had, by refusing, become a smaller version of the thing she had been considering for years.\n\n\"I see.\"\n\nShe picked up the cup again.\n\n\"Well, Mika. I will not retire, then. I will, in fact, become very interested in the next several decisions you make. I do not threaten. I observe.\"\n\nShe smiled.\n\n\"And I outlast.\"\n\nI left the chambers.\n\nThe conversation had, in some way, been the easiest of the four years. I had told the truth. The truth would compound, daily, for as long as either of us was alive.\n\nI had refused without a plan.\n\nI would have to develop a plan.\n\nI had, perhaps, three months.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t5.2", "activity": "t5.3b" },
+          "effects": {
+            "corruption": -2,
+            "vesperaInterest": -3,
+            "flags": {
+              "confronted_vespera": true,
+              "vespera_offered_succession": true,
+              "vespera_targets_mika": true
+            }
+          }
+        }
+      ]
+    },
+
+    "t5.3b_delay": {
+      "id": "t5.3b_delay",
+      "act": 5,
+      "image": "t5.3b_confront_vespera.webp",
+      "text": "\"I want to think.\"\n\nShe nodded.\n\n\"Think.\"\n\n\"I'd like a few months.\"\n\n\"You may have them.\"\n\nShe said it without any irritation. She refilled my cup. We talked, for the rest of the visit, about lighter things.\n\nI left without committing.\n\nI noticed, walking back, that *not committing* was a form of commitment. She had read it as such. She would now, for the duration of the few months I had asked for, be making her own arrangements — building her own contingencies, identifying my potential weaknesses, preparing the pieces she would need to make sure that, when I finally answered, I answered the way she had wanted me to.\n\nI had, by asking for time, given her time also.\n\nI had not understood, going in, that this was the symmetric cost.\n\nI would, soon enough, decide.\n\nI had, by then, fewer real options than I had thought I had walking in.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t5.2", "activity": "t5.3b" },
+          "effects": {
+            "corruption": 5,
+            "vesperaInterest": 2,
+            "flags": { "confronted_vespera": true }
+          }
+        }
+      ]
+    },
+
+    "t5.3c": {
+      "id": "t5.3c",
+      "act": 5,
+      "image": "t5.3c_bran_16.webp",
+      "text": "I met him at the cafe he had named in the letter.\n\nIt was a small place, three blocks from the Capitol wall on the inside, the kind of cafe Eques went to when they did not want to be seen by other Eques.\n\nHe was sitting at a corner table. He had a coffee in front of him. He had grown again. He was sixteen now — a year younger than I had been when I had killed Jason — and he was, by some accounting, almost a man. There was a small scar on his lower lip that was new.\n\nHe stood when I came in. He did not hug me. He shook my hand. The handshake was firm.\n\nHe said, \"Hello, Mika.\"\n\nHe said it the way you say *hello* to a man who is, in some ways, a stranger.\n\nWe sat. He had ordered me a coffee. He had remembered how I took it.\n\nHe said, \"I want to know what you've done.\"",
+      "conditionalText": [
+        {
+          "condition": { "flag": "bran_knows_secret" },
+          "append": "*He said it without preamble because, of course, he had been waiting to say it for four years.*"
+        }
+      ],
+      "choices": [
+        { "label": "Warn him. Leave the city. Change his name. Hide.", "next": "t5.3c_warn" },
+        { "label": "Bring him into the Capitol — protected.", "next": "t5.3c_protect" },
+        { "label": "Cut him off. For his safety, never see him again.", "next": "t5.3c_cut" },
+        { "label": "Tell him the truth. Beg his forgiveness.", "next": "t5.3c_truth" }
+      ]
+    },
+
+    "t5.3c_warn": {
+      "id": "t5.3c_warn",
+      "act": 5,
+      "image": "t5.3c_bran_16.webp",
+      "text": "I told him to leave.\n\nI told him I had access, now, to documents he would not survive being on. I told him there were lists. I told him there was a sweep coming, within months. I told him to change his name and disappear into one of the smaller Quadrants and that I had a contact who could move him quietly.\n\nHe listened. He did not interrupt. He did not weep.\n\nWhen I was done he said, \"Will you come with me?\"\n\n\"No.\"\n\n\"Why not?\"\n\n\"Because I'm finishing something.\"\n\nHe nodded.\n\nHe drank the rest of his coffee. He stood. He shook my hand again.\n\n\"Goodbye, Mika.\"\n\nHe said it like he meant *for the rest of our lives.*",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t5.2", "activity": "t5.3c" },
+          "effects": {
+            "corruption": -3,
+            "flags": { "warned_bran": true, "bran_in_hiding": true }
+          }
+        }
+      ]
+    },
+
+    "t5.3c_protect": {
+      "id": "t5.3c_protect",
+      "act": 5,
+      "image": "t5.3c_bran_16.webp",
+      "text": "I told him to come to the Capitol.\n\nI told him I had quarters that could fit him. I told him I could place him in a school inside the wall — a real one, the kind aristocratic children went to — and he would be on the rolls of *citizens of the Capitol,* which meant the Council would no longer be able to act against him without consulting me.\n\nHe listened.\n\nHe drank his coffee. He looked at me with an expression I could not place.\n\n\"I'm not coming.\"\n\n\"Bran.\"\n\n\"If I come into the Capitol, I am inside the wall, and I am yours. I am not yours, Mika. I have not been yours for a long time. You know this.\"\n\nHe drank.\n\n\"But thank you.\"\n\nHe said it without sarcasm. He thanked me, sincerely, for offering — for offering *the kind of thing I could offer.*\n\nHe stood.\n\n\"I'll write,\" he said. \"Sometimes. Not from here.\"\n\nHe left.\n\nI had bought him, by offering, a kind of polite distance I had not had before.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t5.2", "activity": "t5.3c" },
+          "effects": {
+            "corruption": 2,
+            "relationships": { "bran": -1 },
+            "flags": { "bran_offered_protection": true }
+          }
+        }
+      ]
+    },
+
+    "t5.3c_cut": {
+      "id": "t5.3c_cut",
+      "act": 5,
+      "image": "t5.3c_bran_16.webp",
+      "text": "I told him I could not see him again.\n\nI told him it was for his safety. I told him that the closer he was to me — physically, by association, by *anyone in the system noticing the connection* — the more likely it was that someday his name would land on a list I could not pull it off of in time.\n\nHe listened.\n\nHe waited a long time before answering.\n\nThen: \"Okay.\"\n\nHe said it the way he had said *okay* in the kitchen four years before.\n\nHe stood. He did not shake my hand this time.\n\n\"Mom asks about you. I tell her you're fine.\"\n\nHe left.\n\nI sat at the table.\n\nI noticed I had used the language of *protection* to do something else. I noticed that *protection,* in this conversation, had been a word for *making my life less complicated.*",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t5.2", "activity": "t5.3c" },
+          "effects": {
+            "corruption": 10,
+            "relationships": { "bran": -5 },
+            "flags": { "bran_cut_off": true }
+          }
+        }
+      ]
+    },
+
+    "t5.3c_truth": {
+      "id": "t5.3c_truth",
+      "act": 5,
+      "image": "t5.3c_bran_16.webp",
+      "text": "I told him.\n\nAll of it. The library hallway. The file. The Eques in the doorway. The morale report. The runner at the checkpoint. Ennis Ardin's family. Marya Fennik. Jason in his office at midnight. Sophie at the trial. Kaden in the apartment. The signed kill orders. Vespera offering me her seat. The full account. In one cup of coffee.\n\nHe listened.\n\nWhen I was done he was crying, very quietly. He was not crying loudly. He had learned, somewhere, that loud was dangerous.\n\nHe said, \"Why are you telling me this now?\"\n\n\"Because you asked.\"\n\n\"You could have lied. You're good at it.\"\n\n\"I am.\"\n\n\"So why.\"\n\nI thought about it.\n\n\"Because I have not, in four years, said the truth to anyone who had a right to hear it. And you have a right to hear it. And it's the only thing left I can give you.\"\n\nHe nodded. He stood.\n\n\"I won't tell anyone. I won't write again. I won't visit. I will, for the rest of my life, know who you are. I think I will have to live alone with knowing. I don't know yet whether I forgive you. I don't think I will.\"\n\nHe paused.\n\n\"But I love you. I wanted you to know that, before I leave.\"\n\nHe left.\n\nFor the eleven minutes it took me to walk back to the Capitol, I had been a person again.",
+      "choices": [
+        {
+          "label": "Continue",
+          "returnToHub": { "node": "t5.2", "activity": "t5.3c" },
+          "effects": {
+            "corruption": -5,
+            "mikaSelfAware": 5,
+            "relationships": { "bran": -10 },
+            "flags": { "bran_knows_truth": true }
+          }
+        }
+      ]
+    },
+
+    "t5.4": {
+      "id": "t5.4",
+      "act": 5,
+      "image": "t5.4_surveillance_vote.webp",
+      "text": "Vespera proposed it on a Tuesday.\n\nIt was on the docket as *Resolution 412: Extension of Civilian Monitoring Protocols to Eques Quadrant Personnel.* She presented it, briefly. The argument was about *fairness.* In a system that watched everyone else, why should Eques be exempt? The exemption, she said, had originated as a matter of operational security — but operational security, in the modern Council, was robust enough that the exemption was no longer necessary, and the exemption was, increasingly, *philosophically uncomfortable.*\n\nThe other four Hetairoi nodded along. They had been briefed.\n\nExcept — by the rules of the chamber — the vote required a unanimity, or it had to be tabled for a public review. The other four would vote yes. The vote turned, technically, on me.\n\nVespera looked at me across the table.\n\nShe did not smile. She did not need to.\n\nShe had timed this proposal for the week after I had spoken with her — a test, and an acceleration. A way of consolidating her own power by removing the only branch of society she could not fully see.",
+      "choices": [
+        { "label": "Vote yes — the Eques should not be above the system.", "next": "t5.4_yes" },
+        { "label": "Vote no — the Eques privilege is the only space reform can breathe in.", "next": "t5.4_no" },
+        { "label": "Abstain.", "next": "t5.4_abstain" }
+      ]
+    },
+
+    "t5.4_yes": {
+      "id": "t5.4_yes",
+      "act": 5,
+      "image": "t5.4_surveillance_vote.webp",
+      "text": "\"Yes.\"\n\nThe word was small. It carried.\n\nThe vote went through five to nothing. Resolution 412 passed. The Eques would, within ninety days, begin to be brought under the same monitoring infrastructure as the rest of the city.\n\nVespera nodded at me. The half-smile was on her face.\n\nI had, with one word, done the thing I had — at fifteen — sworn to come into this building specifically to *prevent.*\n\nThe symmetry was clean. It was the kind of clean a person could write a poem about, if a person were the kind of person who wrote poems.\n\nI was not.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t5.5",
+          "effects": {
+            "corruption": 25,
+            "vesperaInterest": 5,
+            "flags": { "voted_expand_surveillance": true }
+          }
+        }
+      ]
+    },
+
+    "t5.4_no": {
+      "id": "t5.4_no",
+      "act": 5,
+      "image": "t5.4_surveillance_vote.webp",
+      "text": "\"No.\"\n\nThe chamber was very quiet.\n\nIt was the first time, in my term, that I had broken unanimity on a major resolution. The other four turned to look at me.\n\nVespera did not look surprised.\n\nI said, \"I believe the exemption is the *only space* in this system that allows the system to consider itself. If the Eques are watched the way the Quadrants are watched, the Council loses the only branch of society capable of independent reflection. I will not vote to take that away.\"\n\nIt was the cleanest sentence I had spoken in four years.\n\nThe vote was tabled. The resolution went to public review. It would return to the Council in six weeks. By then the political cost of my dissent would have done its work.\n\nVespera did not look at me.\n\nI was, formally, in opposition now.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t5.5",
+          "effects": {
+            "corruption": -5,
+            "flags": { "voted_against_surveillance": true, "vespera_targets_mika": true }
+          }
+        }
+      ]
+    },
+
+    "t5.4_abstain": {
+      "id": "t5.4_abstain",
+      "act": 5,
+      "image": "t5.4_surveillance_vote.webp",
+      "text": "\"I abstain.\"\n\nBy the rules of the chamber, an abstention had the same procedural effect as a *no.*\n\nBut abstention had a different *flavor* than dissent. It told the room that I did not have a position. That I was — in this matter — not a colleague but a fence-sitter. Vespera disliked fence-sitters. They were, she had once told me, *unfinished people.*\n\nThe vote was tabled.\n\nShe did not look at me with hostility.\n\nShe looked at me with something more troubling: *curiosity.* As if, by abstaining, I had not lost her — but I had, in some way, become less interesting. I had given her less to work with.\n\nI had, by trying to keep my options open, narrowed them.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t5.5",
+          "effects": {
+            "corruption": 10,
+            "vesperaInterest": 1
+          }
+        }
+      ]
+    },
+
+    "t5.5": {
+      "id": "t5.5",
+      "act": 5,
+      "image": "t5.5_memory_ultimatum.webp",
+      "memory": true,
+      "text": "It was three in the morning.\n\nI was alone in my Hetairoi office. The window was dark. The Capitol was quiet.\n\nThe body did, again, the thing it does when I will not let it sleep.\n\nIt gave me the hallway.\n\nI was fifteen. I was walking the long way. The door was half-open. Quinn's face was on the screen. The Eques was at the desk.\n\nI had remembered this scene in many forms by now. From inside myself. From above. From the boy's perspective. From the Eques's.\n\nThis time, I let the camera settle on the Eques.\n\nHe turned his head. He saw me in the doorway. He stood. He came to the door. He looked at me.\n\nHe had pale skin and dark brown hair, kept short and neat. He had sharp brown eyes with a slight downturn that gave him a permanent half-tired, half-watchful look. He had a small scar on his left jaw. He was wearing the white-and-gold of a Hetairoi.\n\nHe was, in the memory, nineteen.\n\nHe was me.\n\nHe looked at the boy in the doorway. The boy looked back. There was a small silence in the hall — the kind of silence that happens when two people who are the same person, separated by four years and one signature, recognize each other.\n\nThe Hetairoi said, very gently, \"I'm sorry. Come with me.\"\n\nThe boy nodded.\n\nHe came. He came because he had no other option. He came because the Hetairoi had been kind.\n\nI watched myself walk down the hallway with myself.\n\nI watched the boy disappear around the corner.\n\nI did not follow.\n\nI sat at the Hetairoi desk in the present, alone, in the dark, and I noticed that the door I had walked through, four years ago, was a door I had myself — at this older age, in this office — held open.\n\nThe whole architecture made sense.\n\nI was, in this place, both the boy and the Eques. I had been both, all along.",
+      "choices": [
+        {
+          "label": "Continue",
+          "next": "t5.6",
+          "effects": { "mikaSelfAware": 5 }
+        }
+      ]
+    },
+
+    "t5.6": {
+      "id": "t5.6",
+      "act": 5,
+      "image": "t5.6_ending_switch.webp",
+      "text": "Dawn.\n\nI had been at the desk for hours.\n\nThe decisions were lined up in front of me the way the dossiers had lined up at the Agema desk a year before. Each one a folder. Each one a person. Each one a future.\n\nI could move on Vespera. I had the intelligence. I had the timing. I had the alliances I had — quietly, slowly — built in the corners she had not been watching. The coup was *possible.* The coup was even, with effort, *probable.*\n\nI could accept her offer. Become the heir. Inherit the seat in three years and, after that, run this Council the way she had run it, with my own modest variations on the work.\n\nI could propose my own reform. Submit, this morning, a structural revision of the Council's surveillance architecture. The proposal had been written. It was in a drawer. It had been written for months.\n\nI could resist. Stand on the floor of the chamber, this afternoon, and refuse a key vote in a way that could not be quietly undone. They would have to remove me. They would.\n\nOr I could stop.\n\nGet up from the desk. Walk away. Disappear into the small room of myself that had, perhaps, been waiting for four years. Refuse to continue being the man who sat in this chair.\n\nThere was a mirror on the wall opposite the desk. The face in the mirror was nineteen. The face in the mirror was always deciding.\n\nThe face had to decide.",
+      "choices": [
+        { "label": "Move against Vespera. Take the Council.", "routeFromEndingSwitch": "coup" },
+        { "label": "Accept her succession. Become her heir.", "routeFromEndingSwitch": "heir" },
+        { "label": "Propose your own reform. Build a new Council.", "routeFromEndingSwitch": "reform" },
+        { "label": "Resist a vote publicly. Force their hand.", "routeFromEndingSwitch": "resist" },
+        { "label": "You can't continue. Step away from the desk.", "routeFromEndingSwitch": "break" }
+      ]
+    }
+
+  }
+}

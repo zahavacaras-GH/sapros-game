@@ -1,0 +1,37 @@
+{
+  "terms": {
+    "Sapros": {
+      "definition": "Greek — rotten, decayed, putrid. The title of this story. Refers to what Mika is becoming, and what the Council already is."
+    },
+    "Eques": {
+      "definition": "The Council's enforcement officers. Five ranks: Thebes → Skiritai → Achaean → Agema → Hetairoi. The Eques are the only branch of society exempt from civilian surveillance — the privilege Mika is trading his old life for."
+    },
+    "Thebes": {
+      "definition": "First Eques rank (age 15). Recruits doing menial labor — moving crates, mopping facilities, processing the lowest paperwork. No combat assignments, no weapons."
+    },
+    "Skiritai": {
+      "definition": "Second Eques rank (age 16). Field officers. Street patrol, detentions, checkpoint duty. First rank authorized to carry a service rifle and use force."
+    },
+    "Achaean": {
+      "definition": "Third Eques rank (age 17). Squad leader. Oversees Skiritai units and personally carries out targeted operations against citizens the Council has flagged."
+    },
+    "Agema": {
+      "definition": "Fourth Eques rank (age 18). Commander. Signs kill orders that come down from the Council. One step below the Hetairoi."
+    },
+    "Hetairoi": {
+      "definition": "The Council itself. Five members, age 19 or older. They read flagged citizens' files and decide who lives, dies, or quietly disappears. Mika's destination if he climbs all the way."
+    },
+    "Capitol": {
+      "definition": "The walled inner city — seat of the Council and Eques operations. Where the wealthy live, where the surveillance is densest, and where Mika now reports to work."
+    },
+    "Quadrant": {
+      "definition": "One of four districts outside the Capitol wall, where most citizens live. Every transit movement, every search, every conversation in the Quadrants is logged by the Council's predictive system."
+    },
+    "Council": {
+      "definition": "The ruling body of the city. Five Hetairoi who meet to review flagged citizens and authorize action. Their decisions are final and not appealable."
+    },
+    "Meditations": {
+      "definition": "A real 2,000-year-old book by the Roman emperor Marcus Aurelius. Personal reflections on duty, mortality, and the discipline of staying ethical inside a system that doesn't reward ethics. Jason gives Mika a paperback copy on his first night as an Achaean."
+    }
+  }
+}

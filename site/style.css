@@ -1,0 +1,1224 @@
+/* ============================================
+   SAPROS — mobile-first stylesheet
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a0a0a;
+  color: #e8e6e1;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', 'Source Serif Pro', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.55;
+  overscroll-behavior: none;
+}
+
+button {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  border: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ============================================
+   HUD — corruption bar, mute, menu
+   ============================================ */
+
+#hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 12px;
+}
+
+#corruption-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
+  position: relative;
+  overflow: visible;
+}
+
+#corruption-fill {
+  height: 100%;
+  width: 0%;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: width 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), background-color 0.7s ease;
+}
+
+#corruption-label {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+#mute-toggle, #menu-toggle {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 18px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background 0.2s;
+}
+
+#mute-toggle.muted {
+  color: rgba(255, 255, 255, 0.2);
+  text-decoration: line-through;
+}
+
+#mute-toggle:active, #menu-toggle:active {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Threshold flash */
+#hud.threshold-flash {
+  animation: threshold-flash 1s ease-out;
+}
+
+@keyframes threshold-flash {
+  0%   { background: rgba(10, 10, 10, 0.92); }
+  20%  { background: rgba(80, 30, 30, 0.85); }
+  100% { background: rgba(10, 10, 10, 0.92); }
+}
+
+/* ============================================
+   Screens
+   ============================================ */
+
+.screen {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: fade-in 0.4s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ============================================
+   Title screen
+   ============================================ */
+
+#title-screen {
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.title-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0a;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+}
+
+.title-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0.95) 80%);
+}
+
+.title-content {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  padding: 0 24px 56px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+}
+
+.title-content h1 {
+  margin: 0 0 16px 0;
+  font-size: 56px;
+  font-weight: 400;
+  letter-spacing: 0.32em;
+  color: #f4f1ea;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.8);
+}
+
+.subtitle {
+  margin: 0 auto 36px auto;
+  max-width: 480px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(244, 241, 234, 0.7);
+  font-style: italic;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+
+.primary-btn, .secondary-btn {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto 12px auto;
+  padding: 16px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  min-height: 50px;
+}
+
+.primary-btn {
+  background: #f4f1ea;
+  color: #0a0a0a;
+}
+
+.primary-btn:active {
+  transform: scale(0.98);
+  background: #e0ddd5;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: rgba(244, 241, 234, 0.85);
+  border: 1px solid rgba(244, 241, 234, 0.3);
+}
+
+.secondary-btn:active {
+  background: rgba(244, 241, 234, 0.06);
+}
+
+/* ============================================
+   Chapter select
+   ============================================ */
+
+#chapter-select-screen {
+  padding: 36px 20px 36px 20px;
+  background: #0a0a0a;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.chapter-content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.chapter-content h2 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-align: center;
+  color: #f4f1ea;
+}
+
+.chapter-intro {
+  margin: 0 0 28px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  color: rgba(244, 241, 234, 0.6);
+  font-style: italic;
+}
+
+.chapter-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.chapter-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 18px 20px;
+  text-align: left;
+  color: #e8e6e1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.chapter-card:active {
+  background: rgba(255, 255, 255, 0.06);
+  transform: scale(0.99);
+}
+
+.chapter-age {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: rgba(244, 241, 234, 0.5);
+}
+
+.chapter-rank {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #f4f1ea;
+}
+
+.chapter-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(244, 241, 234, 0.65);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+/* ============================================
+   Game screen
+   ============================================ */
+
+#game-screen {
+  padding-top: 44px; /* leave room for HUD */
+  background: #0a0a0a;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+#node-image-container {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #050505;
+  position: relative;
+  overflow: hidden;
+}
+
+#node-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: #0a0a0a;
+  background-repeat: no-repeat;
+  transition: filter 0.5s ease;
+}
+
+#node-image.placeholder {
+  background-image: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Memory flashback styling */
+#node-image.memory {
+  filter: sepia(0.7) saturate(0.85) brightness(0.95);
+}
+
+#node-text-container {
+  padding: 24px 22px 32px 22px;
+  max-width: 620px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#node-text-container.memory #node-text {
+  font-style: italic;
+  color: rgba(244, 230, 200, 0.85);
+}
+
+#node-text {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #e8e6e1;
+  white-space: pre-wrap;
+}
+
+#node-text p {
+  margin: 0 0 16px 0;
+}
+
+#node-text p:last-child {
+  margin-bottom: 0;
+}
+
+#node-text em {
+  font-style: italic;
+  color: rgba(244, 241, 234, 0.95);
+}
+
+#node-text strong {
+  font-weight: 500;
+  color: #f4f1ea;
+}
+
+/* ============================================
+   Choices
+   ============================================ */
+
+#node-choices {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.choice-btn {
+  background: transparent;
+  color: #e8e6e1;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+  padding: 14px 18px;
+  font-size: 16px;
+  line-height: 1.45;
+  text-align: left;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', 'Source Serif Pro', Georgia, serif;
+  transition: all 0.2s ease;
+  min-height: 52px;
+}
+
+.choice-btn:active {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(0.99);
+}
+
+.choice-btn.continue {
+  background: rgba(244, 241, 234, 0.1);
+  border-color: rgba(244, 241, 234, 0.4);
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.choice-btn.disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.choice-btn.completed {
+  opacity: 0.45;
+  text-decoration: line-through;
+}
+
+/* Hub label */
+.hub-prompt {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: rgba(244, 241, 234, 0.4);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Ending styling */
+#node-text-container.ending {
+  padding-top: 32px;
+}
+
+#node-text-container.ending h2 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(244, 241, 234, 0.5);
+  margin: 0 0 18px 0;
+  text-align: center;
+}
+
+/* "Start Again" button at the end of an ending — red, signals death / finality.
+   Overrides the default .continue and base .choice-btn styling within an ending. */
+#node-text-container.ending .choice-btn,
+#node-text-container.ending .choice-btn.continue {
+  color: #ff5a47;
+  background: rgba(198, 76, 58, 0.08);
+  border: 1px solid rgba(255, 90, 71, 0.55);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+#node-text-container.ending .choice-btn:active {
+  background: rgba(255, 90, 71, 0.18);
+  border-color: rgba(255, 90, 71, 0.8);
+  transform: scale(0.99);
+}
+
+/* ============================================
+   Menu overlay
+   ============================================ */
+
+#menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.menu-content {
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 28px 24px;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-content h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-align: center;
+  color: #f4f1ea;
+}
+
+.menu-warn {
+  margin: 12px 0 0 0;
+  font-size: 12px;
+  text-align: center;
+  color: rgba(244, 241, 234, 0.4);
+  font-style: italic;
+}
+
+/* ============================================
+   Page transitions
+   ============================================ */
+
+.fading-out {
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+}
+
+.fading-in {
+  animation: fade-in 0.35s ease-out;
+}
+
+/* ============================================
+   Larger screens
+   ============================================ */
+
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .title-content h1 {
+    font-size: 80px;
+  }
+
+  #node-image-container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  #node-text {
+    font-size: 18px;
+  }
+
+  .choice-btn {
+    font-size: 17px;
+  }
+}
+
+/* ============================================
+   Desktop layout — image fixed left, text scrolls right
+   Kicks in at >=1024px wide AND screen is wider than tall
+   ============================================ */
+
+@media (min-width: 1024px) and (orientation: landscape) {
+
+  /* Two-column game layout. Image sticks; text scrolls. */
+  #game-screen {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas: "image text";
+    align-items: start;
+    padding-top: 0; /* HUD sits above */
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  /* HUD spans full width at the top, slightly taller than mobile */
+  #hud {
+    height: 48px;
+    padding: 0 20px;
+    background: rgba(10, 10, 10, 0.94);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  #corruption-bar {
+    max-width: 360px;
+    margin-right: auto;
+  }
+
+  /* IMAGE — sticky to the left side, fills viewport height below the HUD */
+  #node-image-container {
+    grid-area: image;
+    position: sticky;
+    top: 48px;
+    aspect-ratio: auto;
+    max-width: none;
+    margin: 0;
+    width: 100%;
+    height: calc(100vh - 48px);
+    height: calc(100dvh - 48px);
+    background: #050505;
+    overflow: hidden;
+  }
+
+  #node-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Soft right-edge falloff so the image doesn't fight the text column */
+  #node-image-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(to right, transparent 78%, rgba(0,0,0,0.35) 100%);
+  }
+
+  #node-image.placeholder {
+    font-size: 14px;
+    letter-spacing: 0.2em;
+  }
+
+  /* TEXT — scrolls naturally in the right column */
+  #node-text-container {
+    grid-area: text;
+    padding: 80px 72px;
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #node-text {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  #node-text p {
+    margin-bottom: 18px;
+  }
+
+  #node-choices {
+    margin-top: 36px;
+  }
+
+  .choice-btn {
+    font-size: 17px;
+    padding: 16px 22px;
+    transition: background 0.2s, border-color 0.2s, transform 0.1s;
+  }
+
+  /* Desktop hover states (mouse, not touch) */
+  .choice-btn:hover:not(.disabled):not(.completed) {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .choice-btn.continue:hover:not(.disabled) {
+    background: rgba(244, 241, 234, 0.18);
+  }
+
+  /* Ending "Start Again" button keeps the red on hover */
+  #node-text-container.ending .choice-btn:hover:not(.disabled):not(.completed),
+  #node-text-container.ending .choice-btn.continue:hover:not(.disabled) {
+    background: rgba(255, 90, 71, 0.15);
+    border-color: rgba(255, 90, 71, 0.85);
+    color: #ff7461;
+  }
+
+  #mute-toggle:hover, #menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .chapter-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .primary-btn:hover { background: #e0ddd5; }
+  .secondary-btn:hover {
+    background: rgba(244, 241, 234, 0.06);
+    border-color: rgba(244, 241, 234, 0.5);
+  }
+
+  /* Title screen and chapter select stay centered, not split */
+  #title-screen,
+  #chapter-select-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #title-screen .title-content {
+    margin-top: 0;
+    padding-bottom: 0;
+    max-width: 540px;
+  }
+}
+
+/* ============================================
+   Very wide desktops — cap text column width
+   ============================================ */
+
+@media (min-width: 1600px) and (orientation: landscape) {
+  #node-text-container {
+    padding-left: 96px;
+    padding-right: 96px;
+    max-width: 720px;
+  }
+
+  #node-text {
+    font-size: 19px;
+  }
+}
+
+/* ============================================
+   ERROR SYSTEM — fatal modal, notice banner, QA log
+   ============================================ */
+
+/* Fatal overlay */
+#error-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fade-in 0.3s ease-out;
+}
+
+.error-modal {
+  background: #181818;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 28px 24px;
+  width: 100%;
+  max-width: 440px;
+  color: #e8e6e1;
+}
+
+.error-modal-icon {
+  font-size: 36px;
+  text-align: center;
+  color: #c64c3a;
+  margin-bottom: 8px;
+}
+
+.error-modal h2 {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.error-modal-title {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #f4f1ea;
+  text-align: center;
+}
+
+.error-modal-message {
+  margin: 0 0 18px 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(244, 241, 234, 0.75);
+  text-align: center;
+}
+
+.error-modal details {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 18px;
+  font-size: 12px;
+}
+
+.error-modal details summary {
+  cursor: pointer;
+  color: rgba(244, 241, 234, 0.55);
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.error-modal details pre {
+  margin: 8px 0 0 0;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(244, 241, 234, 0.65);
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.error-modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.error-modal-actions button {
+  width: 100%;
+  padding: 12px 16px;
+  background: transparent;
+  color: #e8e6e1;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.error-modal-actions button:active {
+  background: rgba(255, 255, 255, 0.06);
+  transform: scale(0.99);
+}
+
+.error-modal-actions button[data-act="reload"] {
+  background: #f4f1ea;
+  color: #0a0a0a;
+  border-color: #f4f1ea;
+}
+
+/* Notice banner — stacks at the bottom */
+#error-banner {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  z-index: 500;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.error-notice {
+  pointer-events: auto;
+  background: rgba(24, 24, 24, 0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-left: 3px solid #888;
+  border-radius: 4px;
+  padding: 10px 12px;
+  color: #e8e6e1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  animation: notice-slide-in 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+  max-width: 100%;
+}
+
+.error-notice.notice {
+  border-left-color: #6b8db5;
+}
+
+.error-notice.warning {
+  border-left-color: #d4a043;
+}
+
+.error-notice.fading {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+@keyframes notice-slide-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.error-notice .notice-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.error-notice .notice-title {
+  flex: 1;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.error-notice .notice-details,
+.error-notice .notice-dismiss {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  color: rgba(244, 241, 234, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-notice .notice-details:active,
+.error-notice .notice-dismiss:active {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.error-notice .notice-message {
+  margin-top: 4px;
+  font-size: 12px;
+  color: rgba(244, 241, 234, 0.7);
+  line-height: 1.45;
+}
+
+.error-notice .notice-details-body {
+  margin-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 8px;
+}
+
+.error-notice .notice-details-body pre {
+  margin: 0;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 10px;
+  line-height: 1.5;
+  color: rgba(244, 241, 234, 0.5);
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 160px;
+  overflow: auto;
+}
+
+/* QA log overlay */
+#qa-log-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 800;
+  display: none;
+  align-items: stretch;
+  justify-content: center;
+  padding: 12px;
+  animation: fade-in 0.3s ease-out;
+}
+
+.qa-modal {
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 640px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #e8e6e1;
+}
+
+.qa-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 12px;
+}
+
+.qa-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f4f1ea;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qa-count {
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: rgba(244, 241, 234, 0.75);
+}
+
+.qa-header-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.qa-header-actions button {
+  background: transparent;
+  color: rgba(244, 241, 234, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.qa-header-actions button:active {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.qa-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 16px;
+}
+
+.qa-empty {
+  margin: 32px 0;
+  text-align: center;
+  color: rgba(244, 241, 234, 0.5);
+  font-size: 13px;
+}
+
+.qa-row {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.qa-row.qa-fatal { border-left: 3px solid #c64c3a; }
+.qa-row.qa-warning { border-left: 3px solid #d4a043; }
+.qa-row.qa-notice { border-left: 3px solid #6b8db5; }
+
+.qa-row-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(244, 241, 234, 0.5);
+}
+
+.qa-level {
+  font-weight: 600;
+}
+
+.qa-fatal .qa-level { color: #c64c3a; }
+.qa-warning .qa-level { color: #d4a043; }
+.qa-notice .qa-level { color: #6b8db5; }
+
+.qa-time {
+  font-family: 'SF Mono', Menlo, monospace;
+  font-size: 10px;
+}
+
+.qa-node {
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-family: 'SF Mono', Menlo, monospace;
+  font-size: 10px;
+  color: rgba(244, 241, 234, 0.8);
+}
+
+.qa-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f4f1ea;
+  margin-bottom: 2px;
+}
+
+.qa-message {
+  font-size: 12px;
+  line-height: 1.45;
+  color: rgba(244, 241, 234, 0.7);
+}
+
+.qa-details {
+  margin: 6px 0 0 0;
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 10px;
+  line-height: 1.5;
+  color: rgba(244, 241, 234, 0.5);
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 160px;
+  overflow: auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ============================================
+   GLOSSARY — underlined terms + tap popup
+   ============================================ */
+
+.glossary-term {
+  cursor: pointer;
+  border-bottom: 1px dotted rgba(232, 200, 122, 0.55);
+  color: rgba(244, 230, 200, 0.95);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.glossary-term:active {
+  border-bottom-color: rgba(232, 200, 122, 0.95);
+  color: rgba(255, 244, 220, 1);
+}
+
+#glossary-popup {
+  position: fixed;
+  z-index: 600;
+  width: calc(100vw - 32px);
+  max-width: 340px;
+  background: #181818;
+  border: 1px solid rgba(232, 200, 122, 0.25);
+  border-radius: 8px;
+  padding: 16px 40px 16px 18px;
+  color: #e8e6e1;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+  font-family: 'Iowan Old Style', 'Palatino Linotype', 'Source Serif Pro', Georgia, serif;
+  opacity: 0;
+  transform: translateY(-4px) scale(0.98);
+  transition: opacity 0.18s ease-out, transform 0.18s cubic-bezier(0.2, 0.7, 0.2, 1);
+  pointer-events: auto;
+}
+
+#glossary-popup.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.glossary-popup-name {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(232, 200, 122, 0.85);
+  margin-bottom: 8px;
+}
+
+.glossary-popup-def {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #e8e6e1;
+}
+
+.glossary-popup-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  color: rgba(244, 241, 234, 0.45);
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.glossary-popup-close:active {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(244, 241, 234, 1);
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .glossary-term:hover {
+    border-bottom-color: rgba(232, 200, 122, 0.95);
+    color: rgba(255, 244, 220, 1);
+  }
+  .glossary-popup-close:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(244, 241, 234, 1);
+  }
+}
