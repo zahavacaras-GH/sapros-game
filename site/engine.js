@@ -587,6 +587,7 @@
       setText(node, node.memory);
       setChoices(node);
       updateCorruptionDisplay();
+      applyNodeAudio(node);
       saveState();
     } catch (e) {
       Errors.fatal(
@@ -1083,6 +1084,9 @@
     const savedState = loadState();
     const cont = document.getElementById('btn-continue');
     if (cont) cont.classList.toggle('hidden', !savedState);
+    // Play the title-screen ambient loop
+    syncMuteButtons();
+    playAudio('ambient.mp3');
   }
 
   function showChapterSelectScreen() {
@@ -1100,39 +1104,111 @@
   }
 
   // ============================================
-  // AUDIO
+  // AUDIO MANAGER
   // ============================================
+  //
+  // Architecture:
+  //   - Mute preference is stored in its own localStorage key so it
+  //     applies before any save state is loaded.
+  //   - playAudio(filename) starts/swaps to a track.
+  //   - stopAudio() halts whatever's playing.
+  //   - On render, a node's `audio` field controls the track:
+  //       • a filename → swap to that file (only if different)
+  //       • null       → explicitly stop audio
+  //       • undefined  → leave whatever is currently playing alone
 
-  function setupAudio() {
+  const MUTE_KEY = 'sapros_muted_v1';
+  let currentAudioFile = null;
+  let audioRetryHandler = null;
+
+  function getMutePreference() {
+    try { return localStorage.getItem(MUTE_KEY) === 'true'; }
+    catch (_) { return false; }
+  }
+
+  function setMutePreference(muted) {
+    try { localStorage.setItem(MUTE_KEY, muted ? 'true' : 'false'); }
+    catch (_) {}
+  }
+
+  function syncMuteButtons() {
+    const muted = getMutePreference();
+    document.querySelectorAll('#mute-toggle, #title-mute-toggle').forEach(b => {
+      b.classList.toggle('muted', muted);
+    });
+  }
+
+  function playAudio(filename) {
     const audio = document.getElementById('ambient-audio');
-    if (!audio) return;
-    audio.volume = 0.25;
-    audio.addEventListener('error', () => {
-      // Silent: audio file may not exist
-    }, { once: true });
-    if (state && state.audioMuted) {
-      audio.muted = true;
-      const btn = document.getElementById('mute-toggle');
-      if (btn) btn.classList.add('muted');
+    if (!audio || !filename) return;
+    const wantedSrc = 'audio/' + filename;
+
+    // Swap source only if different
+    let source = audio.querySelector('source');
+    const currentSrc = source ? source.getAttribute('src') : null;
+    if (currentSrc !== wantedSrc) {
+      audio.pause();
+      if (!source) {
+        source = document.createElement('source');
+        source.type = 'audio/mpeg';
+        audio.appendChild(source);
+      }
+      source.setAttribute('src', wantedSrc);
+      audio.load();
     }
+
+    audio.volume = 0.25;
+    audio.muted = getMutePreference();
+    audio.loop = true;
+
+    const p = audio.play();
+    if (p && p.catch) {
+      p.catch(() => {
+        // Browser blocked autoplay — wait for any user click then retry.
+        if (audioRetryHandler) return;
+        audioRetryHandler = () => {
+          document.removeEventListener('click', audioRetryHandler);
+          document.removeEventListener('keydown', audioRetryHandler);
+          audioRetryHandler = null;
+          if (currentAudioFile) {
+            const p2 = audio.play();
+            if (p2 && p2.catch) p2.catch(() => {});
+          }
+        };
+        document.addEventListener('click', audioRetryHandler, { once: true });
+        document.addEventListener('keydown', audioRetryHandler, { once: true });
+      });
+    }
+
+    currentAudioFile = filename;
+  }
+
+  function stopAudio() {
+    const audio = document.getElementById('ambient-audio');
+    if (audio) {
+      audio.pause();
+      try { audio.currentTime = 0; } catch (_) {}
+    }
+    currentAudioFile = null;
+  }
+
+  function applyNodeAudio(node) {
+    if (node.audio === null) {
+      stopAudio();
+    } else if (node.audio && node.audio !== currentAudioFile) {
+      playAudio(node.audio);
+    }
+    // If node.audio is undefined, leave the current track alone.
   }
 
   function toggleMute() {
-    state.audioMuted = !state.audioMuted;
+    const newMuted = !getMutePreference();
+    setMutePreference(newMuted);
     const audio = document.getElementById('ambient-audio');
-    if (audio) audio.muted = state.audioMuted;
-    const btn = document.getElementById('mute-toggle');
-    if (btn) btn.classList.toggle('muted', state.audioMuted);
-    saveState();
-  }
-
-  function tryStartAudio() {
-    const audio = document.getElementById('ambient-audio');
-    if (!audio || state.audioMuted) return;
-    const playPromise = audio.play();
-    if (playPromise && playPromise.catch) {
-      playPromise.catch(() => { /* needs user interaction; safe */ });
-    }
+    if (audio) audio.muted = newMuted;
+    syncMuteButtons();
+    // Keep the play-state state object in sync if it exists
+    if (state) state.audioMuted = newMuted;
   }
 
   // ============================================
@@ -1141,9 +1217,12 @@
 
   function newGame() {
     state = createDefaultState();
+    state.audioMuted = getMutePreference();
     saveState();
-    setupAudio();
-    tryStartAudio();
+    // Title-screen track stops when gameplay begins. Each node can
+    // declare its own `audio` field to play scene-specific tracks
+    // once you add per-scene audio later.
+    stopAudio();
     transitionTo(() => renderNode(story.startNode));
   }
 
@@ -1151,8 +1230,8 @@
     const saved = loadState();
     if (!saved) { newGame(); return; }
     state = saved;
-    setupAudio();
-    tryStartAudio();
+    state.audioMuted = getMutePreference();
+    stopAudio();
     if (state.currentNode) {
       transitionTo(() => renderNode(state.currentNode));
     } else {
@@ -1171,9 +1250,9 @@
       return;
     }
     state = CANONICAL_DEFAULTS[age]();
+    state.audioMuted = getMutePreference();
     saveState();
-    setupAudio();
-    tryStartAudio();
+    stopAudio();
     transitionTo(() => renderNode(STARTING_NODES[age]));
   }
 
@@ -1379,6 +1458,7 @@
     });
 
     bind('mute-toggle', 'click', toggleMute);
+    bind('title-mute-toggle', 'click', toggleMute);
     bind('menu-toggle', 'click', () => {
       const overlay = document.getElementById('menu-overlay');
       if (overlay) overlay.classList.remove('hidden');

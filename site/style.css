@@ -143,6 +143,53 @@ button {
   overflow: hidden;
 }
 
+/* Floating mute button on the title screen (and reusable on any
+   non-HUD screen if we add audio there later). */
+.floating-mute-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(10, 10, 10, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background 0.2s, transform 0.1s;
+}
+
+.floating-mute-btn:active {
+  transform: scale(0.94);
+  background: rgba(10, 10, 10, 0.75);
+}
+
+.floating-mute-btn.muted {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.floating-mute-btn.muted::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.55);
+  transform: rotate(-25deg);
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .floating-mute-btn:hover {
+    background: rgba(10, 10, 10, 0.75);
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
 .title-image {
   position: absolute;
   top: 0; left: 0;
