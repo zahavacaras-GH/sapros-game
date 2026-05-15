@@ -1157,7 +1157,7 @@
       audio.load();
     }
 
-    audio.volume = 0.25;
+    audio.volume = 0.6;
     audio.muted = getMutePreference();
     audio.loop = true;
 

@@ -198,14 +198,16 @@ button {
   background-color: #0a0a0a;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.5);
+  filter: brightness(0.95);
 }
 
 .title-image::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0.95) 80%);
+  /* Lighter overlay so more of the image shows through, but still
+     fades to dark behind the buttons so the text stays readable. */
+  background: linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.15) 45%, rgba(10,10,10,0.85) 90%);
 }
 
 .title-content {
