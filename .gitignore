@@ -26,3 +26,10 @@ sapros-site.zip
 
 # Backup files from past edits
 *.bak
+
+# Only image files belong in /site/images/
+site/images/*.pkg
+site/images/*.dmg
+site/images/*.zip
+site/images/*.exe
+site/images/*.app
