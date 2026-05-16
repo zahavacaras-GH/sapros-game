@@ -29,6 +29,14 @@
       "id": "t1.2",
       "act": 1,
       "image": "t1.2_thebes_barracks.webp",
+      "paragraphImages": [
+        "t1.2_p01_morning_barracks.webp",
+        "t1.2_p02_hour_weight.webp",
+        "t1.2_p03_find_quinn.webp",
+        "t1.2_p04_bran_alone.webp",
+        "t1.2_p05_head_down.webp",
+        "t1.2_p06_choose.webp"
+      ],
       "hub": true,
       "text": "Morning. I had an hour before training. The facility was quiet — most of the recruits were already badged into assignments, doing the kind of work nobody admits Eques do. Hauling pallets at the central logistics yard. Mopping floors in administrative buildings. Standing very still in lobbies. The same labor any kid in any Quadrant did, but with a uniform on and a scannable badge, which apparently made it different.\n\nAn hour. I could feel the hour like a weight in my hand.\n\nI knew what I should do. The thing I'd promised myself in the car, watching the city change. The reason I'd told myself I was here. *Find Quinn. Help him. Get information.*\n\nI also knew Bran was about a forty-minute walk away, sitting at our kitchen table doing schoolwork, alone, because nobody had told him anything. The cameras between here and there would log my route, but my new badge said I had limited liberty.\n\nAnd the senior recruits had been very specific in the briefing about how the smartest thing a new Thebes could do was *put his head down and work*.\n\nThree things. One hour. I had to choose.",
       "choices": [
