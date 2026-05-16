@@ -181,3 +181,10 @@ Total this run so far: 2 done (ending_equal_to_vespera, ending_ghost). 16 remain
 3. **Recommended:** disable `chrome://settings/downloads` → "Ask where to save each file before downloading" so future downloads land in Downloads/ automatically (no dialog → no stuck dialog problem).
 
 Next when unblocked: ending_suicide, ending_mirror, then Group B (worse_than_vespera, paranoid), C, D, E, F.
+
+--- Paragraph-images session, t1.1, 2026-05-16 ---
+Generated: 10 of 10 images (t1.1_p01 through t1.1_p10)
+Failed / partial: none
+Sizes: p01 1.8MB, p02 1.8MB, p03 1.8MB, p04 1.6MB, p05 2.2MB, p06 1.9MB, p07 1.7MB, p08 1.6MB, p09 1.9MB, p10 2.0MB
+Notes: Chrome "Ask where to save" was OFF (set in previous session). Used JS fetch+blob download for all images. JS send-button click (`button[data-testid="send-button"]`) more reliable than coordinate-clicking when textarea is expanded. p10 (close-up portrait) routed to reasoning model and took ~4 minutes.
+Next batch: t1.2 paragraphs (user to provide prompts)
