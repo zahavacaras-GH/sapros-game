@@ -188,3 +188,16 @@ Failed / partial: none
 Sizes: p01 1.8MB, p02 1.8MB, p03 1.8MB, p04 1.6MB, p05 2.2MB, p06 1.9MB, p07 1.7MB, p08 1.6MB, p09 1.9MB, p10 2.0MB
 Notes: Chrome "Ask where to save" was OFF (set in previous session). Used JS fetch+blob download for all images. JS send-button click (`button[data-testid="send-button"]`) more reliable than coordinate-clicking when textarea is expanded. p10 (close-up portrait) routed to reasoning model and took ~4 minutes.
 Next batch: t1.2 paragraphs (user to provide prompts)
+
+--- Redo session, t1.1 p01/p02/p03, 2026-05-16 ---
+Redid: t1.1_p01_silent_drive.webp (1.5MB), t1.1_p02_wall_checkpoint.webp (1.97MB), t1.1_p03_surveillance_poles.webp (1.88MB)
+Reason: Mika looked too old in original p01-p03. Corrected to boyish slim build, lanky teenage face, not yet adult proportions.
+Pipeline discovery: ChatGPT's imagegen container shows 0×0 placeholder imgs but the file_0000 URL returns 200 image/png immediately — use fetch(img.src, {credentials:'include'}) directly instead of waiting for naturalWidth > 0.
+Next: t1.2 paragraph images
+
+--- Paragraph-images session, t1.2, 2026-05-16 ---
+Generated: 6 of 6 images (t1.2_p01 through t1.2_p06)
+Failed / partial: none
+Sizes: p01 2.0MB, p02 1.8MB, p03 1.7MB, p04 1.8MB, p05 1.5MB, p06 1.8MB
+Notes: Fetch+blob pipeline working cleanly. imagegen container appears quickly; fetch file_0000 URL immediately without waiting for naturalWidth.
+Next batch: t1.3a paragraph images (user to provide prompts)

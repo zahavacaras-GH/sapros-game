@@ -12,7 +12,16 @@
   let state = null;
 
   const SAVE_KEY = 'sapros_save_v1';
-  const ENGINE_VERSION = '1.1.0';
+  const ENGINE_VERSION = '1.2.0';
+
+  // Image cache-buster. Stable within a session, changes on each reload.
+  // Forces the browser to refetch images when Cowork updates them, even
+  // if a previous deploy cached them with stale headers.
+  const IMG_CACHE_BUST = '?v=' + Date.now();
+
+  function imgUrl(filename) {
+    return 'images/' + encodeURIComponent(filename) + IMG_CACHE_BUST;
+  }
 
   // ============================================
   // ERROR SYSTEM
@@ -663,7 +672,7 @@
     const outgoing = document.getElementById('node-image-' + outgoingKey);
     if (!incoming || !outgoing) return;
 
-    const src = 'images/' + encodeURIComponent(filename);
+    const src = imgUrl(filename);
     const probe = new Image();
     probe.onload = () => {
       incoming.style.backgroundImage = `url('${src}')`;
@@ -1179,6 +1188,12 @@
       const el = document.getElementById(id);
       if (el) el.classList.toggle('hidden', !showHide[id]);
     });
+    // Set title image with cache-busting (handles the data-image attribute)
+    const titleImg = document.querySelector('.title-image[data-image]');
+    if (titleImg) {
+      const filename = titleImg.getAttribute('data-image');
+      titleImg.style.backgroundImage = `url('${imgUrl(filename)}')`;
+    }
     const savedState = loadState();
     const cont = document.getElementById('btn-continue');
     if (cont) cont.classList.toggle('hidden', !savedState);
