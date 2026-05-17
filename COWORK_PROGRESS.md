@@ -201,3 +201,59 @@ Failed / partial: none
 Sizes: p01 2.0MB, p02 1.8MB, p03 1.7MB, p04 1.8MB, p05 1.5MB, p06 1.8MB
 Notes: Fetch+blob pipeline working cleanly. imagegen container appears quickly; fetch file_0000 URL immediately without waiting for naturalWidth.
 Next batch: t1.3a paragraph images (user to provide prompts)
+
+--- Paragraph-images session, t1.3a, 2026-05-17 ---
+Generated: 5 of 5 images (t1.3a_p01 through t1.3a_p05)
+Failed / partial: none
+Sizes: p01 1.8MB, p02 2.3MB, p03 1.9MB, p04 2.1MB, p05 1.7MB
+Notes: p01 had a stubborn tab (stuck at chatgpt.com root, "Instant" model shown — never sent). Fixed by opening a fresh tab. p02–p05 generated cleanly in parallel across 3 tabs.
+New Bran character ref added: age 12, smaller/slimmer than Mika, rounder face, same olive-tan skin, careful stillness.
+Next batch: t1.3a_truth, t1.3a_lie, t1.3a_silent paragraph images
+
+--- Paragraph-images session, t1.3b, 2026-05-17 ---
+Generated: 5 of 5 images (t1.3b_p01 through t1.3b_p05)
+Failed / partial: none
+Sizes: p01 1.7MB, p02 1.8MB, p03 1.6MB, p04 1.6MB, p05 1.7MB
+Notes: 4-tab parallel pipeline working well. All clean generations.
+Next batch: t1.3c
+
+--- Paragraph-images session, t1.3c, 2026-05-17 ---
+Generated: 4 of 4 images (t1.3c_p01 through t1.3c_p04)
+Failed / partial: none
+Sizes: p01 1.7MB, p02 1.9MB, p03 2.0MB, p04 1.8MB
+Notes: Jason (burn-scar senior / future reveal as Jason) character ref established. All clean.
+Next batch: t1.3a_truth, t1.3a_lie, t1.3a_silent (or t1.4 if user skips sub-nodes)
+
+--- Overnight session, t1.3a_truth / t1.3a_lie / t1.3a_silent / t1.3b_close / t1.3b_safe / t1.3c_thank / t1.3c_brush / t1.4 / t1.5 / t1.6 / t1.7, 2026-05-17 ---
+Generated: 75 of 76 images across all remaining Act I scenes (see detail below)
+Failed / partial: t1.3a_lie_p01_kitchen_table — generated but download stalled twice (SPA-stuck chatgpt.com homepage). Completed separately on 2026-05-17 morning (see below).
+
+Detail:
+  t1.3a_truth_p01–p04 (4 images) — done
+  t1.3a_silent_p01–p04 (4 images) — done
+  t1.3a_lie_p02–p04 (3 images) — done; p01 stuck, handled in separate run
+  t1.3b_close_p01–p05 (5 images) — done
+  t1.3b_safe_p01–p03 (3 images) — done
+  t1.3c_thank_p01–p05 (5 images) — done
+  t1.3c_brush_p01–p05 (5 images) — done
+  t1.4_p01–p06 (6 images) — done
+  t1.4_trust_p01–p05 (5 images) — done
+  t1.4_guarded_p01–p04 (4 images) — done
+  t1.4_mock_p01–p04 (4 images) — done
+  t1.5_p01–p06 (6 images) — done
+  t1.5_refuse_p01–p06 (6 images) — done
+  t1.5_report_p01–p03 (3 images) — done
+  t1.6_p01–p04 (4 images) — done
+  t1.7_p01–p08 (8 images) — done
+
+Pipeline notes: 4–5 parallel ChatGPT tabs used throughout. Fetch+blob download via JS. SPA-stuck homepage issue (chatgpt.com/ and chatgpt.com/new both showed stop-button but msgs:0 and never navigated) — workaround was to use stable existing chat tab (chatgpt.com/c/...) for injection.
+
+--- t1.3a_lie_p01_kitchen_table, 2026-05-17 (morning, final image) ---
+[2026-05-17] t1.3a_lie_p01_kitchen_table.webp — done — 1.8MB, generated via tab 416347231 (stable chat URL), fetch+blob download
+Note: chatgpt.com/ and chatgpt.com/new both stuck (streaming:true, msgs:0, textarea not cleared). Switched to injecting prompt into an existing stable chat tab — worked first try. Image: Mika + Bran at kitchen table, warm afternoon light, Bran's pushed rice, lying-to-protect mood.
+
+--- ALL ACT I PARAGRAPH IMAGES COMPLETE, 2026-05-17 ---
+Total .webp files in site/images/: 170
+Act I paragraph images: all scenes complete — t1.1 (10), t1.2 (6), t1.3a (5 main + 4 truth + 4 lie + 4 silent), t1.3b (5 main + 5 close + 3 safe), t1.3c (4 main + 5 thank + 5 brush), t1.4 (6 main + 5 trust + 4 guarded + 4 mock), t1.5 (6 main + 6 refuse + 3 report), t1.6 (4), t1.7 (8)
+Next: User to review visual flow on live site. Then Act II paragraph images (per-paragraph prompts not yet written — user to provide).
+
