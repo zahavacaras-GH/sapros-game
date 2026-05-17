@@ -584,6 +584,11 @@
           "label": "Be polite but distant.",
           "next": "t2.1_distant"
         }
+      ],
+      "paragraphImages": [
+        "t2.1_p01_investiture_plaza.webp",
+        "t2.1_p02_sophie_uniform.webp",
+        "t2.1_p03_first_words.webp"
       ]
     },
     "t2.1_warm": {
